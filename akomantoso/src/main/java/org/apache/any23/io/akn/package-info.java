@@ -14,14 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /**
- * <p>This package contains the definition of a specific 
- * {@link org.apache.any23.extractor.Extractor} for <i>AkomaNtoso</i> 
- * files.</p> 
- * <p>Akoma Ntoso is an emerging legal document standard for representing 
- * legislative and judicial documents in XML format.
- * @see http://www.akomtantoso.org
- * @see http://code.google.com/p/akomantoso
- * @author lewismc
+ * This package contains an <i><a href="www.akomantoso.org/‎">AkomaNtoso</a></i>
+ * parser and writer based on the 
+ * <i><a href="https://github.com/kohsah/akomantoso-lib">akomantoso-lib</a> API</i>.
  */
-package org.apache.any23.extractor.akn;
+package org.apache.any23.io.akn;

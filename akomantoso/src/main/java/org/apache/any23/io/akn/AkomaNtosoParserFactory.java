@@ -14,20 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.any23.extractor.akn;
+
+package org.apache.any23.io.akn;
+
+import org.kohsuke.MetaInfServices;
+
 
 /**
- * This class provides utility methods for handling <b>Akoma Ntoso</b>
- * nodes contained within a <i>DOM</i> document.
- * @author lewismc
+ * Implementation of {@link org.openrdf.rio.RDFParserFactory} for <code>NQuads</code>.
+ *
+ * @author Michele Mostarda (mostarda@fbk.eu)
  */
-public class AKNParser {
-  
-  enum ErrorMode {
-    /** This mode raises an exception at first encountered error. */
-    StopAtFirstError,
-    /**  This mode produces a full error report. */
-    FullReport
-  }
+@MetaInfServices
+public class AkomaNtosoParserFactory {
+
+    public AkomaNtosoParserFactory() {
+      
+    }
+
 
 }

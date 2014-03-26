@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.apache.any23.extractor.akn;
+package org.apache.any23.io.akn;
 
 import java.util.Arrays;
 
@@ -31,21 +31,21 @@ import org.kohsuke.MetaInfServices;
  *
  */
 @MetaInfServices(ExtractorFactory.class)
-public class AKNExtractorFactory extends SimpleExtractorFactory<AKNExtractor> implements
-        ExtractorFactory<AKNExtractor> {
+public class AkomaNtosoExtractorFactory extends SimpleExtractorFactory<AkomaNtosoExtractor> implements
+        ExtractorFactory<AkomaNtosoExtractor> {
 
-    private static final ExtractorDescription descriptionInstance = new AKNExtractorFactory();
+    private static final ExtractorDescription descriptionInstance = new AkomaNtosoExtractorFactory();
     private static final String NAME = "akomaNtoso";
     private static final Prefixes PREFIXES = PopularPrefixes.createSubset("akn", "AKN", "AKOMA");
     
-    public AKNExtractorFactory() {
-        super(AKNExtractorFactory.NAME, 
-                AKNExtractorFactory.PREFIXES);
+    public AkomaNtosoExtractorFactory() {
+        super(AkomaNtosoExtractorFactory.NAME, 
+                AkomaNtosoExtractorFactory.PREFIXES);
     }
     
     @Override
-    public AKNExtractor createExtractor() {
-        return new AKNExtractor();
+    public AkomaNtosoExtractor createExtractor() {
+        return new AkomaNtosoExtractor();
     }
 
     public static ExtractorDescription getDescriptionInstance() {

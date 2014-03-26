@@ -200,6 +200,7 @@
     <module>plugins/office-scraper</module>
     <module>plugins/integration-test</module>
     <module>service</module>
+    <module>akomantoso</module>
   </modules>
 
   <scm>
