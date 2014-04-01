@@ -18,6 +18,8 @@ package org.apache.any23.io.akn;
 
 import java.io.IOException;
 
+import javax.xml.bind.JAXBException;
+
 import org.apache.any23.extractor.ExtractionContext;
 import org.apache.any23.extractor.ExtractionException;
 import org.apache.any23.extractor.ExtractionParameters;
@@ -53,14 +55,23 @@ public class AkomaNtosoExtractor implements Extractor.TagSoupDOMExtractor{
   public void run(ExtractionParameters extractionParameters, ExtractionContext context, Document in,
       ExtractionResult out) throws IOException, ExtractionException {
 
-    final AkomaNtosoParserReport parserReport = AkomaNtosoParser.getEmbeddedStructure(in);
+    String schemaVersion = extractionParameters.getProperty("any23.extraction.akn.version");
+    AkomaNtosoParserReport parserReport  = null;
+    try {
+      parserReport = AkomaNtosoParser.getEmbeddedStructure(in, schemaVersion);
+    } catch (AkomaNtosoParserException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } catch (JAXBException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
     if (parserReport.getErrors().length > 0) {
       notifyError(parserReport.getErrors(), out);
     }
-    final ItemScope[] itemScopes = parserReport.getDetectedItemScopes();
-    if (itemScopes.length == 0) {
-        return;
-    }
+    //final ItemScope[] itemScopes = parserReport.getDetectedItemScopes();
+    //if (itemScopes.length == 0) {
+    //    return;
   }
 
   private void notifyError(AkomaNtosoParserException[] errors, ExtractionResult out) {
