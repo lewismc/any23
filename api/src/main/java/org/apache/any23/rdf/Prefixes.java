@@ -201,7 +201,7 @@ public class Prefixes {
     private String parsePrefix(String curie) {
         int index = curie.indexOf(':');
         if (index == -1) {
-            throw new IllegalArgumentException("Not a CIRIE: '" + curie + "'");
+            throw new IllegalArgumentException("Not a CURIE: '" + curie + "'");
         }
         return curie.substring(0, index);
     }
@@ -209,7 +209,7 @@ public class Prefixes {
     private String parseLocalName(String curie) {
         int index = curie.indexOf(':');
         if (index == -1) {
-            throw new IllegalArgumentException("Not a CIRIE: '" + curie + "'");
+            throw new IllegalArgumentException("Not a CURIE: '" + curie + "'");
         }
         return curie.substring(index + 1);
     }

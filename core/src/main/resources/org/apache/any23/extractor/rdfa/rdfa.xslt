@@ -323,7 +323,7 @@
     </if>
   </template>
 
-  <!-- determines the CIRIE / IRI of a node -->
+  <!-- determines the CURIE / IRI of a node -->
   <template name="self-curie-or-uri" >
     <param name="node" />
     <choose>
@@ -347,18 +347,18 @@
     </choose>
   </template>  
 			
-  <!-- expand CIRIE / IRI according RDFa 1.1 -->
+  <!-- expand CURIE / IRI according RDFa 1.1 -->
   <template name="expand-curie-or-uri" >
     <param name="curie_or_uri" />
     <choose>
-      <when test="starts-with($curie_or_uri,'[_:')"> <!-- we have a CIRIE blank node -->
+      <when test="starts-with($curie_or_uri,'[_:')"> <!-- we have a CURIE blank node -->
         <value-of select="concat('blank:node:',substring-after(substring-before($curie_or_uri,']'),'[_:'))"/>
       </when>
-      <when test="starts-with($curie_or_uri,'[')"> <!-- we have a CIRIE between square brackets -->
+      <when test="starts-with($curie_or_uri,'[')"> <!-- we have a CURIE between square brackets -->
         <call-template name="expand-ns"><with-param name="qname" select="substring-after(substring-before($curie_or_uri,']'),'[')"/></call-template>
       </when>
       <!-- START: inserted for ensure RDFa 1.1 compatibiliy -->
-      <when test="not(starts-with($curie_or_uri,'[')) and contains($curie_or_uri,':') and contains($curie_or_uri,'/') and not(contains($curie_or_uri, 'http://'))"> <!-- we have a CIRIE -->
+      <when test="not(starts-with($curie_or_uri,'[')) and contains($curie_or_uri,':') and contains($curie_or_uri,'/') and not(contains($curie_or_uri, 'http://'))"> <!-- we have a CURIE -->
         <call-template name="expand-ns"><with-param name="qname" select="$curie_or_uri"/></call-template>
       </when>
       <!-- END: inserted for ensure RDFa 1.1 compatibiliy -->
@@ -381,7 +381,7 @@
         <!--      <value-of select="concat($this_root,substring-after($curie_or_uri,'/'))" />-->
         <value-of select="$curie_or_uri" />
       </when>
-      <otherwise>UNKNOWN CIRIE IRI</otherwise>
+      <otherwise>UNKNOWN CURIE IRI</otherwise>
     </choose>
   </template>
   

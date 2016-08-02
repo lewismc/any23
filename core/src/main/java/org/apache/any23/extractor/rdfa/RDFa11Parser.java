@@ -54,7 +54,7 @@ public class RDFa11Parser {
 
     private static final Logger logger = LoggerFactory.getLogger(RDFa11Parser.class);
 
-    public static final String CIRIE_SEPARATOR      = ":";
+    public static final String CURIE_SEPARATOR      = ":";
     public static final char   IRI_PREFIX_SEPARATOR = ':';
     public static final String IRI_SCHEMA_SEPARATOR = "://";
     public static final String IRI_PATH_SEPARATOR   = "/";
@@ -151,7 +151,7 @@ public class RDFa11Parser {
         return IRI.contains(IRI_SCHEMA_SEPARATOR);
     }
 
-    protected static boolean isCIRIE(String cIRIe) {
+    protected static boolean isCURIE(String cIRIe) {
         if(cIRIe == null) {
             throw new NullPointerException("cIRIe string cannot be null.");
         }
@@ -159,12 +159,12 @@ public class RDFa11Parser {
 
         // '[' PREFIX ':' VALUE ']'
         if( cIRIe.charAt(0) != '[' || cIRIe.charAt(cIRIe.length() -1) != ']') return false;
-        int separatorIndex = cIRIe.indexOf(CIRIE_SEPARATOR);
-        return separatorIndex > 0 && cIRIe.indexOf(CIRIE_SEPARATOR, separatorIndex + 1) == -1;
+        int separatorIndex = cIRIe.indexOf(CURIE_SEPARATOR);
+        return separatorIndex > 0 && cIRIe.indexOf(CURIE_SEPARATOR, separatorIndex + 1) == -1;
     }
 
-    protected static boolean isCIRIEBNode(String cIRIe) {
-        return isCIRIE(cIRIe) && cIRIe.substring(1, cIRIe.length() -1).split(CIRIE_SEPARATOR)[0].equals("_");
+    protected static boolean isCURIEBNode(String cIRIe) {
+        return isCURIE(cIRIe) && cIRIe.substring(1, cIRIe.length() -1).split(CURIE_SEPARATOR)[0].equals("_");
     }
 
     protected static boolean isRelativeNode(Node node) {
@@ -317,10 +317,10 @@ public class RDFa11Parser {
     }
 
     /**
-     * Resolves a <rm>whitelist</em> separated list of <i>CIRIE</i> or <i>IRI</i>.
+     * Resolves a <rm>whitelist</em> separated list of <i>CURIE</i> or <i>IRI</i>.
      *
      * @param n current node.
-     * @param cIRIeOrIRIList list of CIRIE/IRI.
+     * @param cIRIeOrIRIList list of CURIE/IRI.
      * @return list of resolved IRIs.
      * @throws URISyntaxException
      */
@@ -332,11 +332,11 @@ public class RDFa11Parser {
         final List<IRI> result = new ArrayList<IRI>();
         Resource cIRIeOrIRI;
         for(String cIRIeORIRIListPart : cIRIeOrIRIListParts) {
-            cIRIeOrIRI = resolveCIRIEOrIRI(cIRIeORIRIListPart, termAllowed);
+            cIRIeOrIRI = resolveCURIEOrIRI(cIRIeORIRIListPart, termAllowed);
             if(cIRIeOrIRI != null && cIRIeOrIRI instanceof IRI) {
                 result.add((IRI) cIRIeOrIRI);
             } else {
-                reportError(n, String.format("Invalid CIRIE '%s' : expected IRI, found BNode.", cIRIeORIRIListPart));
+                reportError(n, String.format("Invalid CURIE '%s' : expected IRI, found BNode.", cIRIeORIRIListPart));
             }
         }
         return result.toArray(new IRI[result.size()]);
@@ -358,14 +358,14 @@ public class RDFa11Parser {
     }
 
     /**
-     * Resolves a <i>CIRIE</i> or <i>IRI</i> string.
+     * Resolves a <i>CURIE</i> or <i>IRI</i> string.
      *
      * @param cIRIeOrIRI
      * @param termAllowed if <code>true</code> the resolution can be a term.
      * @return the resolved resource.
      */
-    protected Resource resolveCIRIEOrIRI(String cIRIeOrIRI, boolean termAllowed) {
-        if( isCIRIE(cIRIeOrIRI) ) {
+    protected Resource resolveCURIEOrIRI(String cIRIeOrIRI, boolean termAllowed) {
+        if( isCURIE(cIRIeOrIRI) ) {
             return resolveNamespacedIRI(cIRIeOrIRI.substring(1, cIRIeOrIRI.length() - 1), ResolutionPolicy.NSRequired);
         }
         if(isAbsoluteIRI(cIRIeOrIRI)) return resolveIRI(cIRIeOrIRI);
@@ -727,11 +727,11 @@ public class RDFa11Parser {
      */
     private void establishNewSubject(Node node, EvaluationContext currentEvaluationContext)
     throws URISyntaxException {
-        String candidateIRIOrCIRIE;
+        String candidateIRIOrCURIE;
         for(String subjectAttribute : SUBJECT_ATTRIBUTES) {
-            candidateIRIOrCIRIE = DomUtils.readAttribute(node, subjectAttribute, null);
-            if(candidateIRIOrCIRIE != null) {
-                currentEvaluationContext.newSubject = resolveCIRIEOrIRI(candidateIRIOrCIRIE, false);
+            candidateIRIOrCURIE = DomUtils.readAttribute(node, subjectAttribute, null);
+            if(candidateIRIOrCURIE != null) {
+                currentEvaluationContext.newSubject = resolveCURIEOrIRI(candidateIRIOrCURIE, false);
                 return;
             }
         }
@@ -769,14 +769,14 @@ public class RDFa11Parser {
     private void establishNewSubjectCurrentObjectResource(Node node, EvaluationContext currentEvaluationContext)
     throws URISyntaxException {
         // Subject.
-        String candidateIRIOrCIRIE;
-        candidateIRIOrCIRIE = DomUtils.readAttribute(node, ABOUT_ATTRIBUTE, null);
-        if(candidateIRIOrCIRIE != null) {
-            currentEvaluationContext.newSubject = resolveCIRIEOrIRI(candidateIRIOrCIRIE, false);
+        String candidateIRIOrCURIE;
+        candidateIRIOrCURIE = DomUtils.readAttribute(node, ABOUT_ATTRIBUTE, null);
+        if(candidateIRIOrCURIE != null) {
+            currentEvaluationContext.newSubject = resolveCURIEOrIRI(candidateIRIOrCURIE, false);
         } else {
-            candidateIRIOrCIRIE = DomUtils.readAttribute(node, SRC_ATTRIBUTE, null);
-            if (candidateIRIOrCIRIE != null) {
-                currentEvaluationContext.newSubject = resolveIRI(candidateIRIOrCIRIE);
+            candidateIRIOrCURIE = DomUtils.readAttribute(node, SRC_ATTRIBUTE, null);
+            if (candidateIRIOrCURIE != null) {
+                currentEvaluationContext.newSubject = resolveIRI(candidateIRIOrCURIE);
             } else {
                 if (node.getNodeName().equalsIgnoreCase(HEAD_TAG) || node.getNodeName().equalsIgnoreCase(BODY_TAG)) {
                     currentEvaluationContext.newSubject = resolveIRI(currentEvaluationContext.base.toString());
@@ -793,15 +793,15 @@ public class RDFa11Parser {
         }
 
         // Object.
-        candidateIRIOrCIRIE = DomUtils.readAttribute(node, RESOURCE_ATTRIBUTE, null);
-        if(candidateIRIOrCIRIE != null) {
-            currentEvaluationContext.currentObjectResource = resolveCIRIEOrIRI(candidateIRIOrCIRIE, false);
+        candidateIRIOrCURIE = DomUtils.readAttribute(node, RESOURCE_ATTRIBUTE, null);
+        if(candidateIRIOrCURIE != null) {
+            currentEvaluationContext.currentObjectResource = resolveCURIEOrIRI(candidateIRIOrCURIE, false);
             return;
         }
 
-        candidateIRIOrCIRIE = DomUtils.readAttribute(node, HREF_ATTRIBUTE, null);
-        if(candidateIRIOrCIRIE != null) {
-            currentEvaluationContext.currentObjectResource = resolveIRI(candidateIRIOrCIRIE);
+        candidateIRIOrCURIE = DomUtils.readAttribute(node, HREF_ATTRIBUTE, null);
+        if(candidateIRIOrCURIE != null) {
+            currentEvaluationContext.currentObjectResource = resolveIRI(candidateIRIOrCURIE);
             return;
         }
         currentEvaluationContext.currentObjectResource = null;
@@ -887,7 +887,7 @@ public class RDFa11Parser {
         if (datatype == null || datatype.trim().length() == 0 || XML_LITERAL_DATATYPE.equals(datatype.trim()) ) {
             return null;
         }
-        final Resource cIRIeOrIRI = resolveCIRIEOrIRI(datatype, true);
+        final Resource cIRIeOrIRI = resolveCURIEOrIRI(datatype, true);
         return RDFUtils.literal(getNodeContent(node), cIRIeOrIRI instanceof IRI ? (IRI) cIRIeOrIRI : null);
     }
 
@@ -945,19 +945,19 @@ public class RDFa11Parser {
         if(cIRIeMapping == null) {
             throw new IllegalArgumentException( String.format("Cannot map prefix '%s'", prefix) );
         }
-        final String candidateCIRIEStr = cIRIeMapping.toString() + mapping.substring(prefixSeparatorIndex + 1);
-        final java.net.URI candidateCIRIE;
+        final String candidateCURIEStr = cIRIeMapping.toString() + mapping.substring(prefixSeparatorIndex + 1);
+        final java.net.URI candidateCURIE;
         try {
-            candidateCIRIE = new java.net.URI(candidateCIRIEStr);
+            candidateCURIE = new java.net.URI(candidateCURIEStr);
         } catch (URISyntaxException IRIse) {
-            throw new IllegalArgumentException(String.format("Invalid CIRIE '%s'", candidateCIRIEStr) );
+            throw new IllegalArgumentException(String.format("Invalid CURIE '%s'", candidateCURIEStr) );
         }
         return resolveIRI(
-                candidateCIRIE.isAbsolute()
+                candidateCURIE.isAbsolute()
                         ?
-                        candidateCIRIE.toString()
+                        candidateCURIE.toString()
                         :
-                        documentBase.toString() + candidateCIRIE.toString()
+                        documentBase.toString() + candidateCURIE.toString()
         );
     }
 

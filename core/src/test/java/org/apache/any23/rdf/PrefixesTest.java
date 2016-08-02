@@ -96,20 +96,20 @@ public class PrefixesTest {
     }
 
     @Test
-    public void testExpandOnlyAcceptsCIRIEs() {
+    public void testExpandOnlyAcceptsCURIEs() {
         try {
             p.expand("@");
-            Assert.fail("Should have thrown IllegalArgumentException because argument is not a valid CIRIE");
+            Assert.fail("Should have thrown IllegalArgumentException because argument is not a valid CURIE");
         } catch (IllegalArgumentException ex) {
             // expected
         }
     }
 
     @Test
-    public void testCanExpandOnlyAcceptsCIRIEs() {
+    public void testCanExpandOnlyAcceptsCURIEs() {
         try {
             p.expand("@");
-            Assert.fail("Should have thrown IllegalArgumentException because argument is not a valid CIRIE");
+            Assert.fail("Should have thrown IllegalArgumentException because argument is not a valid CURIE");
         } catch (IllegalArgumentException ex) {
             // expected
         }

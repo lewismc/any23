@@ -60,23 +60,23 @@ public class RDFa11ParserTest {
     }
 
     @Test
-    public void testIsCIRIEPositive() {
-        Assert.assertTrue( RDFa11Parser.isCIRIE("[dbr:Albert_Einstein]") );
+    public void testIsCURIEPositive() {
+        Assert.assertTrue( RDFa11Parser.isCURIE("[dbr:Albert_Einstein]") );
     }
 
     @Test
-    public void testIsCIRIENegative() {
-        Assert.assertFalse(RDFa11Parser.isCIRIE("[Albert_Einstein]"));
+    public void testIsCURIENegative() {
+        Assert.assertFalse(RDFa11Parser.isCURIE("[Albert_Einstein]"));
     }
 
     @Test
-    public void testIsCIRIEBNodePositive() {
-        Assert.assertTrue( RDFa11Parser.isCIRIEBNode("[_:john]") );
+    public void testIsCURIEBNodePositive() {
+        Assert.assertTrue( RDFa11Parser.isCURIEBNode("[_:john]") );
     }
 
     @Test
-    public void testIsCIRIEBNodeNegative() {
-        Assert.assertFalse(RDFa11Parser.isCIRIEBNode("[:john]"));
+    public void testIsCURIEBNodeNegative() {
+        Assert.assertFalse(RDFa11Parser.isCURIEBNode("[:john]"));
     }
 
     @Test
