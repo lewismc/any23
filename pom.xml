@@ -190,7 +190,6 @@
   <modules>
     <module>api</module>
     <module>test-resources</module>
-    <module>nquads</module>
     <module>csvutils</module>
     <module>mime</module>
     <module>encoding</module>

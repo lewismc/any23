@@ -81,9 +81,8 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>apache-any23-nquads</artifactId>
-      <version>${project.version}</version>
+      <groupId>org.eclipse.rdf4j</groupId>
+      <artifactId>rdf4j-rio-nquads</artifactId>
       <scope>runtime</scope>
     </dependency>
     <!-- Logging -->
