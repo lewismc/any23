@@ -24,8 +24,8 @@ import org.apache.any23.util.URLUtils;
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Test;
-import org.openrdf.model.Statement;
-import org.openrdf.rio.RDFFormat;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 import java.io.File;
 import java.util.Arrays;

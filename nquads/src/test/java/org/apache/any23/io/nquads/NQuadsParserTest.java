@@ -21,21 +21,21 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openrdf.model.BNode;
-import org.openrdf.model.Literal;
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.URI;
-import org.openrdf.model.Value;
-import org.openrdf.model.impl.URIImpl;
-import org.openrdf.rio.ParseLocationListener;
-import org.openrdf.rio.RDFHandler;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-import org.openrdf.rio.RDFParser;
-import org.openrdf.rio.RioSetting;
-import org.openrdf.rio.helpers.BasicParserSettings;
-import org.openrdf.rio.helpers.NTriplesParserSettings;
+import org.eclipse.rdf4j.model.BNode;
+import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.rio.ParseLocationListener;
+import org.eclipse.rdf4j.rio.RDFHandler;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
+import org.eclipse.rdf4j.rio.RDFParser;
+import org.eclipse.rdf4j.rio.RioSetting;
+import org.eclipse.rdf4j.rio.helpers.BasicParserSettings;
+import org.eclipse.rdf4j.rio.helpers.NTriplesParserSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -132,7 +132,7 @@ public class NQuadsParserTest {
         final Statement statement = rdfHandler.getStatements().get(0);
         Assert.assertEquals("http://www.v/dat/4b", statement.getSubject().stringValue());
         Assert.assertEquals("http://www.w3.org/20/ica#dtend", statement.getPredicate().stringValue());
-        Assert.assertTrue(statement.getObject() instanceof URI);
+        Assert.assertTrue(statement.getObject() instanceof IRI);
         Assert.assertEquals("http://sin/value/2", statement.getObject().stringValue());
         Assert.assertEquals("http://sin.siteserv.org/def/", statement.getContext().stringValue());
     }
@@ -155,7 +155,7 @@ public class NQuadsParserTest {
         final Statement statement = rdfHandler.getStatements().get(0);
         Assert.assertTrue(statement.getSubject() instanceof BNode);
         Assert.assertEquals("http://www.w3.org/20/ica#dtend", statement.getPredicate().stringValue());
-        Assert.assertTrue(statement.getObject() instanceof URI);
+        Assert.assertTrue(statement.getObject() instanceof IRI);
         Assert.assertEquals("http://sin/value/2", statement.getObject().stringValue());
         Assert.assertEquals("http://sin.siteserv.org/def/", statement.getContext().stringValue());
     }
@@ -285,14 +285,14 @@ public class NQuadsParserTest {
     }
 
     /**
-     * Tests the correct decoding of UTF-8 encoded chars in URIs.
+     * Tests the correct decoding of UTF-8 encoded chars in IRIs.
      *
      * @throws RDFHandlerException
      * @throws IOException
      * @throws RDFParseException
      */
     @Test
-    public void testURIDecodingManagement() throws RDFHandlerException, IOException, RDFParseException {
+    public void testIRIDecodingManagement() throws RDFHandlerException, IOException, RDFParseException {
         TestParseLocationListener parseLocationListener = new TestParseLocationListener();
         parser.setParseLocationListener(parseLocationListener);
 
@@ -306,24 +306,24 @@ public class NQuadsParserTest {
         final Statement statement = rdfHandler.getStatements().get(0);
 
         final Resource subject = statement.getSubject();
-        Assert.assertTrue( subject instanceof URI);
-        final String subjectURI = subject.toString();
-        Assert.assertEquals("http://s/はむ", subjectURI);
+        Assert.assertTrue( subject instanceof IRI);
+        final String subjectIRI = subject.toString();
+        Assert.assertEquals("http://s/はむ", subjectIRI);
 
         final Resource predicate = statement.getPredicate();
-        Assert.assertTrue( predicate instanceof URI);
-        final String predicateURI = predicate.toString();
-        Assert.assertEquals("http://p/はむ", predicateURI);
+        Assert.assertTrue( predicate instanceof IRI);
+        final String predicateIRI = predicate.toString();
+        Assert.assertEquals("http://p/はむ", predicateIRI);
 
         final Value object = statement.getObject();
-        Assert.assertTrue( object instanceof URI);
-        final String objectURI = object.toString();
-        Assert.assertEquals("http://o/はむ", objectURI);
+        Assert.assertTrue( object instanceof IRI);
+        final String objectIRI = object.toString();
+        Assert.assertEquals("http://o/はむ", objectIRI);
 
         final Resource graph = statement.getContext();
-        Assert.assertTrue( graph instanceof URI);
-        final String graphURI = graph.toString();
-        Assert.assertEquals("http://g/はむ", graphURI);
+        Assert.assertTrue( graph instanceof IRI);
+        final String graphIRI = graph.toString();
+        Assert.assertEquals("http://g/はむ", graphIRI);
     }
 
     @Test
@@ -572,14 +572,15 @@ public class NQuadsParserTest {
 
     private class TestParseLocationListener implements ParseLocationListener {
 
-        private int lastRow, lastCol;
+        private long lastRow, lastCol;
 
-        public void parseLocationUpdate(int r, int c) {
+        @Override
+        public void parseLocationUpdate(long r, long c) {
             lastRow = r;
             lastCol = c;
         }
 
-        private void assertListener(int row, int col) {
+        private void assertListener(long row, long col) {
             Assert.assertEquals("Unexpected last row", row , lastRow);
             // Column numbers are not supported by the Rio NQuadsParser currently
             //Assert.assertEquals("Unexpected last col", col , lastCol);
@@ -629,20 +630,20 @@ public class NQuadsParserTest {
         public void handleStatement(Statement statement) throws RDFHandlerException {
             int statementIndex = getStatements().size();
             if(statementIndex == 0){
-                Assert.assertEquals(new URIImpl("http://example.org/alice/foaf.rdf#me"), statement.getSubject() );
+                Assert.assertEquals(SimpleValueFactory.getInstance().createIRI("http://example.org/alice/foaf.rdf#me"), statement.getSubject() );
             } else {
                 Assert.assertTrue(statement.getSubject() instanceof BNode);
             }
 
             if( statementIndex == 4) {
-                Assert.assertEquals(new URIImpl("http://example.org/#like"), statement.getPredicate() );
+                Assert.assertEquals(SimpleValueFactory.getInstance().createIRI("http://example.org/#like"), statement.getPredicate() );
             }
 
             if(statementIndex == 5) {
                 Assert.assertNull(statement.getContext());
             } else {
                 Assert.assertEquals(
-                        new URIImpl(String.format("http://example.org/alice/foaf%s.rdf", statementIndex + 1)),
+                        SimpleValueFactory.getInstance().createIRI(String.format("http://example.org/alice/foaf%s.rdf", statementIndex + 1)),
                         statement.getContext()
                 );
             }

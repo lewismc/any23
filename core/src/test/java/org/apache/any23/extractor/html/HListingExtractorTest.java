@@ -24,9 +24,8 @@ import org.apache.any23.vocab.HListing;
 import org.apache.any23.vocab.SINDICE;
 import org.junit.Test;
 import org.junit.Ignore;
-import org.openrdf.model.Resource;
-import org.openrdf.model.vocabulary.RDF;
-import org.openrdf.repository.RepositoryException;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -139,7 +138,7 @@ public class HListingExtractorTest extends AbstractExtractorTestCase {
 		assertContains(vHLISTING.itemUrl, RDFUtils.uri("http://item.com/"));
 		assertContains(vHLISTING.itemName, "Parking space");
 		assertContains(vHLISTING.itemPhoto,
-				RDFUtils.uri(baseURI.stringValue() + "photo.jpg"));
+				RDFUtils.uri(baseIRI.stringValue() + "photo.jpg"));
 	}
 
 	@Test
@@ -149,7 +148,7 @@ public class HListingExtractorTest extends AbstractExtractorTestCase {
 		assertContains(RDF.TYPE, vHLISTING.Item);
 		assertContains(vHLISTING.itemName, "Parking space");
 		assertContains(vHLISTING.itemPhoto,
-				RDFUtils.uri(baseURI.stringValue() + "pic.jpg"));
+				RDFUtils.uri(baseIRI.stringValue() + "pic.jpg"));
 	}
 
 	@Ignore("ANY23-159: Error with nodes and markup extracted from HListingExtractorTest.testKelkoo & testKelkooFull")
@@ -170,13 +169,13 @@ public class HListingExtractorTest extends AbstractExtractorTestCase {
 
 		assertContains(
 				vHLISTING.listerUrl,
-				RDFUtils.uri(baseURI.stringValue()
+				RDFUtils.uri(baseIRI.stringValue()
 						+ "m-4621623-pc-world-business.html"));
 		assertContains(vHLISTING.listerOrg, "PC World Business");
 
 		assertContains(
 				vHLISTING.listerLogo,
-				RDFUtils.uri(baseURI.stringValue()
+				RDFUtils.uri(baseIRI.stringValue()
 						+ "data/merchantlogos/4621623/pcworld.gif"));
 
 		assertContains(vHLISTING.listerName, "PC World Business");

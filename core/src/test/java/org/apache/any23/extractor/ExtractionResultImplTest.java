@@ -26,7 +26,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-import org.openrdf.model.URI;
+import org.eclipse.rdf4j.model.IRI;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -40,7 +40,7 @@ import java.io.PrintStream;
  */
 public class ExtractionResultImplTest {
 
-    private static final URI TEST_URI = RDFUtils.uri("http://host/test/service");
+    private static final IRI TEST_IRI = RDFUtils.uri("http://host/test/service");
 
     private ExtractionResultImpl extractionResult;
     private Extractor extractor;
@@ -51,7 +51,7 @@ public class ExtractionResultImplTest {
         extractor = new TitleExtractor();
         mockTripleHandler = Mockito.mock(TripleHandler.class);
         extractionResult  = new ExtractionResultImpl(
-                new ExtractionContext("test-extractor-name", TEST_URI),
+                new ExtractionContext("test-extractor-name", TEST_IRI),
                 extractor,
                 mockTripleHandler
         );

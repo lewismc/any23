@@ -36,7 +36,7 @@ import java.util.List;
  * @author Michele Mostarda (mostarda@fbk.eu)
  * @author Davide Palmisano (palmisano@fbk.eu)
  */
-public class AboutNotURIRule implements Rule {
+public class AboutNotIRIRule implements Rule {
 
     public static final String NODES_WITH_INVALID_ABOUT = "nodes-with-invalid-about";
 
@@ -77,9 +77,9 @@ public class AboutNotURIRule implements Rule {
         return firstChar == '#' || firstChar == '/';
     }
 
-    private boolean isURL(String candidateURIStr) {
+    private boolean isURL(String candidateIRIStr) {
         try {
-            new URL(candidateURIStr);
+            new URL(candidateIRIStr);
         } catch (MalformedURLException murle) {
             return false;
         }

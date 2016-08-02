@@ -22,7 +22,6 @@ import org.apache.any23.rdf.RDFUtils;
 import org.apache.any23.vocab.DCTerms;
 import org.apache.any23.vocab.FOAF;
 import org.junit.Test;
-import org.openrdf.repository.RepositoryException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -58,14 +57,14 @@ public abstract class AbstractRDFaExtractorTestCase extends
 	/**
 	 * This test check if the <a
 	 * href=""http://www.w3.org/TR/2010/WD-rdfa-core-20100422
-	 * /#s_curieprocessing">RDFa1.1 CURIEs</a> expansion is correct and backward
+	 * /#s_curieprocessing">RDFa1.1 CIRIEs</a> expansion is correct and backward
 	 * compatible with <a
 	 * href="http://www.w3.org/TR/rdfa-syntax/#s_curieprocessing">RDFa 1.0</a>.
 	 *
 	 * @throws Exception
 	 */
 	@Test
-	public void testRDFa11CURIEs() throws Exception {
+	public void testRDFa11CIRIEs() throws Exception {
 		assertExtract("/html/rdfa/rdfa-11-curies.html");
 		assertModelNotEmpty();
 		assertContains(

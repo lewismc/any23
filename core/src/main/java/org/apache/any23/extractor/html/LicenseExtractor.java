@@ -25,7 +25,7 @@ import org.apache.any23.extractor.ExtractorDescription;
 import org.apache.any23.extractor.IssueReport;
 import org.apache.any23.vocab.XHTML;
 import org.apache.any23.extractor.Extractor.TagSoupDOMExtractor;
-import org.openrdf.model.URI;
+import org.eclipse.rdf4j.model.IRI;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -51,7 +51,7 @@ public class LicenseExtractor implements TagSoupDOMExtractor {
             ExtractionResult out
     ) throws IOException, ExtractionException {
         HTMLDocument document = new HTMLDocument(in);
-        final URI documentURI = extractionContext.getDocumentURI();
+        final IRI documentIRI = extractionContext.getDocumentIRI();
         for (Node node : DomUtils.findAll(in, "//A[@rel='license']/@href")) {
             String link = node.getNodeValue();
             if ("".equals(link)) {
@@ -59,13 +59,13 @@ public class LicenseExtractor implements TagSoupDOMExtractor {
                         IssueReport.IssueLevel.Warning,
                         String.format(
                                 "Invalid license link detected within document %s.",
-                                documentURI.toString()
+                                documentIRI.toString()
                         ),
                         0, 0
                 );
                 continue;
             }
-            out.writeTriple(documentURI, vXHTML.license, document.resolveURI(link));
+            out.writeTriple(documentIRI, vXHTML.license, document.resolveIRI(link));
         }
     }
 

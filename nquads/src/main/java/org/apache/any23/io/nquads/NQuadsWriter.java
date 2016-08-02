@@ -28,7 +28,7 @@ import java.nio.charset.Charset;
  *
  * @author Michele Mostarda (mostarda@fbk.eu)
  */
-public class NQuadsWriter extends org.openrdf.rio.nquads.NQuadsWriter {
+public class NQuadsWriter extends org.eclipse.rdf4j.rio.nquads.NQuadsWriter {
 
     public NQuadsWriter(OutputStream os) {
         super( new OutputStreamWriter(os, Charset.forName("UTF-8")) );

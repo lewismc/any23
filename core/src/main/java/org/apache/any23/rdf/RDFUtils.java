@@ -18,23 +18,25 @@
 package org.apache.any23.rdf;
 
 import org.apache.any23.util.MathUtils;
-import org.openrdf.model.BNode;
-import org.openrdf.model.Literal;
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.URI;
-import org.openrdf.model.Value;
-import org.openrdf.model.ValueFactory;
-import org.openrdf.model.impl.URIImpl;
-import org.openrdf.model.impl.ValueFactoryImpl;
-import org.openrdf.model.vocabulary.RDF;
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
-import org.openrdf.rio.RDFParser;
-import org.openrdf.rio.RDFWriter;
-import org.openrdf.rio.Rio;
-import org.openrdf.rio.helpers.StatementCollector;
+import org.eclipse.rdf4j.model.BNode;
+import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.URI;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleIRI;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
+import org.eclipse.rdf4j.rio.RDFParser;
+import org.eclipse.rdf4j.rio.RDFParserRegistry;
+import org.eclipse.rdf4j.rio.RDFWriter;
+import org.eclipse.rdf4j.rio.Rio;
+import org.eclipse.rdf4j.rio.helpers.StatementCollector;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -50,6 +52,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Optional;
 
 /**
  * Basic class providing a set of utility methods when dealing with <i>RDF</i>.
@@ -59,19 +62,19 @@ import java.util.GregorianCalendar;
  */
 public class RDFUtils {
 
-    private static final ValueFactory valueFactory = ValueFactoryImpl.getInstance();
+    private static final ValueFactory valueFactory = SimpleValueFactory.getInstance();
 
     /**
-     * Fixes typical errors in an absolute URI, such as unescaped spaces.
+     * Fixes typical errors in an absolute IRI, such as unescaped spaces.
      *
-     * @param uri An absolute URI, can have typical syntax errors
-     * @return An absolute URI that is valid against the URI syntax
-     * @throws IllegalArgumentException if URI is not fixable
+     * @param uri An absolute IRI, can have typical syntax errors
+     * @return An absolute IRI that is valid against the IRI syntax
+     * @throws IllegalArgumentException if IRI is not fixable
      */
-    public static String fixAbsoluteURI(String uri) {
-        String fixed = fixURIWithException(uri);
-        if (!fixed.matches("[a-zA-Z0-9]+:/.*")) throw new IllegalArgumentException("not a absolute URI: " + uri);
-        // Add trailing slash if URI has only authority but no path.
+    public static String fixAbsoluteIRI(String uri) {
+        String fixed = fixIRIWithException(uri);
+        if (!fixed.matches("[a-zA-Z0-9]+:/.*")) throw new IllegalArgumentException("not a absolute IRI: " + uri);
+        // Add trailing slash if IRI has only authority but no path.
         if (fixed.matches("https?://[a-zA-Z0-9.-]+(:[0-9+])?")) {
             fixed = fixed + "/";
         }
@@ -114,7 +117,7 @@ public class RDFUtils {
     }
 
     /**
-     * Tries to fix a potentially broken relative or absolute URI.
+     * Tries to fix a potentially broken relative or absolute IRI.
      *
      * <p/>
      * These appear to be good rules:
@@ -126,60 +129,60 @@ public class RDFUtils {
      * Drop the triple if any of these appear in the URL: <>[]|*{}"<>\
      * <p/>
      *
-     * @param unescapedURI uri string to be unescaped.
+     * @param unescapedIRI uri string to be unescaped.
      * @return the unescaped string.
      */
-    public static String fixURIWithException(String unescapedURI) {
-        if (unescapedURI == null) throw new IllegalArgumentException("URI was null");
+    public static String fixIRIWithException(String unescapedIRI) {
+        if (unescapedIRI == null) throw new IllegalArgumentException("IRI was null");
 
         //    Remove starting and ending whitespace
-        String escapedURI = unescapedURI.trim();
+        String escapedIRI = unescapedIRI.trim();
 
         //Replace space with %20
-        escapedURI = escapedURI.replaceAll(" ", "%20");
+        escapedIRI = escapedIRI.replaceAll(" ", "%20");
 
         //strip linebreaks
-        escapedURI = escapedURI.replaceAll("\n", "");
+        escapedIRI = escapedIRI.replaceAll("\n", "");
 
         //'Remove starting  "\" or '"'
-        if (escapedURI.startsWith("\\") || escapedURI.startsWith("\"")) escapedURI = escapedURI.substring(1);
+        if (escapedIRI.startsWith("\\") || escapedIRI.startsWith("\"")) escapedIRI = escapedIRI.substring(1);
         //Remove  ending   "\" or '"'
-        if (escapedURI.endsWith("\\") || escapedURI.endsWith("\""))
-            escapedURI = escapedURI.substring(0, escapedURI.length() - 1);
+        if (escapedIRI.endsWith("\\") || escapedIRI.endsWith("\""))
+            escapedIRI = escapedIRI.substring(0, escapedIRI.length() - 1);
 
         //Drop the triple if it matches this regex (only protocol): ^[a-zA-Z0-9]+:/?/?$
-        if (escapedURI.matches("^[a-zA-Z0-9]+:/?/?$"))
-            throw new IllegalArgumentException("no authority in URI: " + unescapedURI);
+        if (escapedIRI.matches("^[a-zA-Z0-9]+:/?/?$"))
+            throw new IllegalArgumentException("no authority in IRI: " + unescapedIRI);
 
         //Drop the triple if it matches this regex: ^javascript:
-        if (escapedURI.matches("^javascript:"))
-            throw new IllegalArgumentException("URI starts with javascript: " + unescapedURI);
+        if (escapedIRI.matches("^javascript:"))
+            throw new IllegalArgumentException("IRI starts with javascript: " + unescapedIRI);
 
         // stripHTML
-        // escapedURI = escapedURI.replaceAll("\\<.*?\\>", "");
+        // escapedIRI = escapedIRI.replaceAll("\\<.*?\\>", "");
 
         //>.*$ from end of lines (Neko didn't quite manage to fix broken markup)
-        escapedURI = escapedURI.replaceAll(">.*$", "");
+        escapedIRI = escapedIRI.replaceAll(">.*$", "");
 
         //Drop the triple if any of these appear in the URL: <>[]|*{}"<>\
-        if (escapedURI.matches("[<>\\[\\]|\\*\\{\\}\"\\\\]"))
-            throw new IllegalArgumentException("Invalid character in URI: " + unescapedURI);
+        if (escapedIRI.matches("[<>\\[\\]|\\*\\{\\}\"\\\\]"))
+            throw new IllegalArgumentException("Invalid character in IRI: " + unescapedIRI);
 
-        return escapedURI;
+        return escapedIRI;
     }
 
     /**
-     * Creates a {@link URI}.
+     * Creates a {@link IRI}.
      */
-    public static URI uri(String uri) {
-        return valueFactory.createURI(uri);
+    public static IRI uri(String uri) {
+        return valueFactory.createIRI(uri);
     }
 
     /**
-     * Creates a {@link URI}.
+     * Creates a {@link IRI}.
      */
-    public static URI uri(String namespace, String localName) {
-        return valueFactory.createURI(namespace, localName);
+    public static IRI uri(String namespace, String localName) {
+        return valueFactory.createIRI(namespace, localName);
     }
 
     /**
@@ -247,8 +250,17 @@ public class RDFUtils {
 
     /**
      * Creates a {@link Literal}.
+     * @deprecated Use {@link #literal(String, IRI)} instead.
      */
+    @Deprecated
     public static Literal literal(String s, URI datatype) {
+        return valueFactory.createLiteral(s, datatype);
+    }
+
+    /**
+     * Creates a {@link Literal}.
+     */
+    public static Literal literal(String s, IRI datatype) {
         return valueFactory.createLiteral(s, datatype);
     }
 
@@ -279,7 +291,7 @@ public class RDFUtils {
     /**
      * Creates a {@link Statement}.
      */
-    public static Statement triple(Resource s, URI p, Value o) {
+    public static Statement triple(Resource s, IRI p, Value o) {
         return valueFactory.createStatement(s, p, o);
     }
 
@@ -292,13 +304,13 @@ public class RDFUtils {
      * @return a statement instance.
      */
     public static Statement triple(String s, String p, String o) {
-        return valueFactory.createStatement((Resource) toValue(s), (URI) toValue(p), toValue(o));
+        return valueFactory.createStatement((Resource) toValue(s), (IRI) toValue(p), toValue(o));
     }
 
     /**
      * Creates a {@link Statement}.
      */
-    public static Statement quad(Resource s, URI p, Value o, Resource g) {
+    public static Statement quad(Resource s, IRI p, Value o, Resource g) {
         return valueFactory.createStatement(s, p, o, g);
     }
 
@@ -306,7 +318,7 @@ public class RDFUtils {
      * Creates a statement of type: <code>toValue(s), toValue(p), toValue(o), toValue(g)</code>
      */
     public static Statement quad(String s, String p, String o, String g) {
-        return valueFactory.createStatement((Resource) toValue(s), (URI) toValue(p), toValue(o), (Resource) toValue(g));
+        return valueFactory.createStatement((Resource) toValue(s), (IRI) toValue(p), toValue(o), (Resource) toValue(g));
     }
 
     /**
@@ -333,7 +345,7 @@ public class RDFUtils {
      * @see org.openrdf.rio.RDFFormat#values()
      */
     public static Collection<RDFFormat> getFormats() {
-        return RDFFormat.values();
+        return RDFParserRegistry.getInstance().getKeys();
     }
 
     /**
@@ -378,24 +390,24 @@ public class RDFUtils {
      * @return parser matching the extension.
      * @throws IllegalArgumentException if no extension matches.
      */
-    public static RDFFormat getFormatByExtension(String ext) {
+    public static Optional<RDFFormat> getFormatByExtension(String ext) {
         if( ! ext.startsWith(".") ) ext = "." + ext;
         return Rio.getParserFormatForFileName(ext);
     }
 
     /**
      * Parses the content of <code>is</code> input stream with the
-     * specified parser <code>p</code> using <code>baseURI</code>.
+     * specified parser <code>p</code> using <code>baseIRI</code>.
      *
      * @param format input format type.
      * @param is input stream containing <code>RDF</data>.
-     * @param baseURI base uri.
+     * @param baseIRI base uri.
      * @return list of statements detected within the input stream.
      * @throws RDFHandlerException
      * @throws IOException
      * @throws RDFParseException
      */
-    public static Statement[] parseRDF(RDFFormat format, InputStream is, String baseURI)
+    public static Statement[] parseRDF(RDFFormat format, InputStream is, String baseIRI)
     throws RDFHandlerException, IOException, RDFParseException {
         final StatementCollector handler = new StatementCollector();
         final RDFParser parser = getParser(format);
@@ -403,13 +415,13 @@ public class RDFUtils {
         parser.setStopAtFirstError(true);
         parser.setPreserveBNodeIDs(true);
         parser.setRDFHandler(handler);
-        parser.parse(is, baseURI);
+        parser.parse(is, baseIRI);
         return handler.getStatements().toArray( new Statement[handler.getStatements().size()] );
     }
 
     /**
      * Parses the content of <code>is</code> input stream with the
-     * specified parser <code>p</code> using <code>''</code> as base URI.
+     * specified parser <code>p</code> using <code>''</code> as base IRI.
      *
      * @param format input format type.
      * @param is input stream containing <code>RDF</data>.
@@ -425,7 +437,7 @@ public class RDFUtils {
 
     /**
      * Parses the content of <code>in</code> string with the
-     * specified parser <code>p</code> using <code>''</code> as base URI.
+     * specified parser <code>p</code> using <code>''</code> as base IRI.
      *
      * @param format input format type.
      * @param in input string containing <code>RDF</data>.
@@ -454,19 +466,20 @@ public class RDFUtils {
         if(extIndex == -1)
             throw new IllegalArgumentException("Error while detecting the extension in resource name " + resource);
         final String extension = resource.substring(extIndex + 1);
-        return parseRDF( getFormatByExtension(extension), RDFUtils.class.getResourceAsStream(resource) );
+        return parseRDF( getFormatByExtension(extension).orElseThrow(Rio.unsupportedFormat(extension))
+        		        , RDFUtils.class.getResourceAsStream(resource) );
     }
 
     /**
      * Checks if <code>href</code> is absolute or not.
      *
-     * @param href candidate URI.
+     * @param href candidate IRI.
      * @return <code>true</code> if <code>href</code> is absolute,
      *         <code>false</code> otherwise.
      */
-    public static boolean isAbsoluteURI(String href) {
+    public static boolean isAbsoluteIRI(String href) {
         try {
-            new URIImpl(href.trim());
+            SimpleValueFactory.getInstance().createIRI(href.trim());
             new java.net.URI(href.trim());
             return true;
         } catch (IllegalArgumentException e) {

@@ -117,7 +117,7 @@ public class DefaultValidatorTest {
     }
 
     @Test
-    public void testAboutNotURIRule() throws Exception {
+    public void testAboutNotIRIRule() throws Exception {
         DOMDocument document = loadDocument("invalid-rdfa-about.html");
         ValidationReport validationReport = validator.validate(document, true);
         logger.debug(validationReport.toString());
@@ -126,9 +126,9 @@ public class DefaultValidatorTest {
 
     private DOMDocument loadDocument(String document) throws IOException, URISyntaxException {
         InputStream is = this.getClass().getResourceAsStream(document);
-        final String documentURI = "http://test.com";
-        TagSoupParser tsp = new TagSoupParser(is, documentURI);
-        return new DefaultDOMDocument( new URI(documentURI), tsp.getDOM() );
+        final String documentIRI = "http://test.com";
+        TagSoupParser tsp = new TagSoupParser(is, documentIRI);
+        return new DefaultDOMDocument( new IRI(documentIRI), tsp.getDOM() );
     }
 
     private String serialize(DOMDocument document) throws Exception {

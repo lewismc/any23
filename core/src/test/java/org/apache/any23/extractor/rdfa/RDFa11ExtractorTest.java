@@ -24,14 +24,14 @@ import org.apache.any23.vocab.FOAF;
 import org.apache.any23.vocab.OGP;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openrdf.model.Literal;
-import org.openrdf.model.Statement;
-import org.openrdf.model.Value;
-import org.openrdf.model.vocabulary.RDF;
-import org.openrdf.repository.RepositoryException;
-import org.openrdf.repository.RepositoryResult;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
+import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.repository.RepositoryResult;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
 
 import java.io.IOException;
 
@@ -98,12 +98,12 @@ public class RDFa11ExtractorTest extends AbstractRDFaExtractorTestCase {
         logger.debug(dumpModelToTurtle());
 
         assertContains(
-                RDFUtils.uri( baseURI.toString(),"#me"),
+                RDFUtils.uri( baseIRI.toString(),"#me"),
                 FOAF.getInstance().name,
                 "John Doe"
         );
         assertContains(
-                RDFUtils.uri( baseURI.toString(),"#me"),
+                RDFUtils.uri( baseIRI.toString(),"#me"),
                 FOAF.getInstance().homepage,
                 RDFUtils.uri("http://example.org/blog/")
         );
@@ -120,14 +120,14 @@ public class RDFa11ExtractorTest extends AbstractRDFaExtractorTestCase {
         logger.debug(dumpModelToTurtle());
 
         assertContains(
-                baseURI,
+                baseIRI,
                 RDFUtils.uri("http://bob.example.com/cite"),
                 RDFUtils.uri("http://www.example.com/books/the_two_towers")
         );
         assertContains(
                 RDFUtils.uri("http://path/to/chapter"),
                 RDFUtils.uri("http://bob.example.com/isChapterOf"),
-                baseURI
+                baseIRI
         );
     }
 
@@ -142,12 +142,12 @@ public class RDFa11ExtractorTest extends AbstractRDFaExtractorTestCase {
         logger.debug(dumpModelToTurtle());
 
         assertContains(
-                RDFUtils.uri(baseURI.toString(), "#me"),
+                RDFUtils.uri(baseIRI.toString(), "#me"),
                 RDFUtils.uri("http://xmlns.com/foaf/0.1/name"),
                 RDFUtils.literal("John Doe")
         );
         assertContains(
-                RDFUtils.uri(baseURI.toString(), "#me"),
+                RDFUtils.uri(baseIRI.toString(), "#me"),
                 RDFUtils.uri("http://xmlns.com/foaf/0.1/homepage"),
                 RDFUtils.uri("http://example.org/blog/")
         );
@@ -218,20 +218,20 @@ public class RDFa11ExtractorTest extends AbstractRDFaExtractorTestCase {
 
         Assert.assertEquals(8, getStatementsSize(null, null, null) );
         final OGP vOGP = OGP.getInstance();
-        assertContains(baseURI, vOGP.audio, RDFUtils.literal("http://example.com/bond/theme.mp3") );
+        assertContains(baseIRI, vOGP.audio, RDFUtils.literal("http://example.com/bond/theme.mp3") );
         assertContains(
-                baseURI,
+                baseIRI,
                 vOGP.description,
                 RDFUtils.literal(
                         "Sean Connery found fame and fortune as the suave, sophisticated British agent, James Bond."
                 )
         );
-        assertContains(baseURI, vOGP.determiner, RDFUtils.literal("the") );
-        assertContains(baseURI, vOGP.locale, RDFUtils.literal("en_UK") );
-        assertContains(baseURI, vOGP.localeAlternate, RDFUtils.literal("fr_FR") );
-        assertContains(baseURI, vOGP.localeAlternate, RDFUtils.literal("es_ES") );
-        assertContains(baseURI, vOGP.siteName, RDFUtils.literal("IMDb") );
-        assertContains(baseURI, vOGP.video, RDFUtils.literal("http://example.com/bond/trailer.swf") );
+        assertContains(baseIRI, vOGP.determiner, RDFUtils.literal("the") );
+        assertContains(baseIRI, vOGP.locale, RDFUtils.literal("en_UK") );
+        assertContains(baseIRI, vOGP.localeAlternate, RDFUtils.literal("fr_FR") );
+        assertContains(baseIRI, vOGP.localeAlternate, RDFUtils.literal("es_ES") );
+        assertContains(baseIRI, vOGP.siteName, RDFUtils.literal("IMDb") );
+        assertContains(baseIRI, vOGP.video, RDFUtils.literal("http://example.com/bond/trailer.swf") );
     }
     
     @Override

@@ -21,10 +21,10 @@ import org.apache.any23.extractor.html.MicroformatExtractor;
 import org.apache.any23.rdf.Prefixes;
 import org.apache.any23.writer.TripleHandler;
 import org.apache.any23.writer.TripleHandlerException;
-import org.openrdf.model.BNode;
-import org.openrdf.model.Resource;
-import org.openrdf.model.URI;
-import org.openrdf.model.Value;
+import org.eclipse.rdf4j.model.BNode;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Value;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -150,7 +150,7 @@ public class ExtractionResultImpl implements TagSoupExtractionResult {
         return context;
     }
 
-    public void writeTriple(Resource s, URI p, Value o, URI g) {
+    public void writeTriple(Resource s, IRI p, Value o, IRI g) {
         if (s == null || p == null || o == null) return;
         // Check for misconstructed literals or BNodes, Sesame does not catch this.
         if (s.stringValue() == null || p.stringValue() == null || o.stringValue() == null) {
@@ -167,7 +167,7 @@ public class ExtractionResultImpl implements TagSoupExtractionResult {
         }
     }
 
-    public void writeTriple(Resource s, URI p, Value o) {
+    public void writeTriple(Resource s, IRI p, Value o) {
         writeTriple(s, p, o, null);
     }
 
@@ -213,7 +213,7 @@ public class ExtractionResultImpl implements TagSoupExtractionResult {
             Prefixes prefixes = extractor.getDescription().getPrefixes();
             for (String prefix : prefixes.allPrefixes()) {
                 try {
-                    tripleHandler.receiveNamespace(prefix, prefixes.getNamespaceURIFor(prefix), context);
+                    tripleHandler.receiveNamespace(prefix, prefixes.getNamespaceIRIFor(prefix), context);
                 } catch (TripleHandlerException e) {
                     throw new RuntimeException(String.format("Error while writing namespace %s", prefix),
                             e

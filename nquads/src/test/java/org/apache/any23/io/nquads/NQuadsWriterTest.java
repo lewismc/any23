@@ -21,16 +21,16 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openrdf.model.BNode;
-import org.openrdf.model.Literal;
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.URI;
-import org.openrdf.model.Value;
-import org.openrdf.model.ValueFactory;
-import org.openrdf.model.impl.ValueFactoryImpl;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
+import org.eclipse.rdf4j.model.BNode;
+import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +54,7 @@ public class NQuadsWriterTest {
     
     @Before
     public void setUp() {
-        vf = ValueFactoryImpl.getInstance();
+        vf = SimpleValueFactory.getInstance();
         writer = new NQuadsWriter(baos);
     }
 
@@ -151,12 +151,12 @@ public class NQuadsWriterTest {
         Assert.assertEquals("Unexpected number of lines.", 400, baos.toString().split("\n").length);
     }
     
-    private Statement quad(Resource subject, URI predicate, Value object, Resource context) {
+    private Statement quad(Resource subject, IRI predicate, Value object, Resource context) {
         return this.vf.createStatement(subject, predicate, object, context);
     }
 
-    private URI uri(String uri) {
-        return this.vf.createURI(uri);
+    private IRI uri(String uri) {
+        return this.vf.createIRI(uri);
     }
 
     private BNode bnode(String testID) {
@@ -167,7 +167,7 @@ public class NQuadsWriterTest {
         return this.vf.createLiteral(literalValue);
     }
 
-    private Literal literal(String literalValue, URI datatype) {
+    private Literal literal(String literalValue, IRI datatype) {
         return this.vf.createLiteral(literalValue, datatype);
     }
 

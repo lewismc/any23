@@ -18,7 +18,7 @@
 package org.apache.any23.cli;
 
 import org.apache.any23.vocab.RDFSchemaUtils;
-import org.openrdf.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 import com.beust.jcommander.IStringConverter;
 import com.beust.jcommander.Parameter;

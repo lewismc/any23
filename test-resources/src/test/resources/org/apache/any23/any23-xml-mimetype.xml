@@ -72,7 +72,7 @@
     <mime-type type="application/rss+xml">
         <alias type="text/rss"/>
         <root-XML localName="rss"/>
-        <root-XML namespaceURI="http://purl.org/rss/1.0/"/>
+        <root-XML namespaceIRI="http://purl.org/rss/1.0/"/>
         <glob pattern="*.rss"/>
     </mime-type>
 
@@ -103,8 +103,8 @@
         <sub-class-of type="application/xml"/>
         <root-XML localName="RDF"/>
         <root-XML localName="rdf"/>
-        <root-XML namespaceURI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-        <root-XML namespaceURI="http://purl.org/rss/1.0/"/>
+        <root-XML namespaceIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <root-XML namespaceIRI="http://purl.org/rss/1.0/"/>
         <alias type="text/rdf"/>
         <magic priority="50">
             <match value="&lt;rdf:RDF" type="string" offset="0:64"/>
@@ -123,15 +123,15 @@
     <mime-type type="application/atom+xml">
         <sub-class-of type="application/xml"/>
         <root-XML localName="feed"/>
-        <root-XML namespaceURI="http://www.w3.org/2005/Atom/" localName="feed"/>
-        <root-XML namespaceURI="http://www.w3.org/2005/Atom"  localName="feed"/>
+        <root-XML namespaceIRI="http://www.w3.org/2005/Atom/" localName="feed"/>
+        <root-XML namespaceIRI="http://www.w3.org/2005/Atom"  localName="feed"/>
     </mime-type>
 
     <!-- WSDL -->
     <mime-type type="application/x-wsdl">
         <sub-class-of type="application/xml"/>
         <root-XML localName="definitions"/>
-        <root-XML namespaceURI="http://schemas.xmlsoap.org/wsdl/" localName="definitions"/>
+        <root-XML namespaceIRI="http://schemas.xmlsoap.org/wsdl/" localName="definitions"/>
         <glob pattern="*.wsdl"/>
     </mime-type>
     <!-- END Semantic Web document mime types. -->
@@ -162,7 +162,7 @@
 
     <mime-type type="application/xhtml+xml">
         <sub-class-of type="application/xml"/>
-        <root-XML namespaceURI='http://www.w3.org/1999/xhtml'
+        <root-XML namespaceIRI='http://www.w3.org/1999/xhtml'
                   localName='html'/>
         <glob pattern="*.xhtml"/>
         <magic priority="50">

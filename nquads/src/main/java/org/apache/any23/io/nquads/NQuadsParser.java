@@ -17,8 +17,8 @@
 
 package org.apache.any23.io.nquads;
 
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,20 +33,20 @@ import java.nio.charset.Charset;
  * @author Michele Mostarda (mostarda@fbk.eu)
  * @see org.openrdf.rio.RDFParser
  */
-public class NQuadsParser extends org.openrdf.rio.nquads.NQuadsParser {
+public class NQuadsParser extends org.eclipse.rdf4j.rio.nquads.NQuadsParser {
 
     @Override
-    public synchronized void parse(InputStream is, String baseURI)
+    public synchronized void parse(InputStream is, String baseIRI)
     throws IOException, RDFParseException, RDFHandlerException {
         if(is == null) {
             throw new NullPointerException("inputStream cannot be null.");
         }
-        if(baseURI == null) {
-            throw new NullPointerException("baseURI cannot be null.");
+        if(baseIRI == null) {
+            throw new NullPointerException("baseIRI cannot be null.");
         }
         
         // NOTE: Sindice needs to be able to support UTF-8 native N-Quads documents, so the charset cannot be US-ASCII
-        this.parse(new InputStreamReader(is, Charset.forName("UTF-8")), baseURI);
+        this.parse(new InputStreamReader(is, Charset.forName("UTF-8")), baseIRI);
     }
 
 }

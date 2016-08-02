@@ -25,10 +25,9 @@ import org.apache.any23.extractor.ExtractionResultImpl;
 import org.apache.any23.extractor.Extractor;
 import org.apache.any23.extractor.ExtractorDescription;
 import org.apache.any23.writer.TripleHandler;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openrdf.model.impl.URIImpl;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -55,7 +54,7 @@ public class ExtractionExceptionTest {
         final TripleHandler th = mock(TripleHandler.class);
         final ExtractionContext extractionContext = new ExtractionContext(
                 extractor.getDescription().getExtractorName(),
-                new URIImpl("http://fake.document.uri")
+                SimpleValueFactory.getInstance().createIRI("http://fake.document.uri")
         );
         final ExtractionResult er = new ExtractionResultImpl(extractionContext, extractor, th);
         er.notifyIssue(IssueReport.IssueLevel.Fatal  , "Fake fatal error.", 1, 2);

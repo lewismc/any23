@@ -19,13 +19,13 @@ package org.apache.any23.writer;
 
 import java.io.OutputStream;
 
-import org.openrdf.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * @author Peter Ansell p_ansell@yahoo.com
  * 
  */
-public class URIListWriterFactory implements WriterFactory {
+public class IRIListWriterFactory implements WriterFactory {
 
     public static final String MIME_TYPE = "text/plain";
     public static final String IDENTIFIER = "uri";
@@ -33,7 +33,7 @@ public class URIListWriterFactory implements WriterFactory {
     /**
      * 
      */
-    public URIListWriterFactory() {
+    public IRIListWriterFactory() {
     }
 
     @Override
@@ -43,17 +43,17 @@ public class URIListWriterFactory implements WriterFactory {
 
     @Override
     public String getIdentifier() {
-        return URIListWriterFactory.IDENTIFIER;
+        return IRIListWriterFactory.IDENTIFIER;
     }
 
     @Override
     public String getMimeType() {
-        return URIListWriterFactory.MIME_TYPE;
+        return IRIListWriterFactory.MIME_TYPE;
     }
 
     @Override
     public FormatWriter getRdfWriter(OutputStream os) {
-        return new URIListWriter(os);
+        return new IRIListWriter(os);
     }
 
 }

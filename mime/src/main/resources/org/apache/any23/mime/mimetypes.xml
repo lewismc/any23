@@ -54,8 +54,8 @@
 		<sub-class-of type="application/xml" />
 		<root-XML localName="RDF" />
 		<root-XML localName="rdf" />
-		<root-XML namespaceURI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
-		<root-XML namespaceURI="http://purl.org/rss/1.0/" />
+		<root-XML namespaceIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+		<root-XML namespaceIRI="http://purl.org/rss/1.0/" />
 		<alias type="text/rdf" />
 		<magic priority="50">
 			<match value="&lt;rdf:RDF" type="string" offset="0:64" />
@@ -73,7 +73,7 @@
 	<!-- TriX -->
 	<mime-type type="application/trix">
 		<sub-class-of type="application/xml" />
-		<root-XML namespaceURI="http://www.w3.org/2004/03/trix/trix-1/"
+		<root-XML namespaceIRI="http://www.w3.org/2004/03/trix/trix-1/"
 			localName="TriX" />
 		<root-XML localName="TriX" />
 		<glob pattern="*.trx" />
@@ -94,7 +94,7 @@
         <alias type="text/rss"/>
         <sub-class-of type="application/xml"/>
         <root-XML localName="rss"/>
-        <root-XML namespaceURI="http://purl.org/rss/1.0/"/>
+        <root-XML namespaceIRI="http://purl.org/rss/1.0/"/>
         <glob pattern="*.rss"/>
     </mime-type>
 
@@ -102,9 +102,9 @@
     <mime-type type="application/atom+xml">
         <sub-class-of type="application/xml"/>
         <root-XML localName="feed"/>
-	    <root-XML localName="feed" namespaceURI="http://purl.org/atom/ns#"/>
-        <root-XML namespaceURI="http://www.w3.org/2005/Atom/" localName="feed"/>
-        <root-XML namespaceURI="http://www.w3.org/2005/Atom"  localName="feed"/>
+	    <root-XML localName="feed" namespaceIRI="http://purl.org/atom/ns#"/>
+        <root-XML namespaceIRI="http://www.w3.org/2005/Atom/" localName="feed"/>
+        <root-XML namespaceIRI="http://www.w3.org/2005/Atom"  localName="feed"/>
 	    <glob pattern="*.atom"/>
     </mime-type>
 
@@ -113,7 +113,7 @@
 		<alias type="application/wsdl+xml" />
         <sub-class-of type="application/xml"/>
         <root-XML localName="definitions"/>
-        <root-XML namespaceURI="http://schemas.xmlsoap.org/wsdl/" localName="definitions"/>
+        <root-XML namespaceIRI="http://schemas.xmlsoap.org/wsdl/" localName="definitions"/>
         <glob pattern="*.wsdl"/>
     </mime-type>
 
@@ -168,7 +168,7 @@
     <!-- XHTML -->
     <mime-type type="application/xhtml+xml">
         <sub-class-of type="application/xml"/>
-        <root-XML namespaceURI='http://www.w3.org/1999/xhtml' localName='html'/>
+        <root-XML namespaceIRI='http://www.w3.org/1999/xhtml' localName='html'/>
         <glob pattern="*.xhtml"/>
 	    <glob pattern="*.xht"/>
         <magic priority="50">
@@ -240,14 +240,14 @@
     <sub-class-of type="application/dita+xml"/>
     <_comment>DITA Map</_comment>
     <root-XML localName="map"/>
-    <root-XML localName="map" namespaceURI="http://docs.oasis-open.org/namespace"/>
+    <root-XML localName="map" namespaceIRI="http://docs.oasis-open.org/namespace"/>
     <glob pattern="*.ditamap"/>
   </mime-type>
   <mime-type type="application/dita+xml;format=topic">
     <sub-class-of type="application/dita+xml"/>
     <_comment>DITA Topic</_comment>
     <root-XML localName="topic"/>
-    <root-XML localName="topic" namespaceURI="http://docs.oasis-open.org/namespace"/>
+    <root-XML localName="topic" namespaceIRI="http://docs.oasis-open.org/namespace"/>
     <!-- Topic is the default, Task and Concept are specialisations -->
     <glob pattern="*.dita"/>
   </mime-type>
@@ -255,19 +255,19 @@
     <sub-class-of type="application/dita+xml;format=task"/>
     <_comment>DITA Task Topic</_comment>
     <root-XML localName="task"/>
-    <root-XML localName="task" namespaceURI="http://docs.oasis-open.org/namespace"/>
+    <root-XML localName="task" namespaceIRI="http://docs.oasis-open.org/namespace"/>
   </mime-type>
   <mime-type type="application/dita+xml;format=concept">
     <sub-class-of type="application/dita+xml;format=topic"/>
     <_comment>DITA Concept Topic</_comment>
     <root-XML localName="concept"/>
-    <root-XML localName="concept" namespaceURI="http://docs.oasis-open.org/namespace"/>
+    <root-XML localName="concept" namespaceIRI="http://docs.oasis-open.org/namespace"/>
   </mime-type>
   <mime-type type="application/dita+xml;format=val">
     <sub-class-of type="application/dita+xml"/>
     <_comment>DITA Conditional Processing Profile</_comment>
     <root-XML localName="val"/>
-    <root-XML localName="val" namespaceURI="http://docs.oasis-open.org/namespace"/>
+    <root-XML localName="val" namespaceIRI="http://docs.oasis-open.org/namespace"/>
     <glob pattern="*.ditaval"/>
   </mime-type>
 
@@ -804,17 +804,17 @@
     <sub-class-of type="application/zip"/>
   </mime-type>
   <mime-type type="application/vnd.apple.keynote">
-    <root-XML localName="presentation" namespaceURI="http://developer.apple.com/namespaces/keynote2" />
+    <root-XML localName="presentation" namespaceIRI="http://developer.apple.com/namespaces/keynote2" />
     <sub-class-of type="application/vnd.apple.iwork" />
     <glob pattern="*.key"/>
   </mime-type>
   <mime-type type="application/vnd.apple.pages">
-    <root-XML localName="document" namespaceURI="http://developer.apple.com/namespaces/sl" />
+    <root-XML localName="document" namespaceIRI="http://developer.apple.com/namespaces/sl" />
     <sub-class-of type="application/vnd.apple.iwork" />
     <glob pattern="*.pages"/>
   </mime-type>
   <mime-type type="application/vnd.apple.numbers">
-    <root-XML localName="document" namespaceURI="http://developer.apple.com/namespaces/ls" />
+    <root-XML localName="document" namespaceIRI="http://developer.apple.com/namespaces/ls" />
     <sub-class-of type="application/vnd.apple.iwork" />
     <glob pattern="*.numbers"/>
   </mime-type>
@@ -1084,7 +1084,7 @@
 
   <mime-type type="application/vnd.google-earth.kml+xml">
     <root-XML localName="kml"/>
-    <root-XML namespaceURI="http://www.opengis.net/kml/2.2" localName="kml"/>
+    <root-XML namespaceIRI="http://www.opengis.net/kml/2.2" localName="kml"/>
     <acronym>KML</acronym>
     <_comment>Keyhole Markup Language</_comment>
     <glob pattern="*.kml"/>
@@ -3367,7 +3367,7 @@
     <acronym>XSLT</acronym>
     <_comment>XSL Transformations</_comment>
     <root-XML localName="stylesheet"
-              namespaceURI="http://www.w3.org/1999/XSL/Transform"/>
+              namespaceIRI="http://www.w3.org/1999/XSL/Transform"/>
     <glob pattern="*.xslt"/>
   </mime-type>
 
@@ -3886,7 +3886,7 @@
     <sub-class-of type="application/xml"/>
     <acronym>SVG</acronym>
     <_comment>Scalable Vector Graphics</_comment>
-    <root-XML localName="svg" namespaceURI="http://www.w3.org/2000/svg"/>
+    <root-XML localName="svg" namespaceIRI="http://www.w3.org/2000/svg"/>
     <glob pattern="*.svg"/>
     <glob pattern="*.svgz"/>
   </mime-type>
@@ -5234,7 +5234,7 @@
   <mime-type type="application/x-fictionbook+xml">
       <_comment>FictionBook document</_comment>
       <sub-class-of type="application/xml"/>
-      <root-XML namespaceURI="http://www.gribuser.ru/xml/fictionbook/2.0" localName="FictionBook"/>
+      <root-XML namespaceIRI="http://www.gribuser.ru/xml/fictionbook/2.0" localName="FictionBook"/>
       <glob pattern="*.fb2"/>
   </mime-type>
 </mime-info>

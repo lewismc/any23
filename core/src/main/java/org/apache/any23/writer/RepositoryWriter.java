@@ -18,11 +18,11 @@
 package org.apache.any23.writer;
 
 import org.apache.any23.extractor.ExtractionContext;
-import org.openrdf.model.Resource;
-import org.openrdf.model.URI;
-import org.openrdf.model.Value;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.RepositoryException;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.RepositoryException;
 
 /**
  * A <i>Sesame repository</i> triple writer.
@@ -43,7 +43,7 @@ public class RepositoryWriter implements TripleHandler {
         this.overrideContext = overrideContext;
     }
 
-    public void startDocument(URI documentURI) throws TripleHandlerException {
+    public void startDocument(IRI documentIRI) throws TripleHandlerException {
         // ignore
     }
 
@@ -53,15 +53,15 @@ public class RepositoryWriter implements TripleHandler {
 
     public void receiveTriple(
             Resource s,
-            URI p,
+            IRI p,
             Value o,
-            URI g,
+            IRI g,
           ExtractionContext context
     ) throws TripleHandlerException {
         try {
             conn.add(
                 conn.getValueFactory().createStatement(s, p, o, g),
-                getContextResource(context.getDocumentURI())
+                getContextResource(context.getDocumentIRI())
             );
         } catch (RepositoryException ex) {
             throw new TripleHandlerException(String.format("Error while receiving triple: %s %s %s", s, p , o),
@@ -92,7 +92,7 @@ public class RepositoryWriter implements TripleHandler {
         // ignore
     }
 
-    public void endDocument(URI documentURI) throws TripleHandlerException {
+    public void endDocument(IRI documentIRI) throws TripleHandlerException {
         // ignore
     }
 

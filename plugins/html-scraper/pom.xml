@@ -35,8 +35,8 @@
   <dependencies>
     <!-- Sesame. -->
     <dependency>
-      <groupId>org.openrdf.sesame</groupId>
-      <artifactId>sesame-model</artifactId>
+      <groupId>org.eclipse.rdf4j</groupId>
+      <artifactId>rdf4j-model</artifactId>
       <scope>provided</scope>
     </dependency>
 

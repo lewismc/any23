@@ -48,9 +48,9 @@ public interface DocumentSource {
     public long getContentLength();
 
     /**
-     * @return the actual, final, canonical URI if redirects occur.
+     * @return the actual, final, canonical IRI if redirects occur.
      */
-    public String getDocumentURI();
+    public String getDocumentIRI();
 
     /**
      * A value of <tt>false</tt> indicates that the document

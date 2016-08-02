@@ -20,10 +20,10 @@ package org.apache.any23.extractor.rdfa;
 import org.apache.any23.extractor.ExtractorFactory;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openrdf.model.Statement;
-import org.openrdf.repository.RepositoryException;
-import org.openrdf.rio.RDFHandlerException;
-import org.openrdf.rio.RDFParseException;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.rio.RDFHandlerException;
+import org.eclipse.rdf4j.rio.RDFParseException;
 
 import java.io.IOException;
 import java.util.List;

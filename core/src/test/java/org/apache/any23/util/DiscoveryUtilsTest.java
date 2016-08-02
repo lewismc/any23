@@ -20,7 +20,7 @@ package org.apache.any23.util;
 import org.apache.any23.vocab.Vocabulary;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openrdf.model.Resource;
+import org.eclipse.rdf4j.model.Resource;
 
 import java.io.IOException;
 import java.util.List;

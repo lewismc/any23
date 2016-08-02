@@ -25,12 +25,11 @@ import org.apache.any23.rdf.RDFUtils;
 import org.apache.any23.vocab.VCard;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.openrdf.model.Resource;
-import org.openrdf.model.Statement;
-import org.openrdf.model.Value;
-import org.openrdf.model.vocabulary.RDF;
-import org.openrdf.repository.RepositoryException;
-import org.openrdf.repository.RepositoryResult;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.repository.RepositoryResult;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -573,14 +572,14 @@ public class HCardExtractorTest extends AbstractExtractorTestCase {
 		assertExtract("/microformats/hcard/07-relative-url.html");
 		assertDefaultVCard();
 		assertJohn();
-		assertContains(vVCARD.url, RDFUtils.uri(baseURI + "home/blah"));
+		assertContains(vVCARD.url, RDFUtils.uri(baseIRI + "home/blah"));
 	}
 
 	@Test
 	public void testRelativeUrlBase() throws Exception {
 		assertExtract("/microformats/hcard/08-relative-url-base.html");
 		assertDefaultVCard();
-		assertContains(vVCARD.url, RDFUtils.uri(baseURI + "home/blah"));
+		assertContains(vVCARD.url, RDFUtils.uri(baseIRI + "home/blah"));
 		assertJohn();
 	}
 
@@ -588,7 +587,7 @@ public class HCardExtractorTest extends AbstractExtractorTestCase {
 	public void testRelativeUrlXmlBase1() throws Exception {
 		assertExtract("/microformats/hcard/09-relative-url-xmlbase-1.html");
 		assertDefaultVCard();
-		assertContains(vVCARD.url, RDFUtils.uri((baseURI + "home/blah")));
+		assertContains(vVCARD.url, RDFUtils.uri((baseIRI + "home/blah")));
 		assertJohn();
 	}
 
@@ -596,7 +595,7 @@ public class HCardExtractorTest extends AbstractExtractorTestCase {
 	public void testRelativeUrlXmlBase2() throws Exception {
 		assertExtract("/microformats/hcard/10-relative-url-xmlbase-2.html");
 		assertDefaultVCard();
-		assertContains(vVCARD.url, RDFUtils.uri((baseURI + "home/blah")));
+		assertContains(vVCARD.url, RDFUtils.uri((baseIRI + "home/blah")));
 		assertJohn();
 	}
 

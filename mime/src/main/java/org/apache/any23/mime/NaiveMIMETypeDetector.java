@@ -17,8 +17,8 @@
 
 package org.apache.any23.mime;
 
-import org.openrdf.rio.RDFFormat;
-import org.openrdf.rio.Rio;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.Rio;
 
 import java.io.InputStream;
 import java.util.HashMap;
