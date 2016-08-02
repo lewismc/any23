@@ -27,6 +27,7 @@ import org.eclipse.rdf4j.model.Value;
 import java.io.BufferedOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.util.Optional;
 
 /**
  * Implementation of <i>JSON</i> format writer.
@@ -163,10 +164,10 @@ public class JSONWriter implements FormatWriter {
         ps.print(", ");
 
         ps.print("\"lang\" : ");
-        final String language = literal.getLanguage();
-        if (language != null) {
+        final Optional<String> language = literal.getLanguage();
+        if (language.isPresent()) {
             ps.print('"');
-            ps.print(literal.getLanguage());
+            ps.print(literal.getLanguage().get());
             ps.print('"');
         } else {
             ps.print("null");

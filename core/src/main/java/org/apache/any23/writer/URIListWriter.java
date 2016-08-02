@@ -33,7 +33,7 @@ import java.util.List;
  * 
  * @author Davide Palmisano (palmisano@fbk.eu)
  */
-public class IRIListWriter implements FormatWriter {
+public class URIListWriter implements FormatWriter {
 
     private List<Resource> resources;
 
@@ -43,7 +43,7 @@ public class IRIListWriter implements FormatWriter {
 
     private long contentLength;
 
-    public IRIListWriter(OutputStream outputStream) {
+    public URIListWriter(OutputStream outputStream) {
         this.resources = new ArrayList<Resource>();
         this.printStream = new PrintStream(outputStream);
     }

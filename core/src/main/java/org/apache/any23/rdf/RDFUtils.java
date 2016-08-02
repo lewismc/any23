@@ -173,7 +173,9 @@ public class RDFUtils {
 
     /**
      * Creates a {@link IRI}.
+     * @deprecated Use {@link #iri(String)} instead.
      */
+    @Deprecated
     public static IRI uri(String uri) {
         return valueFactory.createIRI(uri);
     }
@@ -181,7 +183,23 @@ public class RDFUtils {
     /**
      * Creates a {@link IRI}.
      */
+    public static IRI iri(String uri) {
+        return valueFactory.createIRI(uri);
+    }
+
+    /**
+     * Creates a {@link IRI}.
+     * @deprecated Use {@link #iri(String, String)} instead.
+     */
+    @Deprecated
     public static IRI uri(String namespace, String localName) {
+        return valueFactory.createIRI(namespace, localName);
+    }
+
+    /**
+     * Creates a {@link IRI}.
+     */
+    public static IRI iri(String namespace, String localName) {
         return valueFactory.createIRI(namespace, localName);
     }
 

@@ -34,11 +34,11 @@ import java.util.List;
  */
 public class DefaultDOMDocument implements DOMDocument {
 
-    private IRI documentIRI;
+    private URI documentIRI;
 
     private Document document;
 
-    public DefaultDOMDocument(IRI documentIRI, Document document) {
+    public DefaultDOMDocument(URI documentIRI, Document document) {
         if(documentIRI == null) {
             throw new NullPointerException("documentIRI cannot be null.");
         }
@@ -49,7 +49,7 @@ public class DefaultDOMDocument implements DOMDocument {
         this.document = document;
     }
 
-    public IRI getDocumentIRI() {
+    public URI getDocumentIRI() {
         return documentIRI;
     }
 

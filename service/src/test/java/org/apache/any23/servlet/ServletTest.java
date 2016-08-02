@@ -17,12 +17,12 @@
 
 package org.apache.any23.servlet;
 
-import junit.framework.Assert;
 import org.apache.any23.http.HTTPClient;
 import org.apache.any23.source.DocumentSource;
 import org.apache.any23.source.FileDocumentSource;
 import org.apache.any23.source.StringDocumentSource;
 import org.apache.any23.util.StringUtils;
+import org.junit.Assert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -434,7 +434,7 @@ public class ServletTest {
         if (contentType != null) {
             request.setHeader("Content-Type", contentType);
         }
-        request.setIRI(path);
+        request.setURI(path);
         response.parse(tester.getResponses(request.generate()));
         return response;
     }
@@ -450,7 +450,7 @@ public class ServletTest {
             request.setHeader("Accept", acceptHeader);
         }
 
-        request.setIRI(path);
+        request.setURI(path);
         response.parse(tester.getResponses(request.generate()));
         return response;
     }

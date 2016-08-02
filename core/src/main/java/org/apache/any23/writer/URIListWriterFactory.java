@@ -25,7 +25,7 @@ import org.eclipse.rdf4j.rio.RDFFormat;
  * @author Peter Ansell p_ansell@yahoo.com
  * 
  */
-public class IRIListWriterFactory implements WriterFactory {
+public class URIListWriterFactory implements WriterFactory {
 
     public static final String MIME_TYPE = "text/plain";
     public static final String IDENTIFIER = "uri";
@@ -33,7 +33,7 @@ public class IRIListWriterFactory implements WriterFactory {
     /**
      * 
      */
-    public IRIListWriterFactory() {
+    public URIListWriterFactory() {
     }
 
     @Override
@@ -43,17 +43,17 @@ public class IRIListWriterFactory implements WriterFactory {
 
     @Override
     public String getIdentifier() {
-        return IRIListWriterFactory.IDENTIFIER;
+        return URIListWriterFactory.IDENTIFIER;
     }
 
     @Override
     public String getMimeType() {
-        return IRIListWriterFactory.MIME_TYPE;
+        return URIListWriterFactory.MIME_TYPE;
     }
 
     @Override
     public FormatWriter getRdfWriter(OutputStream os) {
-        return new IRIListWriter(os);
+        return new URIListWriter(os);
     }
 
 }

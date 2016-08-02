@@ -243,7 +243,7 @@ public class Rover implements Tool {
             if (f.isDirectory()) {
                 throw new ParameterException(format("Found a directory: [%s]", f.getAbsolutePath()));
             }
-            return f.toIRI().toString();
+            return f.toURI().toString();
         }
 
     }

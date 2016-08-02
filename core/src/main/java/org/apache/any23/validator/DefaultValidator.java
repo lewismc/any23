@@ -17,7 +17,7 @@
 
 package org.apache.any23.validator;
 
-import org.apache.any23.validator.rule.AboutNotIRIRule;
+import org.apache.any23.validator.rule.AboutNotURIRule;
 import org.apache.any23.validator.rule.MetaNameMisuseFix;
 import org.apache.any23.validator.rule.MetaNameMisuseRule;
 import org.apache.any23.validator.rule.MissingItemscopeAttributeValueFix;
@@ -81,7 +81,7 @@ public class DefaultValidator implements Validator {
         return validationReportBuilder.getReport();
     }
 
-    public ValidationReport validate(IRI documentIRI, Document document, boolean applyFix)
+    public ValidationReport validate(URI documentIRI, Document document, boolean applyFix)
     throws ValidatorException {
         return validate( new DefaultDOMDocument(documentIRI, document), applyFix );
     }
@@ -123,7 +123,7 @@ public class DefaultValidator implements Validator {
     private void loadDefaultRules() {
         addRule(MetaNameMisuseRule.class, MetaNameMisuseFix.class);
         addRule(MissingOpenGraphNamespaceRule.class, OpenGraphNamespaceFix.class);
-        addRule(AboutNotIRIRule.class);
+        addRule(AboutNotURIRule.class);
         addRule(MissingItemscopeAttributeValueRule.class, MissingItemscopeAttributeValueFix.class);
     }
 

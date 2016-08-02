@@ -265,7 +265,8 @@ public class RDFParserFactory {
             extractionResult = er;
         }
 
-        public void warning(String msg, int lineNo, int colNo) {
+        @Override
+        public void warning(String msg, long lineNo, long colNo) {
             try {
                 extractionResult.notifyIssue(IssueReport.IssueLevel.Warning, msg, lineNo, colNo);
             } catch (Exception e) {
@@ -273,7 +274,8 @@ public class RDFParserFactory {
             }
         }
 
-        public void error(String msg, int lineNo, int colNo) {
+        @Override
+        public void error(String msg, long lineNo, long colNo) {
             try {
                 extractionResult.notifyIssue(IssueReport.IssueLevel.Error, msg, lineNo, colNo);
             } catch (Exception e) {
@@ -281,7 +283,8 @@ public class RDFParserFactory {
             }
         }
 
-        public void fatalError(String msg, int lineNo, int colNo) {
+        @Override
+        public void fatalError(String msg, long lineNo, long colNo) {
             try {
                 extractionResult.notifyIssue(IssueReport.IssueLevel.Fatal, msg, lineNo, colNo);
             } catch (Exception e) {

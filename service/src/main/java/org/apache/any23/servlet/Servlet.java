@@ -26,6 +26,7 @@ import org.apache.any23.source.ByteArrayDocumentSource;
 import org.apache.any23.source.DocumentSource;
 import org.apache.any23.source.HTTPDocumentSource;
 import org.apache.any23.source.StringDocumentSource;
+import org.apache.commons.httpclient.URI;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -239,7 +240,7 @@ public class Servlet extends HttpServlet {
 
     private boolean isValidIRI(String s) {
         try {
-            IRI uri = new IRI(s, false);
+            URI uri = new URI(s, false);
             if (!"http".equals(uri.getScheme()) && !"https".equals(uri.getScheme())) {
                 return false;
             }

@@ -89,7 +89,7 @@ public class PopularPrefixes {
      */
     private static boolean testIRICompliance(String stringUri) {
         try {
-            new IRI(stringUri);
+            new URI(stringUri);
         } catch (URISyntaxException e) {
             return false;
         }

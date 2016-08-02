@@ -259,7 +259,7 @@ public class Any23 {
     public DocumentSource createDocumentSource(String documentIRI) throws URISyntaxException, IOException {
         if(documentIRI == null) throw new NullPointerException("documentIRI cannot be null.");
         if (documentIRI.toLowerCase().startsWith("file:")) {
-            return new FileDocumentSource( new File(new IRI(documentIRI)) );
+            return new FileDocumentSource( new File(new URI(documentIRI)) );
         }
         if (documentIRI.toLowerCase().startsWith("http:") || documentIRI.toLowerCase().startsWith("https:")) {
             return new HTTPDocumentSource(getHTTPClient(), documentIRI);

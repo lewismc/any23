@@ -128,7 +128,7 @@ public class DefaultValidatorTest {
         InputStream is = this.getClass().getResourceAsStream(document);
         final String documentIRI = "http://test.com";
         TagSoupParser tsp = new TagSoupParser(is, documentIRI);
-        return new DefaultDOMDocument( new IRI(documentIRI), tsp.getDOM() );
+        return new DefaultDOMDocument( new URI(documentIRI), tsp.getDOM() );
     }
 
     private String serialize(DOMDocument document) throws Exception {

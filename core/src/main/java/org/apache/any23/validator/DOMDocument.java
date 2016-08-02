@@ -35,7 +35,7 @@ public interface DOMDocument {
     /**
      * @return the original document IRI.
      */
-    IRI getDocumentIRI();
+    URI getDocumentIRI();
 
     /**
      * Returns the original document.

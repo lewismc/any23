@@ -52,7 +52,7 @@ public interface Validator {
      * @return a report of the detected issues.
      * @throws ValidatorException if an error occurs during the validation process.
      */
-    ValidationReport validate(IRI documentIRI, Document document, boolean applyFix)
+    ValidationReport validate(URI documentIRI, Document document, boolean applyFix)
     throws ValidatorException;
 
     /**

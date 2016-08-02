@@ -261,7 +261,7 @@ public class RDFa11Parser {
         final String vocabularyStr = DomUtils.readAttribute(currentNode, VOCAB_ATTRIBUTE, null);
         if(vocabularyStr == null) return;
         try {
-            pushVocabulary(currentNode, RDFUtils.IRI(vocabularyStr));
+            pushVocabulary(currentNode, RDFUtils.iri(vocabularyStr));
         } catch (Exception e) {
             reportError(currentNode, String.format("Invalid vocabulary [%s], must be a IRI.", vocabularyStr));
         }
@@ -352,9 +352,9 @@ public class RDFa11Parser {
         return
                 isAbsoluteIRI(IRIStr)
                         ?
-                RDFUtils.IRI(IRIStr)
+                RDFUtils.iri(IRIStr)
                         :
-                RDFUtils.IRI( this.documentBase.toExternalForm(), IRIStr );
+                RDFUtils.iri( this.documentBase.toExternalForm(), IRIStr );
     }
 
     /**

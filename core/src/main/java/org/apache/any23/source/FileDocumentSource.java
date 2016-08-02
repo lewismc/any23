@@ -35,7 +35,7 @@ public class FileDocumentSource implements DocumentSource {
 
     public FileDocumentSource(File file) {
         this.file = file;
-        this.uri = file.toIRI().toString();
+        this.uri = file.toURI().toString();
     }
 
     public FileDocumentSource(File file, String baseIRI) {

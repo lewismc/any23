@@ -36,7 +36,7 @@ import java.util.List;
  * @author Michele Mostarda (mostarda@fbk.eu)
  * @author Davide Palmisano (palmisano@fbk.eu)
  */
-public class AboutNotIRIRule implements Rule {
+public class AboutNotURIRule implements Rule {
 
     public static final String NODES_WITH_INVALID_ABOUT = "nodes-with-invalid-about";
 

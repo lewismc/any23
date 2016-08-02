@@ -17,6 +17,8 @@
 
 package org.apache.any23.rdf;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Date;
 
 import org.apache.any23.extractor.IssueReport;
@@ -129,6 +131,16 @@ public class Any23ValueFactoryWrapper implements ValueFactory {
     public Literal createLiteral(double v) {
         return wrappedFactory.createLiteral(v);
     }
+
+	@Override
+	public Literal createLiteral(BigDecimal v) {
+        return wrappedFactory.createLiteral(v);
+	}
+
+	@Override
+	public Literal createLiteral(BigInteger v) {
+        return wrappedFactory.createLiteral(v);
+	}
 
     public Literal createLiteral(XMLGregorianCalendar calendar) {
         return wrappedFactory.createLiteral(calendar);

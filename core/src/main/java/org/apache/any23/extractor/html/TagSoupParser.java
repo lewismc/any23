@@ -133,10 +133,10 @@ public class TagSoupParser {
      * @throws org.apache.any23.validator.ValidatorException
      */
     public DocumentReport getValidatedDOM(boolean applyFix) throws IOException, ValidatorException {
-        final IRI dIRI;
+        final URI dIRI;
         try {
-            dIRI = SimpleValueFactory.getInstance().createIRI(documentIRI);
-        } catch (IllegalArgumentException urise) {
+            dIRI = new URI(documentIRI);
+        } catch (IllegalArgumentException | URISyntaxException urise) {
             throw new ValidatorException("Error while performing validation, invalid document IRI.", urise);
         }
         Validator validator = new DefaultValidator();
