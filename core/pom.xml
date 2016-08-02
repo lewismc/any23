@@ -53,11 +53,6 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>apache-any23-nquads</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
       <artifactId>apache-any23-test-resources</artifactId>
       <version>${project.version}</version>
       <type>test-jar</type>
