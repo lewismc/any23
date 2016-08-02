@@ -469,7 +469,7 @@ Name</label> <br />
 	type="text/javascript">
         var dbl_extra = 'extra=null', dbl_tile = '6', dbl_sz = '300x250';
         var dbl_profile = LIAds.getProfile().replace(/&/g,';');
-        var dbl_src = "http://ad.doubleclick.net/adj/linkedin.dart/" + dbl_page + ";" + dbl_profile + ";tile=" + dbl_tile + ";dcopt=ist;sz=" + dbl_sz + ";" + encodeIRIComponent(dbl_extra) + ";ord=" + dbl_ord +"?";
+        var dbl_src = "http://ad.doubleclick.net/adj/linkedin.dart/" + dbl_page + ";" + dbl_profile + ";tile=" + dbl_tile + ";dcopt=ist;sz=" + dbl_sz + ";" + encodeURIComponent(dbl_extra) + ";ord=" + dbl_ord +"?";
         document.write('<script src="' + dbl_src + '" type="text/javascript"><\/script>');
       </script></div>
 </div>

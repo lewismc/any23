@@ -178,7 +178,7 @@
                                 }
 
                                 var nq = "* " + predicate + " " + value;
-                                document.location.href = "/search?nq=" + encodeIRIComponent(nq);
+                                document.location.href = "/search?nq=" + encodeURIComponent(nq);
                                 return false;
                             });
                         });

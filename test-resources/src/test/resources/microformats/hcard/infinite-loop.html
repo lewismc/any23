@@ -4194,11 +4194,11 @@
         // Build the url by adding wbParams to wbUrl. wbUrl is then added to end of static url components 
 
         var wbUrl = "";
-        wbUrl += (typeof (wg_cacheid) != 'undefined') ? "&wg_cacheid=" + encodeIRIComponent(wg_cacheid) : "";
-        wbUrl += (typeof (wg_kw) != 'undefined') ? "&wg_kw=" + encodeIRIComponent(wg_kw) : "";
-        wbUrl += (typeof (wg_price) != 'undefined') ? "&wg_price=" + encodeIRIComponent(wg_price) : "";
-        wbUrl += (typeof (wg_mfg) != 'undefined') ? "&wg_mfg=" + encodeIRIComponent(wg_mfg) : "";
-        wbUrl += (typeof (wg_upc) != 'undefined') ? "&wg_upc=" + encodeIRIComponent(wg_upc) : "";
+        wbUrl += (typeof (wg_cacheid) != 'undefined') ? "&wg_cacheid=" + encodeURIComponent(wg_cacheid) : "";
+        wbUrl += (typeof (wg_kw) != 'undefined') ? "&wg_kw=" + encodeURIComponent(wg_kw) : "";
+        wbUrl += (typeof (wg_price) != 'undefined') ? "&wg_price=" + encodeURIComponent(wg_price) : "";
+        wbUrl += (typeof (wg_mfg) != 'undefined') ? "&wg_mfg=" + encodeURIComponent(wg_mfg) : "";
+        wbUrl += (typeof (wg_upc) != 'undefined') ? "&wg_upc=" + encodeURIComponent(wg_upc) : "";
 
         //<!-- Completed url string is the static parameters plus wbParams --> 
         WinbuyerOCP("http://widget.winbuyer.com/w/jsonwidget.aspx?wg_domain=vanns.com&wg_client_id=6001413&wg_noncore=0&wg_width=321&wg_length=4" + wbUrl);
