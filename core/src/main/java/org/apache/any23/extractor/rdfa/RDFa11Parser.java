@@ -151,20 +151,20 @@ public class RDFa11Parser {
         return IRI.contains(IRI_SCHEMA_SEPARATOR);
     }
 
-    protected static boolean isCURIE(String cIRIe) {
-        if(cIRIe == null) {
-            throw new NullPointerException("cIRIe string cannot be null.");
+    protected static boolean isCURIE(String curie) {
+        if(curie == null) {
+            throw new NullPointerException("curie string cannot be null.");
         }
-        if(cIRIe.trim().length() == 0) return false;
+        if(curie.trim().length() == 0) return false;
 
         // '[' PREFIX ':' VALUE ']'
-        if( cIRIe.charAt(0) != '[' || cIRIe.charAt(cIRIe.length() -1) != ']') return false;
-        int separatorIndex = cIRIe.indexOf(CURIE_SEPARATOR);
-        return separatorIndex > 0 && cIRIe.indexOf(CURIE_SEPARATOR, separatorIndex + 1) == -1;
+        if( curie.charAt(0) != '[' || curie.charAt(curie.length() -1) != ']') return false;
+        int separatorIndex = curie.indexOf(CURIE_SEPARATOR);
+        return separatorIndex > 0 && curie.indexOf(CURIE_SEPARATOR, separatorIndex + 1) == -1;
     }
 
-    protected static boolean isCURIEBNode(String cIRIe) {
-        return isCURIE(cIRIe) && cIRIe.substring(1, cIRIe.length() -1).split(CURIE_SEPARATOR)[0].equals("_");
+    protected static boolean isCURIEBNode(String curie) {
+        return isCURIE(curie) && curie.substring(1, curie.length() -1).split(CURIE_SEPARATOR)[0].equals("_");
     }
 
     protected static boolean isRelativeNode(Node node) {
@@ -320,23 +320,23 @@ public class RDFa11Parser {
      * Resolves a <rm>whitelist</em> separated list of <i>CURIE</i> or <i>IRI</i>.
      *
      * @param n current node.
-     * @param cIRIeOrIRIList list of CURIE/IRI.
+     * @param curieOrIRIList list of CURIE/IRI.
      * @return list of resolved IRIs.
      * @throws URISyntaxException
      */
-    protected IRI[] resolveCIRIeOrIRIList(Node n, String cIRIeOrIRIList, boolean termAllowed)
+    protected IRI[] resolveCIRIeOrIRIList(Node n, String curieOrIRIList, boolean termAllowed)
     throws URISyntaxException {
-        if(cIRIeOrIRIList == null || cIRIeOrIRIList.trim().length() == 0) return new IRI[0];
+        if(curieOrIRIList == null || curieOrIRIList.trim().length() == 0) return new IRI[0];
 
-        final String[] cIRIeOrIRIListParts = cIRIeOrIRIList.split("\\s");
+        final String[] curieOrIRIListParts = curieOrIRIList.split("\\s");
         final List<IRI> result = new ArrayList<IRI>();
-        Resource cIRIeOrIRI;
-        for(String cIRIeORIRIListPart : cIRIeOrIRIListParts) {
-            cIRIeOrIRI = resolveCURIEOrIRI(cIRIeORIRIListPart, termAllowed);
-            if(cIRIeOrIRI != null && cIRIeOrIRI instanceof IRI) {
-                result.add((IRI) cIRIeOrIRI);
+        Resource curieOrIRI;
+        for(String curieORIRIListPart : curieOrIRIListParts) {
+            curieOrIRI = resolveCURIEOrIRI(curieORIRIListPart, termAllowed);
+            if(curieOrIRI != null && curieOrIRI instanceof IRI) {
+                result.add((IRI) curieOrIRI);
             } else {
-                reportError(n, String.format("Invalid CURIE '%s' : expected IRI, found BNode.", cIRIeORIRIListPart));
+                reportError(n, String.format("Invalid CURIE '%s' : expected IRI, found BNode.", curieORIRIListPart));
             }
         }
         return result.toArray(new IRI[result.size()]);
@@ -360,17 +360,17 @@ public class RDFa11Parser {
     /**
      * Resolves a <i>CURIE</i> or <i>IRI</i> string.
      *
-     * @param cIRIeOrIRI
+     * @param curieOrIRI
      * @param termAllowed if <code>true</code> the resolution can be a term.
      * @return the resolved resource.
      */
-    protected Resource resolveCURIEOrIRI(String cIRIeOrIRI, boolean termAllowed) {
-        if( isCURIE(cIRIeOrIRI) ) {
-            return resolveNamespacedIRI(cIRIeOrIRI.substring(1, cIRIeOrIRI.length() - 1), ResolutionPolicy.NSRequired);
+    protected Resource resolveCURIEOrIRI(String curieOrIRI, boolean termAllowed) {
+        if( isCURIE(curieOrIRI) ) {
+            return resolveNamespacedIRI(curieOrIRI.substring(1, curieOrIRI.length() - 1), ResolutionPolicy.NSRequired);
         }
-        if(isAbsoluteIRI(cIRIeOrIRI)) return resolveIRI(cIRIeOrIRI);
+        if(isAbsoluteIRI(curieOrIRI)) return resolveIRI(curieOrIRI);
         return resolveNamespacedIRI(
-                cIRIeOrIRI,
+                curieOrIRI,
                 termAllowed ? ResolutionPolicy.TermAllowed : ResolutionPolicy.NSNotRequired
         );
     }
@@ -887,8 +887,8 @@ public class RDFa11Parser {
         if (datatype == null || datatype.trim().length() == 0 || XML_LITERAL_DATATYPE.equals(datatype.trim()) ) {
             return null;
         }
-        final Resource cIRIeOrIRI = resolveCURIEOrIRI(datatype, true);
-        return RDFUtils.literal(getNodeContent(node), cIRIeOrIRI instanceof IRI ? (IRI) cIRIeOrIRI : null);
+        final Resource curieOrIRI = resolveCURIEOrIRI(datatype, true);
+        return RDFUtils.literal(getNodeContent(node), curieOrIRI instanceof IRI ? (IRI) curieOrIRI : null);
     }
 
     private void pushMappings(Node sourceNode, List<PrefixMap> prefixMapList) {
@@ -941,11 +941,11 @@ public class RDFa11Parser {
         }
 
         final String prefix = mapping.substring(0, prefixSeparatorIndex);
-        final IRI cIRIeMapping = getMapping(prefix);
-        if(cIRIeMapping == null) {
+        final IRI curieMapping = getMapping(prefix);
+        if(curieMapping == null) {
             throw new IllegalArgumentException( String.format("Cannot map prefix '%s'", prefix) );
         }
-        final String candidateCURIEStr = cIRIeMapping.toString() + mapping.substring(prefixSeparatorIndex + 1);
+        final String candidateCURIEStr = curieMapping.toString() + mapping.substring(prefixSeparatorIndex + 1);
         final java.net.URI candidateCURIE;
         try {
             candidateCURIE = new java.net.URI(candidateCURIEStr);
