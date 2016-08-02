@@ -255,7 +255,7 @@ public class TikaMIMETypeDetectorTest {
 
     @Test
     public void testDetectTextNQuadsByMeta() throws IOException {
-        detectMIMETypeByMimeTypeHint(NQUADS, "text/x-nquads");
+        detectMIMETypeByMimeTypeHint(NQUADS, "application/n-quads");
     }
 
     @Test
