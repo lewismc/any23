@@ -20,7 +20,7 @@ package org.apache.any23.vocab;
 import org.eclipse.rdf4j.model.IRI;
 
 /**
- * The <i>DCTERMS</code> vocabulary.
+ * The <i>DCTERMS</i> vocabulary.
  * See <a href="http://dublincore.org/">Dublin Core</a>.
  */
 public class DCTerms extends Vocabulary {

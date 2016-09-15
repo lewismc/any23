@@ -90,7 +90,7 @@ public class CSV extends Vocabulary {
 
     /**
      *
-     * @param localName
+     * @param localName a string name for the property
      * @return the new IRI instance.
      */
     public IRI createProperty(String localName) {

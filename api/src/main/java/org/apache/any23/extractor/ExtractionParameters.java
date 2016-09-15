@@ -26,7 +26,6 @@ import java.util.Map;
 /**
  * This class models the parameters to be used to perform an extraction.
  *
- * @see org.apache.any23.Any23
  * @author Michele Mostarda (mostarda@fbk.eu)
  */
 public class ExtractionParameters {
@@ -123,7 +122,7 @@ public class ExtractionParameters {
 
     /**
      * Constructor, allows to set explicitly the value for flag
-     * {@link SingleDocumentExtraction#METADATA_NESTING_FLAG}.
+     * SingleDocumentExtraction#METADATA_NESTING_FLAG.
      *
      * @param configuration the underlying configuration.
      * @param extractionMode specifies the required extraction mode.

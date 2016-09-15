@@ -33,6 +33,9 @@ public interface TripleHandler {
      * Informs the handler that a new context has been established.
      * Contexts are not guaranteed to receive any triples, so they
      * might be closed without any triple.
+     * @param context extraction context.
+     * @throws TripleHandlerException if there is an error open the 
+     *          {@link org.apache.any23.extractor.ExtractionContext}
      */
     void openContext(ExtractionContext context) throws TripleHandlerException;
 
@@ -45,7 +48,7 @@ public interface TripleHandler {
      * @param o triple object, cannot be <code>null</code>.
      * @param g triple graph, can be <code>null</code>.
      * @param context extraction context.
-     * @throws TripleHandlerException
+     * @throws TripleHandlerException if there is an error receiving the triple
      */
     void receiveTriple(Resource s, IRI p, Value o, IRI g, ExtractionContext context) throws TripleHandlerException;
 
@@ -56,7 +59,7 @@ public interface TripleHandler {
      * @param prefix namespace prefix.
      * @param uri namespace <i>IRI</i>.
      * @param context namespace context.
-     * @throws TripleHandlerException
+     * @throws TripleHandlerException if there is an error receiving the namespace
      */
     void receiveNamespace(String prefix, String uri, ExtractionContext context) throws TripleHandlerException;
 
@@ -68,7 +71,8 @@ public interface TripleHandler {
      * local contexts of that document.
      *
      * @param context the context to be closed.
-     * @throws TripleHandlerException
+     * @throws TripleHandlerException if there is an error closing the 
+     *          {@link org.apache.any23.extractor.ExtractionContext}
      */
     void closeContext(ExtractionContext context) throws TripleHandlerException;
 
@@ -77,21 +81,21 @@ public interface TripleHandler {
      * has been reached.
      *
      * @param documentIRI document IRI.
-     * @throws TripleHandlerException
+     * @throws TripleHandlerException if there is an error ending the document
      */
     void endDocument(IRI documentIRI) throws TripleHandlerException;
 
     /**
      * Sets the length of the content to be processed.
      *
-     * @param contentLength
-     * @throws TripleHandlerException
+     * @param contentLength length of the document being processed within the
+     *        {@link org.apache.any23.extractor.ExtractionContext}
      */
     void setContentLength(long contentLength);
 
     /**
      * Will be called last and exactly once.
-     * @throws TripleHandlerException
+     * @throws TripleHandlerException if there is an error closing this Triple Handler.
      */
     void close() throws TripleHandlerException;
 

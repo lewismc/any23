@@ -33,7 +33,7 @@ public interface DocumentSource {
      * Returns the input stream for accessing the content of the document.
      *
      * @return not <code>null</code> input stream for accessing document data.
-     * @throws IOException
+     * @throws IOException if there is an error opening the input stream
      */
     InputStream openInputStream() throws IOException;
 
@@ -53,11 +53,12 @@ public interface DocumentSource {
     public String getDocumentIRI();
 
     /**
-     * A value of <tt>false</tt> indicates that the document
+     * A value of <i>false</i> indicates that the document
      * resides remotely, and that multiple successive accesses
      * to it should be avoided by copying it to local storage.
      * This can also be used for sources that do not support
      * multiple calls to {@link #openInputStream()}.
+     * @return true if the document source is local
      */
     public boolean isLocal();
 }

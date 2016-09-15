@@ -96,7 +96,6 @@ public class Any23PluginManager {
      * @param jar the JAR file to be loaded.
      * @return <code>true</code> if the JAR is added for the first time to the classpath,
      *         <code>false</code> otherwise.
-     * @throws MalformedURLException
      */
     public synchronized boolean loadJAR(File jar) {
         if(jar == null) throw new NullPointerException("jar file cannot be null.");
@@ -233,9 +232,9 @@ public class Any23PluginManager {
      * <code>filter</code>. The search is performed on the static classpath (the one the application
      * started with) and the dynamic classpath (the one specified using the load methods).
      *
-     * @param <T> type of filtered class.
+     * @param type type of filtered class.
      * @return list of matching classes.
-     * @throws IOException
+     * @throws IOException if there is an error obtaining the plugins from the service loader.
      */
     public synchronized <T> Iterator<T> getPlugins(final Class<T> type)
     throws IOException {
@@ -246,7 +245,7 @@ public class Any23PluginManager {
      * Returns the list of all the {@link Tool} classes declared within the classpath.
      *
      * @return not <code>null</code> list of tool classes.
-     * @throws IOException
+     * @throws IOException if there is an error obtaining the Tool(s)
      */
     public synchronized Iterator<Tool> getTools() throws IOException {
         return getPlugins(Tool.class);
@@ -256,7 +255,7 @@ public class Any23PluginManager {
      * List of {@link ExtractorPlugin} classes declared within the classpath.
      *
      * @return not <code>null</code> list of plugin classes.
-     * @throws IOException
+     * @throws IOException if there is an error obtaining the extractors.
      */
     public synchronized Iterator<ExtractorFactory> getExtractors() throws IOException {
         return getPlugins(ExtractorFactory.class);
@@ -292,17 +291,15 @@ public class Any23PluginManager {
         * Configures a new list of extractors containing the extractors declared in <code>initialExtractorGroup</code>
         * and also the extractors detected in classpath specified by <code>pluginLocations</code>.
         *
-        * @param pluginLocations
+        * @param pluginLocations entries representing local plugin {@link java.io.File}s
         * @return full list of extractors.
-        * @throws java.io.IOException
-        * @throws IllegalAccessException
-        * @throws InstantiationException
+        * @throws java.io.IOException if there is an error locating and reading the plugins.
+        * @throws IllegalAccessException if the plugin manager does not have access to the plugins.
+        * @throws InstantiationException if there is an error instantiating one of the plugins.
         */
     public synchronized ExtractorGroup configureExtractors(
-            //final ExtractorGroup initialExtractorGroup,
             final File... pluginLocations
     ) throws IOException, IllegalAccessException, InstantiationException {
-        //if (initialExtractorGroup == null) throw new NullPointerException("inExtractorGroup cannot be null");
 
         final String pluginsReport = loadPlugins(pluginLocations);
         logger.info(pluginsReport);
@@ -323,10 +320,6 @@ public class Any23PluginManager {
                 report.append("\n=== No plugins have been found.===\n");
             }
 
-            //for (ExtractorFactory<?> extractorFactory : initialExtractorGroup) {
-            //    newFactoryList.add(extractorFactory);
-            //}
-
             return new ExtractorGroup(newFactoryList);
         } finally {
             logger.info(report.toString());
@@ -339,9 +332,9 @@ public class Any23PluginManager {
      *
      * @param initialExtractorGroup initial list of extractors.
      * @return full list of extractors.
-     * @throws IOException
-     * @throws InstantiationException
-     * @throws IllegalAccessException
+     * @throws java.io.IOException if there is an error locating and reading the extractors.
+     * @throws IllegalAccessException if the plugin manager does not have access to the extractors.
+     * @throws InstantiationException if there is an error instantiating one of the extractors.
      */
     public synchronized ExtractorGroup configureExtractors(ExtractorGroup initialExtractorGroup)
     throws IOException, InstantiationException, IllegalAccessException {
@@ -353,13 +346,13 @@ public class Any23PluginManager {
     /**
      * Returns an extractor group containing both the default extractors declared by the
      * {@link org.apache.any23.extractor.ExtractorRegistry} and the {@link ExtractorPlugin}s.
-     * @param registry TODO
+     * @param registry an {@link org.apache.any23.extractor.ExtractorRegistry}
      * @param pluginLocations optional list of plugin locations.
      *
      * @return a not <code>null</code> and not empty extractor group.
-     * @throws java.io.IOException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
+     * @throws java.io.IOException if there is an error locating and reading the extractors.
+     * @throws IllegalAccessException if the plugin manager does not have access to the extractors.
+     * @throws InstantiationException if there is an error instantiating one of the extractors.
      */
     public synchronized ExtractorGroup getApplicableExtractors(ExtractorRegistry registry, File... pluginLocations)
     throws IOException, IllegalAccessException, InstantiationException {
@@ -371,7 +364,7 @@ public class Any23PluginManager {
      *
      * @param pluginLocations list of plugin locations.
      * @return set of detected tools.
-     * @throws IOException
+     * @throws IOException if there is an error obtaining one of the plugin {@link java.io.File}s
      */
     public synchronized Iterator<Tool> getApplicableTools(File... pluginLocations) throws IOException {
         final String report = loadPlugins(pluginLocations);

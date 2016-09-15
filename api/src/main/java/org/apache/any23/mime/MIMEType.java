@@ -39,7 +39,7 @@ public class MIMEType implements Comparable<MIMEType> {
      * <code>type/subtype[;q=x.y]</code> .
      * An example of valid mime type is: <code>application/rdf+xml;q=0.9</code> 
      *
-     * @param mimeType
+     * @param mimeType a mimetype string such as <code>type/subtype[;q=x.y]</code>
      * @return the mime type instance.
      * @throws IllegalArgumentException if the <code>mimeType</code> is not well formatted.
      */
