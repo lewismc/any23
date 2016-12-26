@@ -143,6 +143,10 @@
       <groupId>com.github.jsonld-java</groupId>
       <artifactId>jsonld-java-sesame</artifactId>
     </dependency>
+    <dependency>
+        <groupId>com.github.pipauwel</groupId>
+        <artifactId>IFCtoRDF</artifactId>
+    </dependency>
     <!-- END: Misc -->
 
     <!-- BEGIN:  Apache Commons, this version is hosted in the 
