@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr" class="no-js"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" class="no-js"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+	<meta charset="utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="https://podaac.jpl.nasa.gov/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<script language="javascript" type="application/ld+json">{"@context":{"@vocab":"http://schema.org/","datacite":"http://purl.org/spar/datacite/"},"@id":"https://podaac.jpl.nasa.gov/","@type":["http://schema.org/Service","http://schema.org/ResearchProject"],"http://schema.org/address":{"@type":"http://schema.org/PostalAddress","http://schema.org/addressCountry":"USA","http://schema.org/addressLocality":"Pasadena","http://schema.org/addressRegion":"CA","http://schema.org/postalCode":"91009","http://schema.org/streetAddress":"4800 Oak Grove Drive"},"http://schema.org/foundingDate":"1978-01-01","http://schema.org/funder":{"@id":"https://earthdata.nasa.gov/about/esdis-project","@type":"http://schema.org/Organization","http://schema.org/alternateName":"ESDIS","http://schema.org/legalName":"NASA Earth Science Data and Information System","http://schema.org/url":"https://earthdata.nasa.gov/about/esdis-project","parentOrganization":{"@id":"http://dbpedia.org/resource/NASA","@type":"Organization","alternateName":"NASA","legalName":"National Aeronautics and Space Administration","url":"https://www.nasa.gov/"}},"http://schema.org/legalName":"Physical Oceanography Data Active Archive Center","http://schema.org/logo":{"@type":"http://schema.org/ImageObject","contentUrl":"https://podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/podaac_logo.png"},"http://schema.org/name":"PO.DAAC","http://schema.org/parentOrganization":{"@id":"http://dbpedia.org/resource/Jet_Propulsion_Laboratory","@type":"http://schema.org/Organization","http://schema.org/address":{"@type":"http://schema.org/PostalAddress","http://schema.org/addressCountry":"USA","http://schema.org/addressLocality":"Pasadena","http://schema.org/addressRegion":"CA","http://schema.org/postalCode":"91009","http://schema.org/streetAddress":"4800 Oak Grove Drive"},"http://schema.org/legalName":"Jet Propulsion Laboratory","http://schema.org/name":"JPL","http://schema.org/parentOrganization":{"@id":"http://dbpedia.org/resource/California_Institute_of_Technology","@type":"http://schema.org/Organization","http://schema.org/address":{"@type":"http://schema.org/PostalAddress","http://schema.org/addressCountry":"USA","http://schema.org/addressLocality":"Pasadena","http://schema.org/addressRegion":"CA","http://schema.org/postalCode":"91125","http://schema.org/streetAddress":"1200 East California Boulevard"},"http://schema.org/legalName":"California Institute of Technology","http://schema.org/name":"Caltech","http://schema.org/url":"https://www.caltech.edu/"},"http://schema.org/url":"https://www.jpl.nasa.gov/"},"http://schema.org/provider":{"@id":"https://podaac.jpl.nasa.gov/"},"http://schema.org/sameAs":["https://www.youtube.com/user/NASAJPLPODAAC","https://mobile.facebook.com/podaac/","https://www.facebook.com/podaac/","https://twitter.com/podaac"],"http://schema.org/url":"https://podaac.jpl.nasa.gov/","http://schema.org/availableChannel":[{"@type":"ServiceChannel","serviceUrl":"https://podaac.jpl.nasa.gov/","providesService":{"@type":"Service","name":"PO.DAAC Data Search","description":"Search for PO.DAAC data by processing level, across swatch spatial sampling, grid spatial resolution, temporal resolution, parameter, latency, collection, platform, sensor and spatial coverage.","potentialAction":{"@type":"SearchAction","target":"https://podaac.jpl.nasa.gov/datasetlist?search={query_string}","query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"query_string"}}}},{"@type":"ServiceChannel","serviceUrl":"https://podaac.jpl.nasa.gov/","providesService":{"@type":"Service","name":"PO.DAAC Website Search","description":"Search the PO.DAAC website content covering measurements, missions, multimedia and community.","potentialAction":{"@type":"SearchAction","target":"https://podaac.jpl.nasa.gov/search/node/{query_string}","query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"query_string"}}}},{"@type":"ServiceChannel","serviceUrl":"https://podaac.jpl.nasa.gov/","providesService":{"@type":"Service","name":"PO.DAAC Forum Search","description":"Search the PO.DAAC Forum content covering general questions, data recipes, data access, ocean stories discussions, animations and tutorials and PO.DAAC meetings and workshops.","potentialAction":{"@type":"SearchAction","target":"https://podaac.jpl.nasa.gov/forum/search.php?keywords={query_string}","query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"query_string"}}}}],"http://schema.org/category":["Physical Oceanography","Ocean Surface Topography","Sea Surface Temperature","Ocean Winds","Sea Surface Salinity","Gravity","Ocean Circulation","Sea Ice"],"http://schema.org/contactPoint":{"@type":"http://schema.org/ContactPoint","http://schema.org/availableLanguage":"en","http://schema.org/contactType":"customer support","http://schema.org/email":"podaac@podaac.jpl.nasa.gov","http://schema.org/name":"PO.DAAC Support","http://schema.org/url":"https://podaac.jpl.nasa.gov/help"},"http://schema.org/description":"The Physical Oceanography Distributed Active Archive Center (PO.DAAC) is an element of NASA's Earth Observing System Data and Information System (EOSDIS). The EOSDIS provides science data to a wide community of users for NASA's Science Mission Directorate. The mission of the PO.DAAC is to preserve NASA's ocean and climate data and make these universally accessible and meaningful."}</script><!--[if lt IE 9]><script src="sites/all/themes/podaac/js/html5shiv.js" />
+</script><![endif]-->	<title>PO.DAAC</title>
+
+	<meta name="MobileOptimized" content="width">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta http-equiv="cleartype" content="on">
+
+	<link type="text/css" rel="stylesheet" href="https://podaac.jpl.nasa.gov/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://podaac.jpl.nasa.gov/sites/default/files/css/css_O6wPbMz7NDwhWzTOAi-fzQhfSntFFGEqnCzQw7-Wqus.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://podaac.jpl.nasa.gov/sites/default/files/css/css_xzT9nWAliaZQ7Ay62vnV7tJ_bA8KeEz15CItNWxuZIA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://podaac.jpl.nasa.gov/sites/default/files/css/css_wPqN41Hyr82eQLkg2tGThVEi6sgoNezqSLdjKHSnv84.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://podaac.jpl.nasa.gov/sites/default/files/css/css_p0VIYYsXFhxdWZF4B1RS7eI_5pqh6KyvF76_z2vPoBc.css" media="all" />
+	<script src="https://podaac.jpl.nasa.gov/sites/default/files/google_tag/google_tag.script.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/libraries/modernizr/modernizr.min.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/misc/jquery-extend-3.4.0.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/misc/jquery.once.js?v=1.2"></script>
+<script src="https://podaac.jpl.nasa.gov/misc/drupal.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.menu.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.autocomplete.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.effect-slide.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.tabs.min.js?v=1.10.2"></script>
+<script src="https://podaac.jpl.nasa.gov/misc/ajax.js?v=7.67"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/podaac_helper/js/podaac.sortable.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/misc/progress.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/libraries/flexslider/jquery.flexslider-min.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/views/js/base.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/views/js/ajax_view.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/captcha/captcha.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/faceted_browse/resources/js/jquery/jquery.tablesorter.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/faceted_browse/resources/js/faceted-browse-autocomplete.js?pyj1ia"></script>
+<script>var datasetList = "<ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a>Parameter</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Measurement&values=Atmospheric%20Pressure&view=list\" combo=\"Measurement:Atmospheric Pressure\">Atmospheric Pressure (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Atmospheric%20Radiation&view=list\" combo=\"Measurement:Atmospheric Radiation\">Atmospheric Radiation (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Atmospheric%20Temperature&view=list\" combo=\"Measurement:Atmospheric Temperature\">Atmospheric Temperature (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Atmospheric%20Water%20Vapor&view=list\" combo=\"Measurement:Atmospheric Water Vapor\">Atmospheric Water Vapor (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Atmospheric%20Winds&view=list\" combo=\"Measurement:Atmospheric Winds\">Atmospheric Winds (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Bathymetry%2FSeafloor%20Topography&view=list\" combo=\"Measurement:Bathymetry/Seafloor Topography\">Bathymetry/Seafloor Topography (2)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Measurement&values=Clouds&view=list\" combo=\"Measurement:Clouds\">Clouds (1)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Measurement&values=GRAVITY%2FGRAVITATIONAL%20FIELD&view=list\" combo=\"Measurement:GRAVITY/GRAVITATIONAL FIELD\">GRAVITY/GRAVITATIONAL FIELD (41)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Glaciers%2FIce%20Sheets&view=list\" combo=\"Measurement:Glaciers/Ice Sheets\">Glaciers/Ice Sheets (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Humidity%20Indices&view=list\" combo=\"Measurement:Humidity Indices\">Humidity Indices (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Microwave&view=list\" combo=\"Measurement:Microwave\">Microwave (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Chemistry&view=list\" combo=\"Measurement:Ocean Chemistry\">Ocean Chemistry (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Circulation&view=list\" combo=\"Measurement:Ocean Circulation\">Ocean Circulation (10)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Heat%20Budget&view=list\" combo=\"Measurement:Ocean Heat Budget\">Ocean Heat Budget (3)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Optics&view=list\" combo=\"Measurement:Ocean Optics\">Ocean Optics (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Pressure&view=list\" combo=\"Measurement:Ocean Pressure\">Ocean Pressure (22)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Temperature&view=list\" combo=\"Measurement:Ocean Temperature\">Ocean Temperature (207)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Waves&view=list\" combo=\"Measurement:Ocean Waves\">Ocean Waves (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Ocean%20Winds&view=list\" combo=\"Measurement:Ocean Winds\">Ocean Winds (106)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Precipitation&view=list\" combo=\"Measurement:Precipitation\">Precipitation (5)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Measurement&values=Radar&view=list\" combo=\"Measurement:Radar\">Radar (51)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Measurement&values=Salinity%2FDensity&view=list\" combo=\"Measurement:Salinity/Density\">Salinity/Density (158)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Sea%20Ice&view=list\" combo=\"Measurement:Sea Ice\">Sea Ice (37)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Measurement&values=Sea%20Surface%20Topography&view=list\" combo=\"Measurement:Sea Surface Topography\">Sea Surface Topography (25)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Measurement&values=Surface%20Water&view=list\" combo=\"Measurement:Surface Water\">Surface Water (2)</a> </li></ul> </div> </li><li class=\"facet-menu-item\"><a>Latency</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first last\"><a href=\"/datasetlist?ids=Availability&values=NEAR_REAL_TIME&view=list\" combo=\"Availability:NEAR_REAL_TIME\">Near Real Time (74)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first last\"><a href=\"/datasetlist?ids=Availability&values=DELAY_MODE&view=list\" combo=\"Availability:DELAY_MODE\">Delayed Mode (81)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first last\"><a href=\"/datasetlist?ids=Availability&values=HISTORICAL&view=list\" combo=\"Availability:HISTORICAL\">Non-Active (410)</a> </li></ul> </div> </li><li class=\"facet-menu-item\"><a>Collections</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Collections&values=ASCAT&view=list\" combo=\"Collections:ASCAT\">ADVANCED SCATTEROMETER (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=Aquarius&view=list\" combo=\"Collections:Aquarius\">Aquarius/SAC-D mission datasets (179)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=Aquarius-CAP&view=list\" combo=\"Collections:Aquarius-CAP\">JPL SSS CAP datasets (11)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=CCMP&view=list\" combo=\"Collections:CCMP\">Cross-Calibrated Multi-Platform Ocean Surface Wind Vector Analysis Fields (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=CDR&view=list\" combo=\"Collections:CDR\">Climate Data Record (21)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=CYGNSS&view=list\" combo=\"Collections:CYGNSS\">Cyclone Global Navigation Satellite System (4)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Collections&values=GHRSST&view=list\" combo=\"Collections:GHRSST\">Group for High Resolution Sea Surface Temperature Datasets (91)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Collections&values=GRACE&view=list\" combo=\"Collections:GRACE\">GRACE (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=GRACE%20RL06&view=list\" combo=\"Collections:GRACE RL06\">GRACE RL06 (16)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=GRACE-FO&view=list\" combo=\"Collections:GRACE-FO\">GRACE-FO Products (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=Gridded%20Climate%20Variables%20for%20Model%20Intercomparison&view=list\" combo=\"Collections:Gridded Climate Variables for Model Intercomparison\">Gridded Climate Variables for Model Intercomparison (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=JASON-1&view=list\" combo=\"Collections:JASON-1\">Jason-1 (7)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=MEaSUREs&view=list\" combo=\"Collections:MEaSUREs\">MEaSUREs (25)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Collections&values=MODIS_L3_SST&view=list\" combo=\"Collections:MODIS_L3_SST\">MODIS Terra and Aqua L3 SST (48)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Collections&values=OMG&view=list\" combo=\"Collections:OMG\">Oceans Melting Greenland (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=Pre-SWOT%20Hydrology&view=list\" combo=\"Collections:Pre-SWOT Hydrology\">Pre-SWOT Hydrology (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=QSCAT_BYU_L3_OW_SIGMA0_DAILY_BROWSE&view=list\" combo=\"Collections:QSCAT_BYU_L3_OW_SIGMA0_DAILY_BROWSE\">SeaWinds on QuikSCAT Level 3 Sigma-0 Daily Browse Datasets (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=QSCAT_BYU_L3_OW_SIGMA0_LTOD_BROWSE&view=list\" combo=\"Collections:QSCAT_BYU_L3_OW_SIGMA0_LTOD_BROWSE\">SeaWinds on QuikSCAT Level 3 Sigma-0 Local-Time-of-Day Browse Datasets (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=QUIKSCAT&view=list\" combo=\"Collections:QUIKSCAT\">Quick Scatterometer (11)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=RAPIDSCAT&view=list\" combo=\"Collections:RAPIDSCAT\">Rapid Scatterometer (15)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Collections&values=SCAT_BYU_L3_OW_SIGMA0_ENHANCED&view=list\" combo=\"Collections:SCAT_BYU_L3_OW_SIGMA0_ENHANCED\">Enhanced Resolution Sigma-0 Datasets from BYU/SCP (6)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Collections&values=SEAWINDS_BYU_L3_OW_SIGMA0_DAILY_BROWSE&view=list\" combo=\"Collections:SEAWINDS_BYU_L3_OW_SIGMA0_DAILY_BROWSE\">SeaWinds on ADEOS-II Level 3 Sigma-0 Daily Browse Datasets (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=SEAWINDS_BYU_L3_OW_SIGMA0_LTOD_BROWSE&view=list\" combo=\"Collections:SEAWINDS_BYU_L3_OW_SIGMA0_LTOD_BROWSE\">SeaWinds on ADEOS-II Level 3 Sigma-0 Local-Time-of-Day Browse Datasets (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=SMAP-SSS&view=list\" combo=\"Collections:SMAP-SSS\">NASA SMAP Sea Surface Salinity Datasets (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=SPURS-2&view=list\" combo=\"Collections:SPURS-2\">SPURS-2 field campaign (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=SPURS-I&view=list\" combo=\"Collections:SPURS-I\">SPURS-I field Campaign (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Collections&values=Saildrone&view=list\" combo=\"Collections:Saildrone\">Saildrone Cruise Collection (1)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Collections&values=TELLUS&view=list\" combo=\"Collections:TELLUS\">NASA JPL TELLUS (22)</a> </li></ul> </div> </li><li class=\"facet-menu-item\"><a>Platform</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Platform&values=ADEOS-I&view=list\" combo=\"Platform:ADEOS-I\">ADEOS-I (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ADEOS-II&view=list\" combo=\"Platform:ADEOS-II\">ADEOS-II (22)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ARGO&view=list\" combo=\"Platform:ARGO\">ARGO (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Aircraft&view=list\" combo=\"Platform:Aircraft\">Aircraft (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Aqua&view=list\" combo=\"Platform:Aqua\">Aqua (49)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Aquarius_SAC-D&view=list\" combo=\"Platform:Aquarius_SAC-D\">Aquarius_SAC-D (159)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=CORIOLIS&view=list\" combo=\"Platform:CORIOLIS\">CORIOLIS (14)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=CYGNSS&view=list\" combo=\"Platform:CYGNSS\">CYGNSS (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-2%2FF10&view=list\" combo=\"Platform:DMSP 5D-2/F10\">DMSP 5D-2/F10 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-2%2FF11&view=list\" combo=\"Platform:DMSP 5D-2/F11\">DMSP 5D-2/F11 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-2%2FF13&view=list\" combo=\"Platform:DMSP 5D-2/F13\">DMSP 5D-2/F13 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-2%2FF14&view=list\" combo=\"Platform:DMSP 5D-2/F14\">DMSP 5D-2/F14 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-2%2FF8&view=list\" combo=\"Platform:DMSP 5D-2/F8\">DMSP 5D-2/F8 (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-3%2FF15&view=list\" combo=\"Platform:DMSP 5D-3/F15\">DMSP 5D-3/F15 (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-3%2FF16&view=list\" combo=\"Platform:DMSP 5D-3/F16\">DMSP 5D-3/F16 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=DMSP%205D-3%2FF17&view=list\" combo=\"Platform:DMSP 5D-3/F17\">DMSP 5D-3/F17 (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Drifter&view=list\" combo=\"Platform:Drifter\">Drifter (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ENVISAT&view=list\" combo=\"Platform:ENVISAT\">ENVISAT (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ERS-1&view=list\" combo=\"Platform:ERS-1\">ERS-1 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ERS-2&view=list\" combo=\"Platform:ERS-2\">ERS-2 (6)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Platform&values=Ecomapper&view=list\" combo=\"Platform:Ecomapper\">Ecomapper (1)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Platform&values=GCOM-W1&view=list\" combo=\"Platform:GCOM-W1\">GCOM-W1 (12)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GEOS-3&view=list\" combo=\"Platform:GEOS-3\">GEOS-3 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GFO&view=list\" combo=\"Platform:GFO\">GFO (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GOES-11&view=list\" combo=\"Platform:GOES-11\">GOES-11 (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GOES-12&view=list\" combo=\"Platform:GOES-12\">GOES-12 (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GOES-13&view=list\" combo=\"Platform:GOES-13\">GOES-13 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GOES-15&view=list\" combo=\"Platform:GOES-15\">GOES-15 (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GOES-16&view=list\" combo=\"Platform:GOES-16\">GOES-16 (10)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GPM&view=list\" combo=\"Platform:GPM\">GPM (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GRACE&view=list\" combo=\"Platform:GRACE\">GRACE (35)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=GRACE-FO&view=list\" combo=\"Platform:GRACE-FO\">GRACE-FO (11)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Himawari&view=list\" combo=\"Platform:Himawari\">Himawari (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ICOADS&view=list\" combo=\"Platform:ICOADS\">ICOADS (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=IRS-O2&view=list\" combo=\"Platform:IRS-O2\">IRS-O2 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=ISS&view=list\" combo=\"Platform:ISS\">ISS (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=InSitu&view=list\" combo=\"Platform:InSitu\">InSitu (37)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=JASON-1&view=list\" combo=\"Platform:JASON-1\">JASON-1 (16)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=JASON-3&view=list\" combo=\"Platform:JASON-3\">JASON-3 (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Jason-1%20Geodetic&view=list\" combo=\"Platform:Jason-1 Geodetic\">Jason-1 Geodetic (7)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=METEOSAT-10&view=list\" combo=\"Platform:METEOSAT-10\">METEOSAT-10 (2)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Platform&values=METOP-A&view=list\" combo=\"Platform:METOP-A\">METOP-A (26)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Platform&values=METOP-B&view=list\" combo=\"Platform:METOP-B\">METOP-B (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=MSG2&view=list\" combo=\"Platform:MSG2\">MSG2 (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=MSG4&view=list\" combo=\"Platform:MSG4\">MSG4 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=MTSAT-1R&view=list\" combo=\"Platform:MTSAT-1R\">MTSAT-1R (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=MTSAT-2&view=list\" combo=\"Platform:MTSAT-2\">MTSAT-2 (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Mooring&view=list\" combo=\"Platform:Mooring\">Mooring (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NCEP%20GTS&view=list\" combo=\"Platform:NCEP GTS\">NCEP GTS (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NDBC-MOORED-BUOY&view=list\" combo=\"Platform:NDBC-MOORED-BUOY\">NDBC-MOORED-BUOY (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-11&view=list\" combo=\"Platform:NOAA-11\">NOAA-11 (31)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-14&view=list\" combo=\"Platform:NOAA-14\">NOAA-14 (35)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-16&view=list\" combo=\"Platform:NOAA-16\">NOAA-16 (38)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-17&view=list\" combo=\"Platform:NOAA-17\">NOAA-17 (41)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-19&view=list\" combo=\"Platform:NOAA-19\">NOAA-19 (51)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-20&view=list\" combo=\"Platform:NOAA-20\">NOAA-20 (20)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-7&view=list\" combo=\"Platform:NOAA-7\">NOAA-7 (31)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NOAA-9&view=list\" combo=\"Platform:NOAA-9\">NOAA-9 (31)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=NeutrallyBuoyantFloat&view=list\" combo=\"Platform:NeutrallyBuoyantFloat\">NeutrallyBuoyantFloat (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Nimbus-7&view=list\" combo=\"Platform:Nimbus-7\">Nimbus-7 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=OMGSHIP_MBES&view=list\" combo=\"Platform:OMGSHIP_MBES\">OMGSHIP_MBES (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=OMGSHIP_SBES&view=list\" combo=\"Platform:OMGSHIP_SBES\">OMGSHIP_SBES (1)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Platform&values=OSTM%2FJASON-2&view=list\" combo=\"Platform:OSTM/JASON-2\">OSTM/JASON-2 (16)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Platform&values=QUIKSCAT&view=list\" combo=\"Platform:QUIKSCAT\">QUIKSCAT (36)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=R%2FV%20Endeavor&view=list\" combo=\"Platform:R/V Endeavor\">R/V Endeavor (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=R%2FV%20Knorr&view=list\" combo=\"Platform:R/V Knorr\">R/V Knorr (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=R%2FV%20Revelle&view=list\" combo=\"Platform:R/V Revelle\">R/V Revelle (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=R%2FV%20Sarmiento&view=list\" combo=\"Platform:R/V Sarmiento\">R/V Sarmiento (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=R%2FV%20Thalassa&view=list\" combo=\"Platform:R/V Thalassa\">R/V Thalassa (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=RAWINSONDES&view=list\" combo=\"Platform:RAWINSONDES\">RAWINSONDES (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=SARAL&view=list\" combo=\"Platform:SARAL\">SARAL (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=SEASAT-A&view=list\" combo=\"Platform:SEASAT-A\">SEASAT-A (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=SMAP&view=list\" combo=\"Platform:SMAP\">SMAP (7)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=SUOMI-NPP&view=list\" combo=\"Platform:SUOMI-NPP\">SUOMI-NPP (20)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Saildrone&view=list\" combo=\"Platform:Saildrone\">Saildrone (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Seaglider&view=list\" combo=\"Platform:Seaglider\">Seaglider (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Seasoar&view=list\" combo=\"Platform:Seasoar\">Seasoar (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=TOPEX%2FPOSEIDON&view=list\" combo=\"Platform:TOPEX/POSEIDON\">TOPEX/POSEIDON (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=TRMM&view=list\" combo=\"Platform:TRMM\">TRMM (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=TenuseGlider&view=list\" combo=\"Platform:TenuseGlider\">TenuseGlider (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Platform&values=Terra&view=list\" combo=\"Platform:Terra\">Terra (34)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Platform&values=Waveglider&view=list\" combo=\"Platform:Waveglider\">Waveglider (2)</a> </li></ul> </div> </li><li class=\"facet-menu-item\"><a>Sensor</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Sensor&values=AATSR&view=list\" combo=\"Sensor:AATSR\">AATSR (8)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ABI&view=list\" combo=\"Sensor:ABI\">ABI (7)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ADCP&view=list\" combo=\"Sensor:ADCP\">ADCP (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AHI&view=list\" combo=\"Sensor:AHI\">AHI (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ALT%20(TOPEX)&view=list\" combo=\"Sensor:ALT (TOPEX)\">ALT (TOPEX) (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ALTIKA%20Altimeter&view=list\" combo=\"Sensor:ALTIKA Altimeter\">ALTIKA Altimeter (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AMI&view=list\" combo=\"Sensor:AMI\">AMI (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AMR&view=list\" combo=\"Sensor:AMR\">AMR (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AMSR&view=list\" combo=\"Sensor:AMSR\">AMSR (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AMSR-E&view=list\" combo=\"Sensor:AMSR-E\">AMSR-E (18)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AMSR2&view=list\" combo=\"Sensor:AMSR2\">AMSR2 (12)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ANEMOMETERS&view=list\" combo=\"Sensor:ANEMOMETERS\">ANEMOMETERS (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AQUARIUS_RADIOMETER&view=list\" combo=\"Sensor:AQUARIUS_RADIOMETER\">AQUARIUS_RADIOMETER (129)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AQUARIUS_SCATTEROMETER&view=list\" combo=\"Sensor:AQUARIUS_SCATTEROMETER\">AQUARIUS_SCATTEROMETER (158)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ASCAT&view=list\" combo=\"Sensor:ASCAT\">ASCAT (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ATSR-2&view=list\" combo=\"Sensor:ATSR-2\">ATSR-2 (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AVHRR&view=list\" combo=\"Sensor:AVHRR\">AVHRR (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AVHRR-2&view=list\" combo=\"Sensor:AVHRR-2\">AVHRR-2 (35)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AVHRR-3&view=list\" combo=\"Sensor:AVHRR-3\">AVHRR-3 (73)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=AXCTD&view=list\" combo=\"Sensor:AXCTD\">AXCTD (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=BAROMETERS&view=list\" combo=\"Sensor:BAROMETERS\">BAROMETERS (2)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Sensor&values=CTD&view=list\" combo=\"Sensor:CTD\">CTD (16)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Sensor&values=CURRENT%20METERS&view=list\" combo=\"Sensor:CURRENT METERS\">CURRENT METERS (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=DDMI&view=list\" combo=\"Sensor:DDMI\">DDMI (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=DORIS&view=list\" combo=\"Sensor:DORIS\">DORIS (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ERS-1%20ALTIMETER&view=list\" combo=\"Sensor:ERS-1 ALTIMETER\">ERS-1 ALTIMETER (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=ERS-2%20Altimeter&view=list\" combo=\"Sensor:ERS-2 Altimeter\">ERS-2 Altimeter (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=FLUOROMETERS&view=list\" combo=\"Sensor:FLUOROMETERS\">FLUOROMETERS (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GEOS-3%20ALTIMETER&view=list\" combo=\"Sensor:GEOS-3 ALTIMETER\">GEOS-3 ALTIMETER (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GFO%20Altimeter&view=list\" combo=\"Sensor:GFO Altimeter\">GFO Altimeter (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GMI&view=list\" combo=\"Sensor:GMI\">GMI (4)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GOES%20I-M%20IMAGER&view=list\" combo=\"Sensor:GOES I-M IMAGER\">GOES I-M IMAGER (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GOES%20N-P%20IMAGER&view=list\" combo=\"Sensor:GOES N-P IMAGER\">GOES N-P IMAGER (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GOES-11%20Imager&view=list\" combo=\"Sensor:GOES-11 Imager\">GOES-11 Imager (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GOES-13%20Imager&view=list\" combo=\"Sensor:GOES-13 Imager\">GOES-13 Imager (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GOES-15%20Imager&view=list\" combo=\"Sensor:GOES-15 Imager\">GOES-15 Imager (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GPSP&view=list\" combo=\"Sensor:GPSP\">GPSP (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE%20ACC&view=list\" combo=\"Sensor:GRACE ACC\">GRACE ACC (10)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE%20KBR&view=list\" combo=\"Sensor:GRACE KBR\">GRACE KBR (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE%20SCA&view=list\" combo=\"Sensor:GRACE SCA\">GRACE SCA (34)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE-FO%20ACC&view=list\" combo=\"Sensor:GRACE-FO ACC\">GRACE-FO ACC (35)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE-FO%20KBR&view=list\" combo=\"Sensor:GRACE-FO KBR\">GRACE-FO KBR (36)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=GRACE-FO%20LRI&view=list\" combo=\"Sensor:GRACE-FO LRI\">GRACE-FO LRI (5)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Sensor&values=GRACE-FO%20SCA&view=list\" combo=\"Sensor:GRACE-FO SCA\">GRACE-FO SCA (11)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Sensor&values=HUMIDITY%20SENSORS&view=list\" combo=\"Sensor:HUMIDITY SENSORS\">HUMIDITY SENSORS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=IASI&view=list\" combo=\"Sensor:IASI\">IASI (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=InSitu&view=list\" combo=\"Sensor:InSitu\">InSitu (43)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=JASON-1%20Microwave%20Radiometer&view=list\" combo=\"Sensor:JASON-1 Microwave Radiometer\">JASON-1 Microwave Radiometer (18)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MBES&view=list\" combo=\"Sensor:MBES\">MBES (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MMS&view=list\" combo=\"Sensor:MMS\">MMS (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MODIS&view=list\" combo=\"Sensor:MODIS\">MODIS (61)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MTSAT%201R%20Imager&view=list\" combo=\"Sensor:MTSAT 1R Imager\">MTSAT 1R Imager (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MTSAT%202%20Imager&view=list\" combo=\"Sensor:MTSAT 2 Imager\">MTSAT 2 Imager (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=MWR&view=list\" combo=\"Sensor:MWR\">MWR (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=NSCAT&view=list\" combo=\"Sensor:NSCAT\">NSCAT (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=OSCAT&view=list\" combo=\"Sensor:OSCAT\">OSCAT (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=OXYGEN%20METERS&view=list\" combo=\"Sensor:OXYGEN METERS\">OXYGEN METERS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=POSEIDON-2&view=list\" combo=\"Sensor:POSEIDON-2\">POSEIDON-2 (17)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=POSEIDON-3&view=list\" combo=\"Sensor:POSEIDON-3\">POSEIDON-3 (17)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=POSEIDON-3B&view=list\" combo=\"Sensor:POSEIDON-3B\">POSEIDON-3B (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=PYROMETERS&view=list\" combo=\"Sensor:PYROMETERS\">PYROMETERS (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=RA-2&view=list\" combo=\"Sensor:RA-2\">RA-2 (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=RapidScat&view=list\" combo=\"Sensor:RapidScat\">RapidScat (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SASS&view=list\" combo=\"Sensor:SASS\">SASS (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SBES&view=list\" combo=\"Sensor:SBES\">SBES (1)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Sensor&values=SEAPOL&view=list\" combo=\"Sensor:SEAPOL\">SEAPOL (1)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=Sensor&values=SEAWINDS&view=list\" combo=\"Sensor:SEAWINDS\">SEAWINDS (55)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SEVIRI&view=list\" combo=\"Sensor:SEVIRI\">SEVIRI (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SMAP%20L-BAND%20RADIOMETER&view=list\" combo=\"Sensor:SMAP L-BAND RADIOMETER\">SMAP L-BAND RADIOMETER (7)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SMMR&view=list\" combo=\"Sensor:SMMR\">SMMR (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SPURS_METEO&view=list\" combo=\"Sensor:SPURS_METEO\">SPURS_METEO (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SS&view=list\" combo=\"Sensor:SS\">SS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SSALT&view=list\" combo=\"Sensor:SSALT\">SSALT (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SSM%2FI&view=list\" combo=\"Sensor:SSM/I\">SSM/I (12)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=SSMIS&view=list\" combo=\"Sensor:SSMIS\">SSMIS (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=TEMPERATURE%20SENSORS&view=list\" combo=\"Sensor:TEMPERATURE SENSORS\">TEMPERATURE SENSORS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=THERMOSALINOGRAPHS&view=list\" combo=\"Sensor:THERMOSALINOGRAPHS\">THERMOSALINOGRAPHS (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=TMI&view=list\" combo=\"Sensor:TMI\">TMI (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=TMR&view=list\" combo=\"Sensor:TMR\">TMR (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=TRSR&view=list\" combo=\"Sensor:TRSR\">TRSR (3)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=TURBIDITY%20METERS&view=list\" combo=\"Sensor:TURBIDITY METERS\">TURBIDITY METERS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=UCTD&view=list\" combo=\"Sensor:UCTD\">UCTD (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=USPS&view=list\" combo=\"Sensor:USPS\">USPS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=VIIRS&view=list\" combo=\"Sensor:VIIRS\">VIIRS (24)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=WAMOS&view=list\" combo=\"Sensor:WAMOS\">WAMOS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=WIND%20PROFILERS&view=list\" combo=\"Sensor:WIND PROFILERS\">WIND PROFILERS (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=Sensor&values=WINDSAT&view=list\" combo=\"Sensor:WINDSAT\">WINDSAT (14)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=Sensor&values=XBT&view=list\" combo=\"Sensor:XBT\">XBT (1)</a> </li></ul> </div> </li><li class=\"facet-menu-item last\"><a>Spatial Coverage</a> <div class=\'facet-dropdown\'> <ul class=\"from-module first\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=SpatialCoverage&values=38N-38S&view=list\" combo=\"SpatialCoverage:38N-38S\">38N-38S (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Alaska&view=list\" combo=\"SpatialCoverage:Alaska\">Alaska (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Americas&view=list\" combo=\"SpatialCoverage:Americas\">Americas (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Antarctic&view=list\" combo=\"SpatialCoverage:Antarctic\">Antarctic (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Antarctica&view=list\" combo=\"SpatialCoverage:Antarctica\">Antarctica (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Arctic&view=list\" combo=\"SpatialCoverage:Arctic\">Arctic (17)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Atlantic%20Ocean&view=list\" combo=\"SpatialCoverage:Atlantic Ocean\">Atlantic Ocean (5)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Australia&view=list\" combo=\"SpatialCoverage:Australia\">Australia (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Baltic%20Sea&view=list\" combo=\"SpatialCoverage:Baltic Sea\">Baltic Sea (1)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Bering%20Sea&view=list\" combo=\"SpatialCoverage:Bering Sea\">Bering Sea (6)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Central%20America&view=list\" combo=\"SpatialCoverage:Central America\">Central America (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=China&view=list\" combo=\"SpatialCoverage:China\">China (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Eastern%20Atlantic&view=list\" combo=\"SpatialCoverage:Eastern Atlantic\">Eastern Atlantic (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Eastern%20Pacific&view=list\" combo=\"SpatialCoverage:Eastern Pacific\">Eastern Pacific (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Eastern%20Pacific%20Ocean&view=list\" combo=\"SpatialCoverage:Eastern Pacific Ocean\">Eastern Pacific Ocean (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Eastern%20Tropical%20Pacific&view=list\" combo=\"SpatialCoverage:Eastern Tropical Pacific\">Eastern Tropical Pacific (13)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Europe&view=list\" combo=\"SpatialCoverage:Europe\">Europe (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Global&view=list\" combo=\"SpatialCoverage:Global\">Global (473)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Greenland&view=list\" combo=\"SpatialCoverage:Greenland\">Greenland (7)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Indian%20Ocean&view=list\" combo=\"SpatialCoverage:Indian Ocean\">Indian Ocean (1)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Indonesia&view=list\" combo=\"SpatialCoverage:Indonesia\">Indonesia (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Japan&view=list\" combo=\"SpatialCoverage:Japan\">Japan (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Mid-Atlantic%20to%20East%20Indian%20Ocean%20-%20Baltic%20Sea%20to%20below%20Africa&view=list\" combo=\"SpatialCoverage:Mid-Atlantic to East Indian Ocean - Baltic Sea to below Africa\">Mid-Atlantic to East Indian Ocean - Baltic Sea to below Africa (2)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=North%20Africa&view=list\" combo=\"SpatialCoverage:North Africa\">North Africa (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=North%20America&view=list\" combo=\"SpatialCoverage:North America\">North America (9)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=North%20Sea&view=list\" combo=\"SpatialCoverage:North Sea\">North Sea (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Northeast%20Atlantic&view=list\" combo=\"SpatialCoverage:Northeast Atlantic\">Northeast Atlantic (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Oceania&view=list\" combo=\"SpatialCoverage:Oceania\">Oceania (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Pacific&view=list\" combo=\"SpatialCoverage:Pacific\">Pacific (1)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Regional&view=list\" combo=\"SpatialCoverage:Regional\">Regional (4)</a> </li></ul> <ul class=\"from-module\"> <li class=\"facet-menu-item first\"><a href=\"/datasetlist?ids=SpatialCoverage&values=SPURS-1%20%20N.Atlantic%20Salinity%20maximum%20region&view=list\" combo=\"SpatialCoverage:SPURS-1  N.Atlantic Salinity maximum region\">SPURS-1  N.Atlantic Salinity maximum region (15)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Siberia&view=list\" combo=\"SpatialCoverage:Siberia\">Siberia (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=South%20Africa&view=list\" combo=\"SpatialCoverage:South Africa\">South Africa (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=South%20America&view=list\" combo=\"SpatialCoverage:South America\">South America (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=South%20Atlantic&view=list\" combo=\"SpatialCoverage:South Atlantic\">South Atlantic (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Southern%20Asia&view=list\" combo=\"SpatialCoverage:Southern Asia\">Southern Asia (6)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Tropics&view=list\" combo=\"SpatialCoverage:Tropics\">Tropics (1)</a> </li><li class=\"facet-menu-item\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Western%20Atlantic&view=list\" combo=\"SpatialCoverage:Western Atlantic\">Western Atlantic (2)</a> </li><li class=\"facet-menu-item last\"><a href=\"/datasetlist?ids=SpatialCoverage&values=Western%20Pacific%20Ocean&view=list\" combo=\"SpatialCoverage:Western Pacific Ocean\">Western Pacific Ocean (1)</a> </li></ul> </div> </li></ul> ";</script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/faceted_browse/resources/js/faceted-browse-menu.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/faceted_browse/resources/js/faceted-browse-table-dialog.js?pyj1ia"></script>
+<script src="https://status.earthdata.nasa.gov/assets/banner_widget.js"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/podaac_helper/js/podaac.search.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/menu_attach_block/menu_attach_block.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/faceted_browse/resources/js/faceted-browse-front-block.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/quicktabs/js/quicktabs.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/themes/podaac/js/front.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/themes/podaac/js/navigation.js?pyj1ia"></script>
+<script src="https://podaac.jpl.nasa.gov/sites/all/themes/podaac/js/podaac.js?pyj1ia"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"podaac","theme_token":"ll3aF2CtxvnR16Tp-FMn270foqzt11wEUtkPuzBRLu0","jquery_version":"1.10","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.menu.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"sites\/all\/modules\/contrib\/simplenews\/simplenews.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/menu_attach_block\/menu_attach_block.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/custom\/podaac_helper\/css\/podaac.sortable.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/css\/faceted-browse-table-dialog.css":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/css\/faceted-browse-menu.css":1,"sites\/all\/modules\/custom\/podaac_helper\/css\/podaac.jpl-banner.css":1,"sites\/all\/modules\/custom\/podaac_helper\/css\/podaac.search.css":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/css\/faceted-browse-front-block.css":1,"sites\/all\/modules\/contrib\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/themes\/podaac\/system.menus.css":1,"sites\/all\/themes\/podaac\/css\/normalize.css":1,"sites\/all\/themes\/podaac\/css\/wireframes.css":1,"sites\/all\/themes\/podaac\/css\/page-backgrounds.css":1,"sites\/all\/themes\/podaac\/css\/tabs.css":1,"sites\/all\/themes\/podaac\/css\/pages.css":1,"sites\/all\/themes\/podaac\/css\/blocks.css":1,"sites\/all\/themes\/podaac\/css\/navigation.css":1,"sites\/all\/themes\/podaac\/css\/views-styles.css":1,"sites\/all\/themes\/podaac\/css\/nodes.css":1,"sites\/all\/themes\/podaac\/css\/comments.css":1,"sites\/all\/themes\/podaac\/css\/forms.css":1,"sites\/all\/themes\/podaac\/css\/fields.css":1,"sites\/all\/themes\/podaac\/css\/content.css":1,"sites\/all\/themes\/podaac\/css\/print.css":1,"sites\/all\/themes\/podaac\/css\/front.css":1,"sites\/all\/themes\/podaac\/css\/layouts\/fixed-width.css":1,"sites\/all\/themes\/podaac\/css\/layouts\/responsive-header.css":1,"sites\/all\/themes\/podaac\/css\/layouts\/responsive-sidebars.css":1,"sites\/all\/themes\/podaac\/css\/layouts\/responsive-footer.css":1,"sites\/all\/themes\/podaac\/css\/tophat.css":1},"js":{"sites\/all\/modules\/contrib\/flexslider\/assets\/js\/flexslider.load.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"sites\/all\/libraries\/modernizr\/modernizr.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.menu.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.autocomplete.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect-slide.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/podaac_helper\/js\/podaac.sortable.js":1,"misc\/progress.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/custom\/captcha\/captcha.js":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/js\/jquery\/jquery.tablesorter.js":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/js\/faceted-browse-autocomplete.js":1,"0":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/js\/faceted-browse-menu.js":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/js\/faceted-browse-table-dialog.js":1,"https:\/\/status.earthdata.nasa.gov\/assets\/banner_widget.js":1,"sites\/all\/modules\/custom\/podaac_helper\/js\/podaac.search.js":1,"sites\/all\/modules\/contrib\/menu_attach_block\/menu_attach_block.js":1,"sites\/all\/modules\/custom\/faceted_browse\/resources\/js\/faceted-browse-front-block.js":1,"sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/themes\/podaac\/js\/front.js":1,"sites\/all\/themes\/podaac\/js\/navigation.js":1,"sites\/all\/themes\/podaac\/js\/podaac.js":1}},"flexslider":{"optionsets":{"default":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":7000,"directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"default"}},"urlIsAjaxTrusted":{"\/":true},"PODAAC":{"autocompleteuri":"\/api\/autocomplete"},"podaac_search":{"default_text":"Search"},"faceted_browse":{"path":"\/sites\/all\/modules\/custom\/faceted_browse","datasetPageUri":"\/dataset","webApi":"api","hoverInfo":{"Processing Levels":"Datasets grouped by data processing level (e.g., swath, grid, or blended).","Across Swath Spatial Sampling":"Datasets grouped by across swath spatial resolution.","Grid Spatial Resolution":"Datasets grouped by grid spatial resolution.","Temporal Resolution":"Datasets grouped by temporal resolution.","Parameter":"Datasets grouped by key ocean related parameter.","Platform":"Datasets grouped by the platform used to acquire data (e.g., satellite, in-situ, aircraft).","Sensor":"Datasets grouped by the instrument used to acquire data.","Collections":"Datasets grouped by common characteristics (e.g., project, discipline).","Latency":"Datasets grouped by the period of time between data collection and availability.","Spatial Coverage":"Datasets grouped by geographical regions.","default":"N\/A"}},"quicktabs":{"qt_frontpage_tab":{"name":"frontpage_tab","tabs":[{"vid":"highlight","display":"block","args":"","view_path":"frontpage","view_dom_id":1,"ajax_args":"","actual_args":[]},{"vid":"animations","display":"block","args":"","view_path":"frontpage","view_dom_id":2,"ajax_args":"","actual_args":[]},{"vid":"ocean_stories","display":"block","args":"","view_path":"frontpage","view_dom_id":3,"ajax_args":"","actual_args":[]},{"vid":"images","display":"block","args":"","view_path":"frontpage","view_dom_id":4,"ajax_args":"","actual_args":[]}],"ajaxPageState":{"jquery_version":"1.10"}}}});</script>
+</head>
+<body class="html front not-logged-in one-sidebar sidebar-second page-frontpage page-views" >
+	  <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNP7MLF" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager">Google Tag Manager</iframe></noscript>  </div><!-- /.region -->
+	
+<div id="eosdis-tophat-container"></div>
+<div id="page">
+  <div id="header-container">
+    <header id="header" role="banner">
+  
+        <div class="region region-header">
+    <div id="block-podaac-helper-podaac-jpl-banner" class="block block-podaac-helper first odd">
+
+  <div class="block-content">
+              
+    <div id="JPL-banner">
+  
+  <div id="JPL-home">
+    <a href="http://www.nasa.gov" id="JPL-NASA-link"></a>    
+    <a href="http://www.jpl.nasa.gov" id="JPL-home-link">Jet Propulsion Laboratory</a>    
+    <a href="http://www.caltech.edu/" id="JPL-caltech-link">California Institute of Technology</a>  </div>
+  
+  <div id="JPL-link-container">
+    <ul id="JPL-links"><li class="jpl-home first"><a href="http://www.jpl.nasa.gov/index.cfm">JPL Home</a></li>
+<li class="jpl-earth"><a href="http://www.jpl.nasa.gov/earth/index.cfm">Earth</a></li>
+<li class="jpl-solar-system"><a href="http://www.jpl.nasa.gov/solar-system/index.cfm">Solar System</a></li>
+<li class="jpl-stars-galaxy"><a href="http://www.jpl.nasa.gov/stars-galaxies/index.cfm">Stars &amp; Galaxies</a></li>
+<li class="jpl-science-tech last"><a href="http://scienceandtechnology.jpl.nasa.gov/">Science &amp; Technology</a></li>
+</ul>    
+    <div id="JPL-icon-container">
+      <span id="JPL-icon-slogan">Bring the Universe to You</span>
+      
+      <ul id="JPL-icons"><li class="jpl-mail first"><a href="http://jpl.kintera.org/signup/" class="jpl-icon jpl-email-news-icon"></a></li>
+<li class="jpl-facebook"><a href="http://www.facebook.com/NASAJPL" class="jpl-icon jpl-facebook-icon"></a></li>
+<li class="jpl-twitter"><a href="http://twitter.com/NASAJPL" class="jpl-icon jpl-twitter-icon"></a></li>
+<li class="jpl-gplus"><a href="http://plus.google.com/113315419190905475766/posts" class="jpl-icon jpl-gplus-icon"></a></li>
+<li class="jpl-youtube"><a href="http://www.youtube.com/user/JPLnews" class="jpl-icon jpl-youtube-icon"></a></li>
+<li class="jpl-itunes"><a href="http://itunes.apple.com/podcast/hd-nasas-jet-propulsion-laboratory/id262254981" class="jpl-icon jpl-itunes-icon"></a></li>
+<li class="jpl-ustream"><a href="http://www.ustream.tv/nasajpl2" class="jpl-icon jpl-ustream-icon"></a></li>
+<li class="jpl-rss"><a href="http://www.jpl.nasa.gov/rss/" class="jpl-icon jpl-rss-icon"></a></li>
+<li class="jpl-blog"><a href="http://blogs.jpl.nasa.gov/" class="jpl-icon jpl-blog-icon"></a></li>
+<li class="jpl-mobile last"><a href="http://www.jpl.nasa.gov/onthego/" class="jpl-icon jpl-mobile-icon"></a></li>
+</ul>    </div>
+  </div>
+  <div class="clearfix podaac-clear"></div>
+  
+</div><!-- /.JPL-banner -->
+
+  </div>
+
+</div><!-- /.block -->
+<div id="block-podaac-helper-podaac-search" class="block block-podaac-helper even">
+
+  <div class="block-content">
+              
+    <form action="https://podaac.jpl.nasa.gov/helper/search" method="GET" id="podaac-search-form" accept-charset="UTF-8"><div><div class="form-item form-type-select form-item-type">
+  <label class="element-invisible" for="edit-type">Search Type </label>
+ <select class="not-chosen form-select" id="edit-type" name="type"><option value="website">Website</option><option value="dataset" selected="selected">Data</option><option value="forum">Forum</option></select>
+</div>
+<div class="form-item form-type-textfield form-item-search">
+  <label class="element-invisible" for="edit-search">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search" name="search" value="Search" size="15" maxlength="128" class="form-text" /> <span class="field-suffix"><a href="/DatasetSearchHelp" id="podaac-search-help"><img src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/podaac_helper/images/search-help.png" width="15" height="15" alt="" /></a></span>
+</div>
+</div></form>  </div>
+
+</div><!-- /.block -->
+<div id="block-block-16" class="block block-block last odd">
+
+  <div class="block-content">
+              
+    <!-- <div class="messages error" style="background: #B22222; Font: #FFFAFA; Color: #FFFAFA; border: 2px solid #FFFAFA; border-radius: 7px;">
+<p class="rtecenter">PO.DAAC FTP services are no longer available. For more information and alternate methods of access, please see our last<span style="font-family:arial,helvetica,sans-serif"><span style="font-size:12px"> <a href="//podaac.jpl.nasa.gov/announcements/2019-06-03_REMINDER-PO.DAAC_FTP_SERVICE_NO_LONGER_AVAILABLE" target="_blank"><span style="color:#ADD8E6">Announcement</span></a><span style="color:#ADD8E6">.</span></span></span></p>
+</div>
+-->  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  
+              <hgroup id="name-and-slogan">
+                      <a href="/" title="Home" rel="home" id="logo"><img src="https://podaac.jpl.nasa.gov/sites/all/themes/podaac/logo.png" alt="Home" /></a>
+                    
+                      <h1 id="site-name">
+              <a href="/" title="Home" rel="home"><span>PO.DAAC</span></a>
+            </h1>
+            
+                  </hgroup><!-- /#name-and-slogan -->
+        
+            
+      <div id="header-satellite"></div>
+      
+      <div id="podaac-follow-us">
+        <span id="podaac-follow-us-trigger">Follow Us</span>
+        <ul id="podaac-follow-us-links">
+          <li><a href="https://www.facebook.com/podaac" class="podaac-follow-us-icon" id="podaac-facebook" target="_blank" title="PODAAC Facebook"></a></li>
+          <li><a href="http://www.youtube.com/user/NASAJPLPODAAC " class="podaac-follow-us-icon" id="podaac-youtube" target="_blank" title="PODAAC YouTube"></a></li>
+          <li><a href="https://twitter.com/podaac" class="podaac-follow-us-icon" id="podaac-twitter" target="_blank" title="PODAAC Twitter"></a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <div id="header-banner"></div>
+  </div>
+
+  <div id="main-container">
+    <div id="content-backdrop">
+      <div id="backdrop">
+        <div id="backdrop-gradient"></div>
+      </div>
+    </div>
+    
+    <div id="main">
+    <!--[if lt IE 8]>
+      <div id="browser-compatibility">
+        You are viewing PODAAC in an incompatible browser and may not have full usability of the site;
+        to view the list of compatible browsers please visit our <a href="/browser-compatibility">FAQ</a>      </div>
+    <![endif]-->
+  
+      <div id="navigation">
+  
+          
+          <div class="region region-navigation">
+    <div id="block-menu-block-1" class="block block-menu-block first last odd" role="navigation">
+
+  <div class="block-content">
+              <h2 class="block-title">Navigation</h2>
+          
+    <div class="menu-block-wrapper menu-block-1 menu-name-menu-podaac-nav parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf active menu-mlid-298"><a href="https://podaac.jpl.nasa.gov/" title="" class="active">Home</a></li>
+<li class="leaf menu-mlid-299"><a href="https://podaac.jpl.nasa.gov/datasetlist" title="Dataset Discovery">Dataset Discovery</a></li>
+<li class="expanded menu-mlid-349"><a href="https://podaac.jpl.nasa.gov/dataaccess" title="Data Access">Data Access</a><ul class="menu"><li class="first leaf menu-mlid-4119"><a href="http://podaac-tools.jpl.nasa.gov/drive" title="PO.DAAC Drive">PO.DAAC Drive</a></li>
+<li class="leaf menu-mlid-380"><a href="https://opendap.jpl.nasa.gov/opendap/" title="Open-source Project for a Network Data Access Protocol (OPeNDAP)">OPeNDAP</a></li>
+<li class="leaf menu-mlid-729"><a href="https://thredds.jpl.nasa.gov" title="Thematic Real-time Environmental Distributed Data Services (THREDDS) Data Server">THREDDS</a></li>
+<li class="leaf menu-mlid-3212"><a href="https://podaac.jpl.nasa.gov/ws" title="PO.DAAC Web Services">Web Services</a></li>
+<li class="leaf menu-mlid-3731"><a href="https://podaac-tools.jpl.nasa.gov/mcc" title="Metadata Compliance Checker (MCC).">MCC</a></li>
+<li class="leaf menu-mlid-718"><a href="https://podaac-tools.jpl.nasa.gov/soto" title="SOTO (State of the Ocean)">SOTO (State of the Ocean)</a></li>
+<li class="leaf menu-mlid-987"><a href="https://podaac-tools.jpl.nasa.gov/hitide" title="High-level Tool for Interactive Data Extraction/L2 Subsetting Services (HiTIDE/L2SS)">HiTIDE (L2 Subsetting)</a></li>
+<li class="leaf menu-mlid-379"><a href="https://podaac-tools.jpl.nasa.gov/las" title="Live Access Server (LAS) ">LAS (L3 Subsetting)</a></li>
+<li class="leaf menu-mlid-4494"><a href="https://github.com/nasa/podaac_tools_and_services" title="GitHub for hosting all PO.DAAC code">PO.DAAC GitHub</a></li>
+<li class="last expanded menu-mlid-3274"><span title="Earth Observing System Data and Information System (EOSDIS) Tools" class="nolink">EOSDIS Tools</span><ul class="menu"><li class="first leaf menu-mlid-3879"><a href="https://search.earthdata.nasa.gov/search" title="Earthdata Search">Earthdata Search</a></li>
+<li class="last leaf menu-mlid-499"><a href="http://gcmd.nasa.gov/" title="Global Change Master Directory (GCMD)">GCMD</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-546"><a href="https://podaac.jpl.nasa.gov/CoreMeasurements" title="Core Measurements Description">Measurements</a><ul class="menu"><li class="first expanded menu-mlid-862"><a href="https://podaac.jpl.nasa.gov/gravity" title="Gravity">Gravity</a><ul class="menu"><li class="first leaf menu-mlid-2023"><a href="https://podaac.jpl.nasa.gov/GRACE" title="GRACE">GRACE</a></li>
+<li class="leaf has-children menu-mlid-4117"><a href="https://podaac.jpl.nasa.gov/GRACE-FO" title="GRACE-FO">GRACE-FO</a></li>
+<li class="last leaf menu-mlid-4432"><a href="https://podaac.jpl.nasa.gov/OMG" title="Oceans Melting Greenland (OMG)">OMG</a></li>
+</ul></li>
+<li class="expanded menu-mlid-378"><a href="https://podaac.jpl.nasa.gov/SeaSurfaceSalinity" title="Sea Surface Salinity">Sea Surface Salinity</a><ul class="menu"><li class="first leaf menu-mlid-2027"><a href="https://podaac.jpl.nasa.gov/aquarius" title="AQUARIUS">AQUARIUS</a></li>
+<li class="leaf menu-mlid-3806"><a href="https://podaac.jpl.nasa.gov/SMAP" title="Soil Moisture Active Passive (SMAP)">SMAP</a></li>
+<li class="last leaf menu-mlid-3276"><a href="https://podaac.jpl.nasa.gov/SPURS" title="SPURS">SPURS</a></li>
+</ul></li>
+<li class="expanded menu-mlid-373"><a href="https://podaac.jpl.nasa.gov/SeaSurfaceTemperature" title="Sea Surface Temperature (SST)">Sea Surface Temperature (SST)</a><ul class="menu"><li class="first leaf menu-mlid-2026"><a href="https://podaac.jpl.nasa.gov/AQUA" title="">AQUA</a></li>
+<li class="leaf menu-mlid-701"><a href="https://podaac.jpl.nasa.gov/GHRSST" title="GHRSST  (Sea Surface Temperature)">GHRSST</a></li>
+<li class="leaf menu-mlid-3877"><a href="https://podaac.jpl.nasa.gov/S-NPP" title="S-NPP">S-NPP</a></li>
+<li class="last leaf menu-mlid-2019"><a href="https://podaac.jpl.nasa.gov/Terra" title="Terra">TERRA</a></li>
+</ul></li>
+<li class="leaf menu-mlid-375"><a href="https://podaac.jpl.nasa.gov/OceanCurrentsCirculation" title="Ocean Currents &amp; Circulation">Ocean Currents &amp; Circulation</a></li>
+<li class="expanded menu-mlid-863"><a href="https://podaac.jpl.nasa.gov/OceanSurfaceTopography" title="Ocean Surface Topography">Ocean Surface Topography</a><ul class="menu"><li class="first leaf menu-mlid-934"><a href="https://podaac.jpl.nasa.gov/JASON1">JASON 1</a></li>
+<li class="leaf menu-mlid-500"><a href="https://podaac.jpl.nasa.gov/OSTM-JASON2" title="OSTM - JASON 2">OSTM - JASON 2</a></li>
+<li class="leaf menu-mlid-3729"><a href="https://podaac.jpl.nasa.gov/JASON3">JASON 3</a></li>
+<li class="leaf menu-mlid-4433"><a href="https://podaac.jpl.nasa.gov/OMG" title="Oceans Melting Greenland (OMG)">OMG</a></li>
+<li class="leaf menu-mlid-2035"><a href="https://podaac.jpl.nasa.gov/Seasat" title="Seasat">Seasat</a></li>
+<li class="leaf menu-mlid-4369"><a href="https://podaac.jpl.nasa.gov/SWOT" title="Surface Water and Ocean Topography (SWOT)">SWOT</a></li>
+<li class="leaf menu-mlid-2039"><a href="https://podaac.jpl.nasa.gov/TOPEX-POSEIDON" title="TOPEX-POSEIDON">TOPEX-POSEIDON</a></li>
+<li class="last leaf menu-mlid-2042"><a href="https://podaac.jpl.nasa.gov/GEOS-3" title="">GEOS-3</a></li>
+</ul></li>
+<li class="expanded menu-mlid-377"><a href="https://podaac.jpl.nasa.gov/OceanWind" title="Ocean Wind">Ocean Wind</a><ul class="menu"><li class="first leaf menu-mlid-2379"><a href="https://podaac.jpl.nasa.gov/ADEOS-II" title="">ADEOS-II</a></li>
+<li class="leaf menu-mlid-3799"><a href="https://podaac.jpl.nasa.gov/CYGNSS" title="CYGNSS">CYGNSS</a></li>
+<li class="leaf menu-mlid-3795"><a href="https://podaac.jpl.nasa.gov/ISS-RapidScat">ISS-RapidScat</a></li>
+<li class="leaf menu-mlid-2029"><a href="https://podaac.jpl.nasa.gov/MEaSUREs" title="MEaSUREs">MEaSUREs</a></li>
+<li class="leaf menu-mlid-669"><a href="https://podaac.jpl.nasa.gov/NSCAT" title="NSCAT">NSCAT</a></li>
+<li class="leaf menu-mlid-2034"><a href="https://podaac.jpl.nasa.gov/QuikSCAT" title="QuikSCAT">QuikSCAT</a></li>
+<li class="last leaf menu-mlid-2036"><a href="https://podaac.jpl.nasa.gov/Seasat" title="">Seasat</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-873"><a href="https://podaac.jpl.nasa.gov/SeaIce" title="Sea Ice">Sea Ice</a><ul class="menu"><li class="first leaf menu-mlid-2024"><a href="https://podaac.jpl.nasa.gov/ADEOS-II">ADEOS-II</a></li>
+<li class="leaf menu-mlid-1675"><a href="https://podaac.jpl.nasa.gov/NSCAT" title="">NSCAT</a></li>
+<li class="leaf menu-mlid-2018"><a href="https://podaac.jpl.nasa.gov/QuikSCAT" title="QuikSCAT">QuikSCAT</a></li>
+<li class="last leaf menu-mlid-2381"><a href="https://podaac.jpl.nasa.gov/Seasat" title="">Seasat</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-699"><a href="https://podaac.jpl.nasa.gov/missions" title="PO.DAAC Related Missions">Missions</a><ul class="menu"><li class="first leaf menu-mlid-2382"><a href="https://podaac.jpl.nasa.gov/ADEOS-II" title="Advanced Earth Observing Satellite (ADEOS-II)">ADEOS-II</a></li>
+<li class="leaf menu-mlid-2383"><a href="https://podaac.jpl.nasa.gov/AQUA" title="AQUA">AQUA</a></li>
+<li class="leaf menu-mlid-2384"><a href="https://podaac.jpl.nasa.gov/aquarius" title="AQUARIUS">AQUARIUS</a></li>
+<li class="leaf menu-mlid-3800"><a href="https://podaac.jpl.nasa.gov/CYGNSS" title="Cyclone Global Navigation Satellite System (CYGNSS)">CYGNSS</a></li>
+<li class="leaf menu-mlid-2021"><a href="https://podaac.jpl.nasa.gov/GEOS-3" title="Geodynamics and Earth Ocean Satellite (GEOS-3)">GEOS-3</a></li>
+<li class="leaf menu-mlid-2022"><a href="https://podaac.jpl.nasa.gov/GHRSST" title="Group for High Resolution Sea Surface Temperature (GHRSST)">GHRSST</a></li>
+<li class="leaf menu-mlid-2385"><a href="https://podaac.jpl.nasa.gov/GRACE" title="Gravity Recovery and Climate Experiment (GRACE)">GRACE</a></li>
+<li class="leaf menu-mlid-4118"><a href="https://podaac.jpl.nasa.gov/GRACE-FO" title="Gravity Recovery and Climate Experiment Follow-On (GRACE-FO)">GRACE-FO</a></li>
+<li class="leaf menu-mlid-3797"><a href="https://podaac.jpl.nasa.gov/ISS-RapidScat" title="InternISS-RapidScat ational Space Station Rapid Scatterometer (ISS-RapidScat) ">ISS-RapidScat</a></li>
+<li class="leaf menu-mlid-2028"><a href="https://podaac.jpl.nasa.gov/JASON1" title="JASON 1">JASON 1</a></li>
+<li class="leaf menu-mlid-3730"><a href="https://podaac.jpl.nasa.gov/JASON3" title="JASON 3">JASON 3</a></li>
+<li class="leaf menu-mlid-2386"><a href="https://podaac.jpl.nasa.gov/MEaSUREs" title="Making Earth Science Data Records for Use in Research Environments (MEaSUREs) ">MEaSUREs</a></li>
+<li class="leaf menu-mlid-2032"><a href="https://podaac.jpl.nasa.gov/NSCAT" title="NASA Scatterometer (NSCAT) ">NSCAT</a></li>
+<li class="leaf menu-mlid-4434"><a href="https://podaac.jpl.nasa.gov/OMG" title="Oceans Melting Greenland (OMG)">OMG</a></li>
+<li class="leaf menu-mlid-2033"><a href="https://podaac.jpl.nasa.gov/OSTM-JASON2" title="Ocean Surface Topography Mission (OSTM)/Jason-2">OSTM - JASON 2</a></li>
+<li class="leaf menu-mlid-2380"><a href="https://podaac.jpl.nasa.gov/QuikSCAT" title="QuikSCAT">QuikSCAT</a></li>
+<li class="leaf menu-mlid-4371"><a href="https://podaac.jpl.nasa.gov/Saildrone" title="Saildrone">Saildrone</a></li>
+<li class="leaf menu-mlid-2389"><a href="https://podaac.jpl.nasa.gov/Seasat" title="
+Seasat">Seasat</a></li>
+<li class="leaf menu-mlid-3807"><a href="https://podaac.jpl.nasa.gov/SMAP" title="Soil Moisture Active Passive (SMAP)">SMAP</a></li>
+<li class="leaf menu-mlid-3878"><a href="https://podaac.jpl.nasa.gov/S-NPP" title="Suomi National Polar-orbiting Partnership satellite, or Suomi NPP (S-NPP)">S-NPP</a></li>
+<li class="leaf menu-mlid-3277"><a href="https://podaac.jpl.nasa.gov/SPURS" title="Salinity Processes in the Upper Ocean Regional Study (SPURS)">SPURS</a></li>
+<li class="leaf menu-mlid-4370"><a href="https://podaac.jpl.nasa.gov/SWOT" title="Surface Water and Ocean Topography (SWOT) ">SWOT</a></li>
+<li class="leaf menu-mlid-2390"><a href="https://podaac.jpl.nasa.gov/Terra" title="Terra">TERRA</a></li>
+<li class="last leaf menu-mlid-2040"><a href="https://podaac.jpl.nasa.gov/TOPEX-POSEIDON" title="TOPEX-POSEIDON">TOPEX-POSEIDON</a></li>
+</ul></li>
+<li class="expanded menu-mlid-351"><a href="https://podaac.jpl.nasa.gov/AnimationsImages" title="Ocean Stories, Dataset Highlights, Images and Animations">Multimedia</a><ul class="menu"><li class="first collapsed menu-mlid-2348"><a href="https://podaac.jpl.nasa.gov/OceanEvents" title="Ocean Stories Highlighting PO.DAAC Datasets">Ocean Stories</a></li>
+<li class="leaf menu-mlid-469"><a href="https://podaac.jpl.nasa.gov/highlights" title="Dataset Highlights">Dataset Highlights</a></li>
+<li class="leaf menu-mlid-2064"><a href="https://podaac.jpl.nasa.gov/AnimationsImages/Animations" title="Animations">Animations</a></li>
+<li class="last collapsed menu-mlid-2391"><a href="https://podaac.jpl.nasa.gov/AnimationsImages/Images" title="Images">Images</a></li>
+</ul></li>
+<li class="expanded menu-mlid-352"><a href="https://podaac.jpl.nasa.gov/UserCommunity" title="PO.DAAC Information Relevant to the User Community">Community</a><ul class="menu"><li class="first leaf menu-mlid-476"><a href="https://podaac.jpl.nasa.gov/announcements" title="PO.DAAC Related Announcements">Announcements</a></li>
+<li class="leaf menu-mlid-437"><a href="https://podaac.jpl.nasa.gov/events" title="Events in the Oceanography Community">Events</a></li>
+<li class="leaf menu-mlid-2536"><a href="https://podaac.jpl.nasa.gov/system-alerts" title="System Alerts">System Alerts</a></li>
+<li class="collapsed menu-mlid-2551"><a href="https://podaac.jpl.nasa.gov/spotlight" title="PO.DAAC Activities in the Oceanography Community">Spotlight</a></li>
+<li class="leaf menu-mlid-2699"><a href="https://podaac.jpl.nasa.gov/PO.DAAC_DataManagementPractices" title="Data Best Practices">Data Best Practices</a></li>
+<li class="leaf menu-mlid-4495"><a href="https://podaac.jpl.nasa.gov/NASA_ROSES_DataManagementPlan" title="NASA ROSES Data Management Plan">NASA ROSES DMP</a></li>
+<li class="leaf menu-mlid-493"><a href="https://podaac.jpl.nasa.gov/education" title="Education">Education</a></li>
+<li class="leaf menu-mlid-494"><a href="https://podaac.jpl.nasa.gov/MailingList" title="Mailing List">Mailing List</a></li>
+<li class="leaf menu-mlid-495"><a href="https://podaac.jpl.nasa.gov/UserWorkingGroup" title="User Working Group (UWG)">User Working Group (UWG)</a></li>
+<li class="leaf menu-mlid-3808"><a href="https://podaac.jpl.nasa.gov/MeetingsandWorkshops" title="Meetings and Workshops">Meetings and Workshops</a></li>
+<li class="last leaf menu-mlid-3876"><a href="https://podaac.jpl.nasa.gov/PO.DAAC_RSS_Feed" title="PO.DAAC RSS Feeds">PO.DAAC RSS Feeds</a></li>
+</ul></li>
+<li class="leaf menu-mlid-717"><a href="http://podaac.jpl.nasa.gov/forum" title="PO.DAAC Forum">Forum</a></li>
+<li class="last expanded menu-mlid-354"><a href="https://podaac.jpl.nasa.gov/help" title="Additional PO.DAAC Information">About</a><ul class="menu"><li class="first leaf menu-mlid-391"><a href="https://podaac.jpl.nasa.gov/AboutPodaac" title="About Us">About Us</a></li>
+<li class="leaf menu-mlid-485"><a href="https://podaac.jpl.nasa.gov/Acronyms" title="Acronyms">Acronyms</a></li>
+<li class="leaf menu-mlid-383"><a href="https://podaac.jpl.nasa.gov/Glossary" title="Glossary">Glossary</a></li>
+<li class="leaf menu-mlid-537"><a href="https://podaac.jpl.nasa.gov/DataTerminologyandFormats" title="Data Terminology">Data Terminology</a></li>
+<li class="leaf menu-mlid-488"><a href="https://podaac.jpl.nasa.gov/CitingPODAAC" title="PO.DAAC Data Citation and Acknowledgements">Data Citation</a></li>
+<li class="last leaf menu-mlid-3146"><a href="https://podaac.jpl.nasa.gov/metrics" title="PO.DAAC Metrics">PO.DAAC Metrics</a></li>
+</ul></li>
+</ul></div>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+      
+        <div class="clearfix"></div>
+  
+      </div><!-- /#navigation -->
+       
+       
+            
+      <div id="content-container">
+        <div class="region-content">
+          <div id="content" class="column" role="main">
+                                    <a id="main-content"></a>
+                                                                                    
+<div id="block-menu-block-3" class="block block-menu-block first last odd" role="navigation">
+
+  <div class="block-content">
+              
+    <div class="menu-block-wrapper menu-block-3 menu-name-menu-featured parent-mlid-0 menu-level-1">
+  <ul id="feature-menu" class="menu"><li class="first leaf menu-mlid-1957" data-featured-menu-trigger="1957"><a href="/datasetlist" title="">Search</a>
+<a href="# " class="menu-attach-block-drop-link external expand-on-click" data-block-id="faceted_browse|front-nav" id="datasetlist-drop-link-1957">More</a><div class="menu-attach-block-wrapper orientation-horizontal">
+	<div id="block-faceted-browse-front-nav" class="block block-faceted-browse first odd">
+
+  <div class="block-content">
+              
+    <div class="faceted-browse-front-container">
+	<h2 class="title"> <!-- title -->
+			</h2>
+	<div class="faceted-browse-front-facets"> <!-- top facet list -->
+			<ul class="from-module first">
+<li class="facet-menu-item first"><a class="image-5">Parameter</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=Measurement&values=Atmospheric%20Pressure&view=list" combo="Measurement:Atmospheric Pressure">Atmospheric Pressure (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Atmospheric%20Radiation&view=list" combo="Measurement:Atmospheric Radiation">Atmospheric Radiation (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Atmospheric%20Temperature&view=list" combo="Measurement:Atmospheric Temperature">Atmospheric Temperature (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Atmospheric%20Water%20Vapor&view=list" combo="Measurement:Atmospheric Water Vapor">Atmospheric Water Vapor (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Atmospheric%20Winds&view=list" combo="Measurement:Atmospheric Winds">Atmospheric Winds (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Bathymetry%2FSeafloor%20Topography&view=list" combo="Measurement:Bathymetry/Seafloor Topography">Bathymetry/Seafloor Topography (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Clouds&view=list" combo="Measurement:Clouds">Clouds (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=GRAVITY%2FGRAVITATIONAL%20FIELD&view=list" combo="Measurement:GRAVITY/GRAVITATIONAL FIELD">GRAVITY/GRAVITATIONAL FIELD (41)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Glaciers%2FIce%20Sheets&view=list" combo="Measurement:Glaciers/Ice Sheets">Glaciers/Ice Sheets (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Humidity%20Indices&view=list" combo="Measurement:Humidity Indices">Humidity Indices (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Microwave&view=list" combo="Measurement:Microwave">Microwave (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Chemistry&view=list" combo="Measurement:Ocean Chemistry">Ocean Chemistry (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Circulation&view=list" combo="Measurement:Ocean Circulation">Ocean Circulation (10)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Heat%20Budget&view=list" combo="Measurement:Ocean Heat Budget">Ocean Heat Budget (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Optics&view=list" combo="Measurement:Ocean Optics">Ocean Optics (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Pressure&view=list" combo="Measurement:Ocean Pressure">Ocean Pressure (22)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Temperature&view=list" combo="Measurement:Ocean Temperature">Ocean Temperature (207)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Waves&view=list" combo="Measurement:Ocean Waves">Ocean Waves (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Ocean%20Winds&view=list" combo="Measurement:Ocean Winds">Ocean Winds (106)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Precipitation&view=list" combo="Measurement:Precipitation">Precipitation (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Radar&view=list" combo="Measurement:Radar">Radar (51)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Salinity%2FDensity&view=list" combo="Measurement:Salinity/Density">Salinity/Density (158)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Sea%20Ice&view=list" combo="Measurement:Sea Ice">Sea Ice (37)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Measurement&values=Sea%20Surface%20Topography&view=list" combo="Measurement:Sea Surface Topography">Sea Surface Topography (25)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=Measurement&values=Surface%20Water&view=list" combo="Measurement:Surface Water">Surface Water (2)</a>
+</li></ul>
+</li><li class="facet-menu-item"><a class="image-6">Latency</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=Availability&values=NEAR_REAL_TIME&view=list" combo="Availability:NEAR_REAL_TIME">Near Real Time (74)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Availability&values=DELAY_MODE&view=list" combo="Availability:DELAY_MODE">Delayed Mode (81)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=Availability&values=HISTORICAL&view=list" combo="Availability:HISTORICAL">Non-Active (410)</a>
+</li></ul>
+</li><li class="facet-menu-item"><a class="">Collections</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=Collections&values=ASCAT&view=list" combo="Collections:ASCAT">ADVANCED SCATTEROMETER (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=Aquarius&view=list" combo="Collections:Aquarius">Aquarius/SAC-D mission datasets (179)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=Aquarius-CAP&view=list" combo="Collections:Aquarius-CAP">JPL SSS CAP datasets (11)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=CCMP&view=list" combo="Collections:CCMP">Cross-Calibrated Multi-Platform Ocean Surface Wind Vector Analysis Fields (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=CDR&view=list" combo="Collections:CDR">Climate Data Record (21)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=CYGNSS&view=list" combo="Collections:CYGNSS">Cyclone Global Navigation Satellite System (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=GHRSST&view=list" combo="Collections:GHRSST">Group for High Resolution Sea Surface Temperature Datasets (91)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=GRACE&view=list" combo="Collections:GRACE">GRACE (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=GRACE%20RL06&view=list" combo="Collections:GRACE RL06">GRACE RL06 (16)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=GRACE-FO&view=list" combo="Collections:GRACE-FO">GRACE-FO Products (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=Gridded%20Climate%20Variables%20for%20Model%20Intercomparison&view=list" combo="Collections:Gridded Climate Variables for Model Intercomparison">Gridded Climate Variables for Model Intercomparison (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=JASON-1&view=list" combo="Collections:JASON-1">Jason-1 (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=MEaSUREs&view=list" combo="Collections:MEaSUREs">MEaSUREs (25)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=MODIS_L3_SST&view=list" combo="Collections:MODIS_L3_SST">MODIS Terra and Aqua L3 SST (48)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=OMG&view=list" combo="Collections:OMG">Oceans Melting Greenland (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=Pre-SWOT%20Hydrology&view=list" combo="Collections:Pre-SWOT Hydrology">Pre-SWOT Hydrology (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=QSCAT_BYU_L3_OW_SIGMA0_DAILY_BROWSE&view=list" combo="Collections:QSCAT_BYU_L3_OW_SIGMA0_DAILY_BROWSE">SeaWinds on QuikSCAT Level 3 Sigma-0 Daily Browse Datasets (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=QSCAT_BYU_L3_OW_SIGMA0_LTOD_BROWSE&view=list" combo="Collections:QSCAT_BYU_L3_OW_SIGMA0_LTOD_BROWSE">SeaWinds on QuikSCAT Level 3 Sigma-0 Local-Time-of-Day Browse Datasets (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=QUIKSCAT&view=list" combo="Collections:QUIKSCAT">Quick Scatterometer (11)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=RAPIDSCAT&view=list" combo="Collections:RAPIDSCAT">Rapid Scatterometer (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SCAT_BYU_L3_OW_SIGMA0_ENHANCED&view=list" combo="Collections:SCAT_BYU_L3_OW_SIGMA0_ENHANCED">Enhanced Resolution Sigma-0 Datasets from BYU/SCP (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SEAWINDS_BYU_L3_OW_SIGMA0_DAILY_BROWSE&view=list" combo="Collections:SEAWINDS_BYU_L3_OW_SIGMA0_DAILY_BROWSE">SeaWinds on ADEOS-II Level 3 Sigma-0 Daily Browse Datasets (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SEAWINDS_BYU_L3_OW_SIGMA0_LTOD_BROWSE&view=list" combo="Collections:SEAWINDS_BYU_L3_OW_SIGMA0_LTOD_BROWSE">SeaWinds on ADEOS-II Level 3 Sigma-0 Local-Time-of-Day Browse Datasets (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SMAP-SSS&view=list" combo="Collections:SMAP-SSS">NASA SMAP Sea Surface Salinity Datasets (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SPURS-2&view=list" combo="Collections:SPURS-2">SPURS-2 field campaign (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=SPURS-I&view=list" combo="Collections:SPURS-I">SPURS-I field Campaign (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Collections&values=Saildrone&view=list" combo="Collections:Saildrone">Saildrone Cruise Collection (1)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=Collections&values=TELLUS&view=list" combo="Collections:TELLUS">NASA JPL TELLUS (22)</a>
+</li></ul>
+</li><li class="facet-menu-item"><a class="">Platform</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=Platform&values=ADEOS-I&view=list" combo="Platform:ADEOS-I">ADEOS-I (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ADEOS-II&view=list" combo="Platform:ADEOS-II">ADEOS-II (22)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ARGO&view=list" combo="Platform:ARGO">ARGO (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Aircraft&view=list" combo="Platform:Aircraft">Aircraft (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Aqua&view=list" combo="Platform:Aqua">Aqua (49)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Aquarius_SAC-D&view=list" combo="Platform:Aquarius_SAC-D">Aquarius_SAC-D (159)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=CORIOLIS&view=list" combo="Platform:CORIOLIS">CORIOLIS (14)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=CYGNSS&view=list" combo="Platform:CYGNSS">CYGNSS (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-2%2FF10&view=list" combo="Platform:DMSP 5D-2/F10">DMSP 5D-2/F10 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-2%2FF11&view=list" combo="Platform:DMSP 5D-2/F11">DMSP 5D-2/F11 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-2%2FF13&view=list" combo="Platform:DMSP 5D-2/F13">DMSP 5D-2/F13 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-2%2FF14&view=list" combo="Platform:DMSP 5D-2/F14">DMSP 5D-2/F14 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-2%2FF8&view=list" combo="Platform:DMSP 5D-2/F8">DMSP 5D-2/F8 (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-3%2FF15&view=list" combo="Platform:DMSP 5D-3/F15">DMSP 5D-3/F15 (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-3%2FF16&view=list" combo="Platform:DMSP 5D-3/F16">DMSP 5D-3/F16 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=DMSP%205D-3%2FF17&view=list" combo="Platform:DMSP 5D-3/F17">DMSP 5D-3/F17 (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Drifter&view=list" combo="Platform:Drifter">Drifter (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ENVISAT&view=list" combo="Platform:ENVISAT">ENVISAT (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ERS-1&view=list" combo="Platform:ERS-1">ERS-1 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ERS-2&view=list" combo="Platform:ERS-2">ERS-2 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Ecomapper&view=list" combo="Platform:Ecomapper">Ecomapper (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GCOM-W1&view=list" combo="Platform:GCOM-W1">GCOM-W1 (12)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GEOS-3&view=list" combo="Platform:GEOS-3">GEOS-3 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GFO&view=list" combo="Platform:GFO">GFO (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GOES-11&view=list" combo="Platform:GOES-11">GOES-11 (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GOES-12&view=list" combo="Platform:GOES-12">GOES-12 (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GOES-13&view=list" combo="Platform:GOES-13">GOES-13 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GOES-15&view=list" combo="Platform:GOES-15">GOES-15 (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GOES-16&view=list" combo="Platform:GOES-16">GOES-16 (10)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GPM&view=list" combo="Platform:GPM">GPM (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GRACE&view=list" combo="Platform:GRACE">GRACE (35)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=GRACE-FO&view=list" combo="Platform:GRACE-FO">GRACE-FO (11)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Himawari&view=list" combo="Platform:Himawari">Himawari (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ICOADS&view=list" combo="Platform:ICOADS">ICOADS (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=IRS-O2&view=list" combo="Platform:IRS-O2">IRS-O2 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=ISS&view=list" combo="Platform:ISS">ISS (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=InSitu&view=list" combo="Platform:InSitu">InSitu (37)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=JASON-1&view=list" combo="Platform:JASON-1">JASON-1 (16)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=JASON-3&view=list" combo="Platform:JASON-3">JASON-3 (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Jason-1%20Geodetic&view=list" combo="Platform:Jason-1 Geodetic">Jason-1 Geodetic (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=METEOSAT-10&view=list" combo="Platform:METEOSAT-10">METEOSAT-10 (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=METOP-A&view=list" combo="Platform:METOP-A">METOP-A (26)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=METOP-B&view=list" combo="Platform:METOP-B">METOP-B (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=MSG2&view=list" combo="Platform:MSG2">MSG2 (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=MSG4&view=list" combo="Platform:MSG4">MSG4 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=MTSAT-1R&view=list" combo="Platform:MTSAT-1R">MTSAT-1R (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=MTSAT-2&view=list" combo="Platform:MTSAT-2">MTSAT-2 (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Mooring&view=list" combo="Platform:Mooring">Mooring (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NCEP%20GTS&view=list" combo="Platform:NCEP GTS">NCEP GTS (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NDBC-MOORED-BUOY&view=list" combo="Platform:NDBC-MOORED-BUOY">NDBC-MOORED-BUOY (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-11&view=list" combo="Platform:NOAA-11">NOAA-11 (31)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-14&view=list" combo="Platform:NOAA-14">NOAA-14 (35)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-16&view=list" combo="Platform:NOAA-16">NOAA-16 (38)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-17&view=list" combo="Platform:NOAA-17">NOAA-17 (41)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-19&view=list" combo="Platform:NOAA-19">NOAA-19 (51)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-20&view=list" combo="Platform:NOAA-20">NOAA-20 (20)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-7&view=list" combo="Platform:NOAA-7">NOAA-7 (31)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NOAA-9&view=list" combo="Platform:NOAA-9">NOAA-9 (31)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=NeutrallyBuoyantFloat&view=list" combo="Platform:NeutrallyBuoyantFloat">NeutrallyBuoyantFloat (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Nimbus-7&view=list" combo="Platform:Nimbus-7">Nimbus-7 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=OMGSHIP_MBES&view=list" combo="Platform:OMGSHIP_MBES">OMGSHIP_MBES (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=OMGSHIP_SBES&view=list" combo="Platform:OMGSHIP_SBES">OMGSHIP_SBES (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=OSTM%2FJASON-2&view=list" combo="Platform:OSTM/JASON-2">OSTM/JASON-2 (16)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=QUIKSCAT&view=list" combo="Platform:QUIKSCAT">QUIKSCAT (36)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=R%2FV%20Endeavor&view=list" combo="Platform:R/V Endeavor">R/V Endeavor (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=R%2FV%20Knorr&view=list" combo="Platform:R/V Knorr">R/V Knorr (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=R%2FV%20Revelle&view=list" combo="Platform:R/V Revelle">R/V Revelle (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=R%2FV%20Sarmiento&view=list" combo="Platform:R/V Sarmiento">R/V Sarmiento (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=R%2FV%20Thalassa&view=list" combo="Platform:R/V Thalassa">R/V Thalassa (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=RAWINSONDES&view=list" combo="Platform:RAWINSONDES">RAWINSONDES (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=SARAL&view=list" combo="Platform:SARAL">SARAL (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=SEASAT-A&view=list" combo="Platform:SEASAT-A">SEASAT-A (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=SMAP&view=list" combo="Platform:SMAP">SMAP (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=SUOMI-NPP&view=list" combo="Platform:SUOMI-NPP">SUOMI-NPP (20)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Saildrone&view=list" combo="Platform:Saildrone">Saildrone (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Seaglider&view=list" combo="Platform:Seaglider">Seaglider (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Seasoar&view=list" combo="Platform:Seasoar">Seasoar (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=TOPEX%2FPOSEIDON&view=list" combo="Platform:TOPEX/POSEIDON">TOPEX/POSEIDON (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=TRMM&view=list" combo="Platform:TRMM">TRMM (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=TenuseGlider&view=list" combo="Platform:TenuseGlider">TenuseGlider (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Platform&values=Terra&view=list" combo="Platform:Terra">Terra (34)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=Platform&values=Waveglider&view=list" combo="Platform:Waveglider">Waveglider (2)</a>
+</li></ul>
+</li><li class="facet-menu-item"><a class="">Sensor</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=Sensor&values=AATSR&view=list" combo="Sensor:AATSR">AATSR (8)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ABI&view=list" combo="Sensor:ABI">ABI (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ADCP&view=list" combo="Sensor:ADCP">ADCP (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AHI&view=list" combo="Sensor:AHI">AHI (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ALT%20(TOPEX)&view=list" combo="Sensor:ALT (TOPEX)">ALT (TOPEX) (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ALTIKA%20Altimeter&view=list" combo="Sensor:ALTIKA Altimeter">ALTIKA Altimeter (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AMI&view=list" combo="Sensor:AMI">AMI (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AMR&view=list" combo="Sensor:AMR">AMR (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AMSR&view=list" combo="Sensor:AMSR">AMSR (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AMSR-E&view=list" combo="Sensor:AMSR-E">AMSR-E (18)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AMSR2&view=list" combo="Sensor:AMSR2">AMSR2 (12)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ANEMOMETERS&view=list" combo="Sensor:ANEMOMETERS">ANEMOMETERS (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AQUARIUS_RADIOMETER&view=list" combo="Sensor:AQUARIUS_RADIOMETER">AQUARIUS_RADIOMETER (129)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AQUARIUS_SCATTEROMETER&view=list" combo="Sensor:AQUARIUS_SCATTEROMETER">AQUARIUS_SCATTEROMETER (158)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ASCAT&view=list" combo="Sensor:ASCAT">ASCAT (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ATSR-2&view=list" combo="Sensor:ATSR-2">ATSR-2 (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AVHRR&view=list" combo="Sensor:AVHRR">AVHRR (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AVHRR-2&view=list" combo="Sensor:AVHRR-2">AVHRR-2 (35)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AVHRR-3&view=list" combo="Sensor:AVHRR-3">AVHRR-3 (73)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=AXCTD&view=list" combo="Sensor:AXCTD">AXCTD (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=BAROMETERS&view=list" combo="Sensor:BAROMETERS">BAROMETERS (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=CTD&view=list" combo="Sensor:CTD">CTD (16)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=CURRENT%20METERS&view=list" combo="Sensor:CURRENT METERS">CURRENT METERS (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=DDMI&view=list" combo="Sensor:DDMI">DDMI (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=DORIS&view=list" combo="Sensor:DORIS">DORIS (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ERS-1%20ALTIMETER&view=list" combo="Sensor:ERS-1 ALTIMETER">ERS-1 ALTIMETER (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=ERS-2%20Altimeter&view=list" combo="Sensor:ERS-2 Altimeter">ERS-2 Altimeter (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=FLUOROMETERS&view=list" combo="Sensor:FLUOROMETERS">FLUOROMETERS (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GEOS-3%20ALTIMETER&view=list" combo="Sensor:GEOS-3 ALTIMETER">GEOS-3 ALTIMETER (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GFO%20Altimeter&view=list" combo="Sensor:GFO Altimeter">GFO Altimeter (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GMI&view=list" combo="Sensor:GMI">GMI (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GOES%20I-M%20IMAGER&view=list" combo="Sensor:GOES I-M IMAGER">GOES I-M IMAGER (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GOES%20N-P%20IMAGER&view=list" combo="Sensor:GOES N-P IMAGER">GOES N-P IMAGER (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GOES-11%20Imager&view=list" combo="Sensor:GOES-11 Imager">GOES-11 Imager (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GOES-13%20Imager&view=list" combo="Sensor:GOES-13 Imager">GOES-13 Imager (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GOES-15%20Imager&view=list" combo="Sensor:GOES-15 Imager">GOES-15 Imager (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GPSP&view=list" combo="Sensor:GPSP">GPSP (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE%20ACC&view=list" combo="Sensor:GRACE ACC">GRACE ACC (10)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE%20KBR&view=list" combo="Sensor:GRACE KBR">GRACE KBR (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE%20SCA&view=list" combo="Sensor:GRACE SCA">GRACE SCA (34)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE-FO%20ACC&view=list" combo="Sensor:GRACE-FO ACC">GRACE-FO ACC (35)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE-FO%20KBR&view=list" combo="Sensor:GRACE-FO KBR">GRACE-FO KBR (36)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE-FO%20LRI&view=list" combo="Sensor:GRACE-FO LRI">GRACE-FO LRI (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=GRACE-FO%20SCA&view=list" combo="Sensor:GRACE-FO SCA">GRACE-FO SCA (11)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=HUMIDITY%20SENSORS&view=list" combo="Sensor:HUMIDITY SENSORS">HUMIDITY SENSORS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=IASI&view=list" combo="Sensor:IASI">IASI (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=InSitu&view=list" combo="Sensor:InSitu">InSitu (43)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=JASON-1%20Microwave%20Radiometer&view=list" combo="Sensor:JASON-1 Microwave Radiometer">JASON-1 Microwave Radiometer (18)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MBES&view=list" combo="Sensor:MBES">MBES (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MMS&view=list" combo="Sensor:MMS">MMS (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MODIS&view=list" combo="Sensor:MODIS">MODIS (61)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MTSAT%201R%20Imager&view=list" combo="Sensor:MTSAT 1R Imager">MTSAT 1R Imager (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MTSAT%202%20Imager&view=list" combo="Sensor:MTSAT 2 Imager">MTSAT 2 Imager (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=MWR&view=list" combo="Sensor:MWR">MWR (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=NSCAT&view=list" combo="Sensor:NSCAT">NSCAT (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=OSCAT&view=list" combo="Sensor:OSCAT">OSCAT (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=OXYGEN%20METERS&view=list" combo="Sensor:OXYGEN METERS">OXYGEN METERS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=POSEIDON-2&view=list" combo="Sensor:POSEIDON-2">POSEIDON-2 (17)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=POSEIDON-3&view=list" combo="Sensor:POSEIDON-3">POSEIDON-3 (17)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=POSEIDON-3B&view=list" combo="Sensor:POSEIDON-3B">POSEIDON-3B (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=PYROMETERS&view=list" combo="Sensor:PYROMETERS">PYROMETERS (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=RA-2&view=list" combo="Sensor:RA-2">RA-2 (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=RapidScat&view=list" combo="Sensor:RapidScat">RapidScat (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SASS&view=list" combo="Sensor:SASS">SASS (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SBES&view=list" combo="Sensor:SBES">SBES (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SEAPOL&view=list" combo="Sensor:SEAPOL">SEAPOL (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SEAWINDS&view=list" combo="Sensor:SEAWINDS">SEAWINDS (55)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SEVIRI&view=list" combo="Sensor:SEVIRI">SEVIRI (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SMAP%20L-BAND%20RADIOMETER&view=list" combo="Sensor:SMAP L-BAND RADIOMETER">SMAP L-BAND RADIOMETER (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SMMR&view=list" combo="Sensor:SMMR">SMMR (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SPURS_METEO&view=list" combo="Sensor:SPURS_METEO">SPURS_METEO (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SS&view=list" combo="Sensor:SS">SS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SSALT&view=list" combo="Sensor:SSALT">SSALT (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SSM%2FI&view=list" combo="Sensor:SSM/I">SSM/I (12)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=SSMIS&view=list" combo="Sensor:SSMIS">SSMIS (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=TEMPERATURE%20SENSORS&view=list" combo="Sensor:TEMPERATURE SENSORS">TEMPERATURE SENSORS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=THERMOSALINOGRAPHS&view=list" combo="Sensor:THERMOSALINOGRAPHS">THERMOSALINOGRAPHS (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=TMI&view=list" combo="Sensor:TMI">TMI (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=TMR&view=list" combo="Sensor:TMR">TMR (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=TRSR&view=list" combo="Sensor:TRSR">TRSR (3)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=TURBIDITY%20METERS&view=list" combo="Sensor:TURBIDITY METERS">TURBIDITY METERS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=UCTD&view=list" combo="Sensor:UCTD">UCTD (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=USPS&view=list" combo="Sensor:USPS">USPS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=VIIRS&view=list" combo="Sensor:VIIRS">VIIRS (24)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=WAMOS&view=list" combo="Sensor:WAMOS">WAMOS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=WIND%20PROFILERS&view=list" combo="Sensor:WIND PROFILERS">WIND PROFILERS (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=Sensor&values=WINDSAT&view=list" combo="Sensor:WINDSAT">WINDSAT (14)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=Sensor&values=XBT&view=list" combo="Sensor:XBT">XBT (1)</a>
+</li></ul>
+</li><li class="facet-menu-item last"><a class="">Spatial Coverage</a>
+<ul class="from-module first">
+<li class="facet-menu-item first"><a href="/datasetlist?ids=SpatialCoverage&values=38N-38S&view=list" combo="SpatialCoverage:38N-38S">38N-38S (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Alaska&view=list" combo="SpatialCoverage:Alaska">Alaska (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Americas&view=list" combo="SpatialCoverage:Americas">Americas (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Antarctic&view=list" combo="SpatialCoverage:Antarctic">Antarctic (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Antarctica&view=list" combo="SpatialCoverage:Antarctica">Antarctica (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Arctic&view=list" combo="SpatialCoverage:Arctic">Arctic (17)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Atlantic%20Ocean&view=list" combo="SpatialCoverage:Atlantic Ocean">Atlantic Ocean (5)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Australia&view=list" combo="SpatialCoverage:Australia">Australia (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Baltic%20Sea&view=list" combo="SpatialCoverage:Baltic Sea">Baltic Sea (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Bering%20Sea&view=list" combo="SpatialCoverage:Bering Sea">Bering Sea (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Central%20America&view=list" combo="SpatialCoverage:Central America">Central America (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=China&view=list" combo="SpatialCoverage:China">China (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Eastern%20Atlantic&view=list" combo="SpatialCoverage:Eastern Atlantic">Eastern Atlantic (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Eastern%20Pacific&view=list" combo="SpatialCoverage:Eastern Pacific">Eastern Pacific (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Eastern%20Pacific%20Ocean&view=list" combo="SpatialCoverage:Eastern Pacific Ocean">Eastern Pacific Ocean (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Eastern%20Tropical%20Pacific&view=list" combo="SpatialCoverage:Eastern Tropical Pacific">Eastern Tropical Pacific (13)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Europe&view=list" combo="SpatialCoverage:Europe">Europe (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Global&view=list" combo="SpatialCoverage:Global">Global (473)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Greenland&view=list" combo="SpatialCoverage:Greenland">Greenland (7)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Indian%20Ocean&view=list" combo="SpatialCoverage:Indian Ocean">Indian Ocean (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Indonesia&view=list" combo="SpatialCoverage:Indonesia">Indonesia (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Japan&view=list" combo="SpatialCoverage:Japan">Japan (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Mid-Atlantic%20to%20East%20Indian%20Ocean%20-%20Baltic%20Sea%20to%20below%20Africa&view=list" combo="SpatialCoverage:Mid-Atlantic to East Indian Ocean - Baltic Sea to below Africa">Mid-Atlantic to East Indian Ocean - Baltic Sea to below Africa (2)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=North%20Africa&view=list" combo="SpatialCoverage:North Africa">North Africa (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=North%20America&view=list" combo="SpatialCoverage:North America">North America (9)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=North%20Sea&view=list" combo="SpatialCoverage:North Sea">North Sea (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Northeast%20Atlantic&view=list" combo="SpatialCoverage:Northeast Atlantic">Northeast Atlantic (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Oceania&view=list" combo="SpatialCoverage:Oceania">Oceania (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Pacific&view=list" combo="SpatialCoverage:Pacific">Pacific (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Regional&view=list" combo="SpatialCoverage:Regional">Regional (4)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=SPURS-1%20%20N.Atlantic%20Salinity%20maximum%20region&view=list" combo="SpatialCoverage:SPURS-1  N.Atlantic Salinity maximum region">SPURS-1  N.Atlantic Salinity maximum region (15)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Siberia&view=list" combo="SpatialCoverage:Siberia">Siberia (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=South%20Africa&view=list" combo="SpatialCoverage:South Africa">South Africa (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=South%20America&view=list" combo="SpatialCoverage:South America">South America (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=South%20Atlantic&view=list" combo="SpatialCoverage:South Atlantic">South Atlantic (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Southern%20Asia&view=list" combo="SpatialCoverage:Southern Asia">Southern Asia (6)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Tropics&view=list" combo="SpatialCoverage:Tropics">Tropics (1)</a>
+</li><li class="facet-menu-item"><a href="/datasetlist?ids=SpatialCoverage&values=Western%20Atlantic&view=list" combo="SpatialCoverage:Western Atlantic">Western Atlantic (2)</a>
+</li><li class="facet-menu-item last"><a href="/datasetlist?ids=SpatialCoverage&values=Western%20Pacific%20Ocean&view=list" combo="SpatialCoverage:Western Pacific Ocean">Western Pacific Ocean (1)</a>
+</li></ul>
+</li></ul>
+	</div>
+	
+	<div class="faceted-browse-front-information-container">
+		<div class="faceted-browse-front-information">
+			To browse for datasets, select a starting category from the left
+		</div> <!-- container to display custom text on facet rollover -->
+	</div>
+
+	<div class="sub-holder"> <!-- holder for right side popup -->
+		<div class="sub-header"></div> <!-- area with title of selected facet -->
+		<div class="sub-content"></div> <!-- list of facet results -->
+	</div>
+	
+	<div class="front-dataset-search">
+		<label for="edit-datasetsearch" id="datasetsearch-label">Search for Datasets:</label>
+		<div class="dataset-search-form">
+			<form action="/" method="post" id="faceted-browse-front-search-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-datasetSearch">
+ <input onfocus="if (this.value == &#039;Enter Dataset Keyword&#039;) {this.value = &#039;&#039;;}" onblur="if (this.value == &#039;&#039;) {this.value = &#039;Enter Dataset Keyword&#039;;}" type="text" id="edit-datasetsearch" name="datasetSearch" value="Enter Dataset Keyword" size="30" maxlength="100" class="form-text" />
+</div>
+<a href="/DatasetSearchHelp"><img id="podaac-search-help" src="https://podaac.jpl.nasa.gov/sites/all/modules/custom/podaac_helper/images/search-help.png" width="25" height="25" alt="" /></a><input type="submit" id="edit-submit-button" name="op" value="Go" class="form-submit" /><input type="hidden" name="form_build_id" value="form-c9gMpx10tRHZEEFm2XSwd5Cnc2PzAaaqnF3IH-Y-5gg" />
+<input type="hidden" name="form_id" value="faceted_browse_front_search_form" />
+</div></form>		</div>
+	</div>
+</div>  </div>
+
+</div><!-- /.block -->
+</div>
+</li>
+<li class="expanded menu-mlid-1958" data-featured-menu-trigger="1958"><a href="/dataaccess" title="">Access</a></li>
+<li class="expanded active menu-mlid-1959" data-featured-menu-trigger="1959"><a href="/" title="" class="active">Visualize</a></li>
+<li class="last expanded menu-mlid-1960" data-featured-menu-trigger="1960"><a href="/help" title="">Help</a></li>
+</ul><ul class="feature-sub-menu menu" data-featured-menu-target="1958"><li class="first leaf menu-mlid-2349"><a href="/dataaccess" title="Protocols">Protocols</a><div class="featured-preview" data-featured-preview="2349"><table border="0" cellpadding="5" cellspacing="0" style="width:100%"><tbody><tr><td style="vertical-align:top">
+			<p class="image-center"><a href="http://podaac-tools.jpl.nasa.gov/drive" target="_blank"><img alt="PODAAC_Drive" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/PODAAC_Drive.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p><strong><a href="http://podaac-tools.jpl.nasa.gov/drive" target="_blank">PO.DAAC Drive</a></strong> provides an FTP alternative for browsing and retrieving data at PO.DAAC.  It offers file navigation and download through an interface served directly through your browser, and with a familiar look and feel.</p>
+			</td>
+		</tr><!--   ---------------- removed FTP ----------------
+		<tr>
+			<td style="vertical-align:top">
+			<p><a href="ftp://podaac-ftp.jpl.nasa.gov/" target="_blank"><img alt="ftpx_icon_portal.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/ftpx_icon_portal.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p>&nbsp;</p>
+
+			<p>PO.DAAC&#39;s data products are accessible via our anonymous FTP server,&nbsp;<a href="ftp://podaac-ftp.jpl.nasa.gov/" target="_blank">ftp://podaac-ftp.jpl.nasa.gov</a></p>
+			</td>
+		</tr>
+----------  --><tr><td style="vertical-align:top">
+			<p><a href="http://opendap.jpl.nasa.gov/opendap/"><img alt="http://opendap.jpl.nasa.gov/opendap/" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/opendapx_icon_portal.png" title="" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p> </p>
+
+			<p>OPeNDAP handles transport, translation and subsetting of data residing in most Earth science data formats.</p>
+			</td>
+		</tr><tr><td style="vertical-align:top"><a href="http://thredds.jpl.nasa.gov/" target="_blank"><img alt="threddsx_icon.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/threddsx_icon_portal.png" width="174" /></a></td>
+			<td style="vertical-align:top">
+			<p>The THREDDS Data Server is a web server that provides metadata and data access for scientific datasets, using a variety of remote data access protocols.</p>
+			</td>
+		</tr><tr><td style="vertical-align:top"><a href="//podaac.jpl.nasa.gov/ws" target="_blank"><img alt="Webservices image" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/webservicesx_icon.png" width="174" /></a></td>
+			<td style="vertical-align:top">PO.DAAC Web Services are APIs that can be accessed through standard web protocols. They use a ReST model with calls issued over a HTTP connection.  On receipt of a request message, our services return the response in either an XML structure or, optionally, a JSON format.</td>
+		</tr></tbody></table><p> </p>
+</div></li>
+<li class="leaf menu-mlid-2350"><a href="/dataaccess" title="Subsetting Tools">Subsetting</a><div class="featured-preview" data-featured-preview="2350"><table border="0" cellpadding="5" cellspacing="0" style="width:100%"><tbody><tr><td style="vertical-align:top">
+			<p><a href="http://podaac-tools.jpl.nasa.gov/hitide" target="_blank"><img alt="/hitidex_icon_portal.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/HiTIDE-L2SS_icon_portal.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p> </p>
+
+			<p>The <strong>Hi</strong>gh-level <strong>T</strong>ool for <strong>I</strong>nteractive <strong>D</strong>ata <strong>E</strong>xtraction (<strong>HiTIDE</strong>) is a web-based interface facilitating the search, imaging, and extraction of select Level 2 "swath" datasets from PO.DAAC's archive. </p>
+			</td>
+		</tr><tr><td style="vertical-align:top">
+			<p><a href="http://podaac-tools.jpl.nasa.gov/las" target="_blank"><img alt="lasx_icon_portal.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/lasx_icon_portal.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p>The<strong> L</strong>ive <strong>A</strong>ccess <strong>S</strong>erver (<strong>LAS</strong>) enables the web user to: visualize data withon-the-fly graphics; request custom subsets of variables in a choice of file formats; access background reference material about the data (metadata); compare (difference) variables from distributed locations.</p>
+			</td>
+		</tr><tr><td style="vertical-align:top"> </td>
+			<td style="vertical-align:top"> </td>
+		</tr></tbody></table><p> </p>
+
+<p> </p>
+
+<p> </p>
+</div></li>
+<li class="last leaf menu-mlid-2356"><a href="/dataaccess" title="Earth Observing System Data and Information System (EOSDIS) Tools">EOSDIS Tools</a><div class="featured-preview" data-featured-preview="2356"><table border="0" cellpadding="5" cellspacing="0" style="width:100%"><tbody><tr><td style="vertical-align:top">
+			<p><a href="https://search.earthdata.nasa.gov/search" target="_blank"><img alt="reverbx_icon.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/earthdatascience_icon.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p>Earthdata Search application allows you to search, discover, visualize, refine, and access NASA Earth Observation data. It provides search and access capabilities for dataset holdings at all of the Distributed Active Archive Centers (DAACs) as well as the PO.DAAC.</p>
+			</td>
+		</tr><tr><td style="vertical-align:top">
+			<p><a href="http://gcmd.nasa.gov/" target="_blank"><img alt="gcmdx_icon.png" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/gcmdx_icon.png" width="174" /></a></p>
+			</td>
+			<td style="vertical-align:top">
+			<p>The GCMD holds Earth science data set and service descriptions, such as location of the data or service, associated investigators and other contacts, spatial and temporal coverage, and resolution that provide vital information to help determine whether the data or service meets the user’s needs.</p>
+			</td>
+		</tr></tbody></table><p> </p>
+</div></li>
+</ul><ul class="feature-sub-menu menu" data-featured-menu-target="1959"><li class="first last leaf menu-mlid-2696"><a href="http://podaac-tools.jpl.nasa.gov/soto" title="An interactive, web-based tool to generate informative maps, animations, and plots that communicate and promote the discovery and analysis of the State Of The Ocean (SOTO)">SOTO (State Of The Ocean)</a><div class="featured-preview" data-featured-preview="2696"><table border="0" cellpadding="5" cellspacing="0" style="width:100%"><tbody><tr><td style="vertical-align:top"><a href="http://podaac-tools.jpl.nasa.gov/soto" target="_blank"><img alt="SOTO" height="124" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/PODAAC_SOTO_icon.png" width="174" /></a></td>
+			<td style="vertical-align:top">
+			<p>An interactive, web-based tool to generate informative maps, animations, and plots that communicate and promote the discovery and analysis of the State Of The Ocean (SOTO). </p>
+			</td>
+		</tr></tbody></table><p> </p>
+</div></li>
+</ul><ul class="feature-sub-menu menu" data-featured-menu-target="1960"><li class="first leaf menu-mlid-2362"><a href="https://podaac.jpl.nasa.gov/forum/viewforum.php?f=7" title="Ask PO.DAAC">Ask PO.DAAC</a><div class="featured-preview" data-featured-preview="2362"><h1><a href="//podaac.jpl.nasa.gov/AboutPodaac"><img alt="podaac_logo" height="100" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/podaac_logo.png" width="100" /></a><strong>Questions? Answers.</strong></h1>
+
+<div class="rteindent2"><strong>      Visit our:  <a href="//podaac.jpl.nasa.gov/forum/" target="_blank">PO.DAAC Forum</a></strong></div>
+
+<p> </p>
+
+<h1><strong>      Follow Us</strong>:                                         </h1>
+
+<h2 class="rteindent3"><strong><a href="https://www.facebook.com/podaac" target="_blank">FACEBOOK</a>  </strong></h2>
+
+<h2 class="rteindent3"><strong><a href="http://www.youtube.com/user/NASAJPLPODAAC" target="_blank">YOUTUBE</a> </strong></h2>
+
+<h2 class="rteindent3"><strong><a href="https://twitter.com/podaac" target="_blank">TWITTER</a></strong></h2>
+</div></li>
+<li class="leaf menu-mlid-2554"><a href="/DatasetSearchHelp" title="PO.DAAC Dataset Search Help">Dataset Search Help</a><div class="featured-preview" data-featured-preview="2554"><h1><a href="//podaac.jpl.nasa.gov/DatasetSearchHelp"><img alt="podaac_logo" height="100" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/podaac_logo.png" width="100" /></a><strong> </strong><span>Need help in searching for a dataset?</span></h1>
+
+<p>The keyword search capability on the PO.DAAC Web Portal supports a ”Google-like" query syntax  <strong>NOTE: </strong> that keyword search is NOT case sensitive; a search for "sea surface temperature" will return the same results as a search for "Sea Surface Temperature".   <a href="//podaac.jpl.nasa.gov/DatasetSearchHelp">More &gt;&gt;</a></p>
+
+<p> </p>
+
+<table align="center" border="1" cellpadding="10" cellspacing="30" style="width:95%"><tbody><tr><td>
+			<p><strong>Include a white space between the words to search for pages that may have just one of several words,</strong></p>
+
+			<div>Example:<em> Search for </em>  <strong>GHRSST  L4  </strong> <em>will return datasets that have keywords GHRSST or L4</em></div>
+			</td>
+		</tr><tr><td>
+			<p><strong>Wildcard (*) will search for partial text so you do not have to type the full word.</strong></p>
+			Example: Search for <strong>GHRS*</strong> will return datasets that have keywords GHRSST</td>
+		</tr><tr><td>
+			<p><strong>Add a plus (+) before a word to include all results that include that word.</strong></p>
+
+			<div>Example:<em> Search for </em>  <strong> +GHRSST +L4 </strong>   <em>will return datasets that have keywords GHRSST and L4</em></div>
+			</td>
+		</tr><tr><td>
+			<p><strong>Add a dash (-) before a word to exclude all results that include that word.</strong></p>
+
+			<div>Example: Search for    <strong>GHRSST  -L4 </strong>   will return datasets that have keywords GHRSST but not L4<br />
+			 </div>
+			</td>
+		</tr><tr><td>
+			<p><strong>Use quotes to search for an exact word or set of words.</strong></p>
+			Example: <em> Search for </em>  <strong> "sea surface temperature" </strong>  <em>  will return datasets that have keyword phrase "sea surface temperature"</em></td>
+		</tr><tr><td>
+			<p><strong>Plural matching</strong></p>
+			Example: <em>Search for</em>  <strong> temperatures </strong>  <em>will return datasets that have keywords temperature or temperatures</em></td>
+		</tr><tr><td>
+			<p><strong>You can combine any of the above query syntax.</strong></p>
+			Example: Search for <strong>+GHRSST +GOES*</strong> will return datasets that have keywords GHRSST and any of the GOES missions (GOES-11, 12, 13, 15).</td>
+		</tr></tbody></table></div></li>
+<li class="last leaf menu-mlid-2371"><a href="/CitingPODAAC" title="Data Citation and Acknowledgements">Data Citation</a><div class="featured-preview" data-featured-preview="2371"><h1><a href="//podaac.jpl.nasa.gov/CitingPODAAC"><img alt="podaac_logo" height="100" src="//podaac.jpl.nasa.gov/sites/default/files/image/custom_thumbs/podaac_logo.png" width="100" /></a><strong>Data Citations and Acknowledgments.</strong></h1>
+
+<p>NASA data are freely accessible; however, when you publish these data or works based on the data, we request that you cite the datasets within the text of the publication and include a reference to them in your reference list.</p>
+
+<p>A recommended citation is provided for each dataset and appears on the PO.DAAC webpage that describes the dataset. The elements contained in the recommended citation can be reorganized for compliance with a particular reference style that is specified by a publisher.</p>
+
+<p>For more details go to <a href="//podaac.jpl.nasa.gov/CitingPODAAC">Data Citations and Acknowledgements</a> page.</p>
+</div></li>
+</ul><div id="featured-preview-container"></div></div>
+  </div>
+
+</div><!-- /.block -->
+<div class="view view-front-flexslider view-id-front_flexslider view-display-id-page view-dom-id-1ca6a22331cba2ce83f926ef51c3f7eb">
+        
+  
+  
+      <div class="view-content">
+      <div  id="flexslider-1" class="flexslider">
+  <ul class="slides"><li>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="front-page-featured-background"></div>
+<div class="front-page-featured-content-container">
+<a href="https://podaac.jpl.nasa.gov/spotlight_OceanObs19" target="_blank">OceanObs’19 Conference - An Ocean of Opportunity</a><br />
+Ed Armstrong representing PO.DAAC at the OceanObs&rsquo;19 conference in Honolulu, HI.
+
+</div></span>  </div>  
+  <div class="views-field views-field-field-image">        <div class="field-content"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/flexslider_full/public/flexslider/Ed_c.png?itok=lmp9ecdb" width="750" height="370" alt="" /></div>  </div>  
+  <div class="views-field views-field-field-date">    <span class="views-label views-label-field-date">Date: </span>    <div class="field-content"></div>  </div></li>
+<li>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="front-page-featured-background"></div>
+<div class="front-page-featured-content-container">
+<a href="https://podaac.jpl.nasa.gov/highlights/Oceans_Melting_Greenland_Dataset_Release" target="_blank">New dataset highlight now featured at PO.DAAC</a><br />
+The PO.DAAC is pleased to announce the public release of the Oceans Melting Greenland (OMG) Airborne eXpendable Conductivity Temperature Depth (AXCTD) Version 1 dataset.
+
+</div></span>  </div>  
+  <div class="views-field views-field-field-image">        <div class="field-content"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/flexslider_full/public/flexslider/OMG_L2_AXCTD_2.jpg?itok=gD0NAu_Q" width="750" height="370" alt="" /></div>  </div>  
+  <div class="views-field views-field-field-date">    <span class="views-label views-label-field-date">Date: </span>    <div class="field-content"></div>  </div></li>
+<li>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="front-page-featured-background"></div>
+<div class="front-page-featured-content-container">
+<a href="https://podaac.jpl.nasa.gov/highlights/RSS_SMAP_SSS_V4.0_Datasets_Release" target="_blank">New dataset highlight now featured at PO.DAAC</a><br />
+The new Remote Sensing Systems (RSS) SMAP Sea Surface Salinity (SSS) V4.0 data spans the full mission, from 2 April 2015 to the present.
+
+&nbsp;
+
+</div></span>  </div>  
+  <div class="views-field views-field-field-image">        <div class="field-content"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/flexslider_full/public/flexslider/SMAP_SSS_2.JPG?itok=7IxbBbhw" width="750" height="370" alt="" /></div>  </div>  
+  <div class="views-field views-field-field-date">    <span class="views-label views-label-field-date">Date: </span>    <div class="field-content"></div>  </div></li>
+<li>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="front-page-featured-background"></div>
+<div class="front-page-featured-content-container">
+<a href="https://podaac.jpl.nasa.gov/animations/Sea_Surface_Salinity_from_SMAP_RSS_V4_Data_Animation" target="_blank">New PO.DAAC animation now available online!</a><br />
+Animation of sea surface salinity from 27 March 2015 to 13 August 2019&nbsp;based on the 8-day running mean version 4.0 Level 3 NASA Soil Moisture Active Passive (SMAP) dataset from Remote Sensing Systems (RSS).&nbsp;
+
+</div></span>  </div>  
+  <div class="views-field views-field-field-image">        <div class="field-content"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/flexslider_full/public/flexslider/SMAP_1.JPG?itok=5Vv5WTr9" width="750" height="370" alt="" /></div>  </div>  
+  <div class="views-field views-field-field-date">    <span class="views-label views-label-field-date">Date: </span>    <div class="field-content"></div>  </div></li>
+<li>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="front-page-featured-background"></div>
+<div class="front-page-featured-content-container">
+<a href="https://earthdata.nasa.gov/learn/user-resources/who-uses-nasa-earth-science-data-user-profiles/user-profile-dr-philip-thompson" target="_blank">Who Uses NASA Earth Science Data? </a><br />
+The global average sea level is rising. Dr. Philip Thompson uses NASA Earth science data to explore how&mdash;and when&mdash;this will affect vulnerable communities.
+
+</div></span>  </div>  
+  <div class="views-field views-field-field-image">        <div class="field-content"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/flexslider_full/public/flexslider/Earth%20Data%20User%20Profile.JPG?itok=MaDJTCO3" width="750" height="370" alt="" /></div>  </div>  
+  <div class="views-field views-field-field-date">    <span class="views-label views-label-field-date">Date: </span>    <div class="field-content"></div>  </div></li>
+</ul></div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div><!-- region__no_wrapper -->
+          </div><!-- /#content -->
+        </div>
+  
+          
+                  <aside class="sidebars">
+                      
+                        <div class="region-sidebar-second-container">
+                <section class="region region-sidebar-second column sidebar">
+    <div id="block-views-announcement-block" class="block block-views first odd">
+
+  <div class="block-content">
+              <h2 class="block-title">Announcements</h2>
+          
+    <div class="view view-announcement view-id-announcement view-display-id-block view-dom-id-e56d9e1d79f3757ef3d05f11560a1c52">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/announcements/2019-09-05_Oceans_Melting_Greenland_AXCTD_V1_Dataset_Release">Oceans Melting Greenland (OMG) Airborne eXpendable Conductivity Temperature Depth (AXCTD) Version 1 Dataset Release</a></span>  </div>  
+  <div class="views-field views-field-field-item-date">        <div class="field-content"><span class="date-display-single">Thursday, September 5, 2019</span></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/announcements/2019-08-29_GHRSST_L4_MUR_Global_Foundation_SST_Analysis_Dataset_Update">GHRSST Level 4 MUR Global Foundation Sea Surface Temperature Analysis (v4.1) Dataset Update </a></span>  </div>  
+  <div class="views-field views-field-field-item-date">        <div class="field-content"><span class="date-display-single">Thursday, August 29, 2019</span></div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/announcements/2019-08-29_NOAA_AVHRR_PATHFINDER_SST_v5.0_and_v5.1_datasets_retired">NOAA AVHRR PATHFINDER SST v5.0 and v5.1 datasets have been retired</a></span>  </div>  
+  <div class="views-field views-field-field-item-date">        <div class="field-content"><span class="date-display-single">Thursday, August 29, 2019</span></div>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/announcements">
+    More »  </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+<div id="block-views-people-block" class="block block-views even">
+
+  <div class="block-content">
+              <h2 class="block-title">Spotlight</h2>
+          
+    <div class="view view-people view-id-people view-display-id-block view-dom-id-a23f8b95f1ac2794f5cc6e952195e919">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/spotlight_OceanObs19"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/frontpage_bottom_blocks/public/people/images/collage.jpg?itok=VjagQE9h" width="420" height="210" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/spotlight_OceanObs19">OceanObs’19 - An Ocean of Opportunity</a></span>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Ed Armstrong, Dr. Jorge Vazquez and Dr. Vardis Tsontos representing PO.DAAC at the OceanObs’19 conference in Honolulu, HI on 16-20 September 2019.
+</span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/spotlight">
+    More »   </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+<div id="block-views-event-block-1" class="block block-views odd">
+
+  <div class="block-content">
+              <h2 class="block-title">Events</h2>
+          
+    <div class="view view-event view-id-event view-display-id-block_1 view-dom-id-d11fceb75ecdd5e552f8aa4992fa7b68">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/events/2019-09-26_Fall_AGU_Meeting">AGU Fall Meeting</a></span>  </div>  
+  <div class="views-field views-field-field-location">        <div class="field-content"><span class="date-display-single">2019-12-09</span> | San Francisco, California</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/events/2019-09-26_Oceans_2019_Meeting">Oceans 2019</a></span>  </div>  
+  <div class="views-field views-field-field-location">        <div class="field-content"><span class="date-display-single">2019-10-27</span> | Seattle, Washington</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/events/2019-08-06_OSTST_Meeting">Ocean Surface Topography Science Team Meeting (OSTST)</a></span>  </div>  
+  <div class="views-field views-field-field-location">        <div class="field-content"><span class="date-display-single">2019-10-21</span> | Chicago, Illinois</div>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/events">
+    More »  </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+<div id="block-views-system-alerts-block" class="block block-views last even">
+
+  <div class="block-content">
+              <h2 class="block-title">System Alerts</h2>
+          
+    <div class="view view-system-alerts view-id-system_alerts view-display-id-block view-dom-id-0ab9823be5b7c7305c7c0e87bbc0b0fc">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/system-alerts/ScheduledSystemMaintenance_2018_0604">Scheduled System Maintenance (PO.DAAC LAS, SOTO and MCC)</a></span>  </div>  
+  <div class="views-field views-field-field-active">        <div class="field-content"><span class="date-display-single">Mon, 06/04/2018 - <div class="date-display-range"><span class="date-display-start">16:00</span> to <span class="date-display-end">18:00</span></div></span></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/system-alerts/ScheduledSystemMaintenance_2018_0501">Scheduled System Maintenance (PO.DAAC OPeNDAP and THREDDS)</a></span>  </div>  
+  <div class="views-field views-field-field-active">        <div class="field-content"><span class="date-display-single">Tue, 05/01/2018 - <div class="date-display-range"><span class="date-display-start">16:00</span> to <span class="date-display-end">20:00</span></div></span></div>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/system-alerts">
+    More »  </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+  </section><!-- region__sidebar -->
+            </div>
+                      </aside><!-- /.sidebars -->
+              </div>
+
+      <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        <div id="footer" class="region region-footer">
+    <div id="block-quicktabs-frontpage-tab" class="block block-quicktabs first odd">
+
+  <div class="block-content">
+              
+    <div  id="quicktabs-frontpage_tab" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle"><li class="active first"><a href="/frontpage?qt-frontpage_tab=0#qt-frontpage_tab" id="quicktabs-tab-frontpage_tab-0" class="active">Dataset Highlights</a></li>
+<li><a href="/frontpage?qt-frontpage_tab=1#qt-frontpage_tab" id="quicktabs-tab-frontpage_tab-1" class="active">Animations</a></li>
+<li><a href="/frontpage?qt-frontpage_tab=2#qt-frontpage_tab" id="quicktabs-tab-frontpage_tab-2" class="active">Ocean Stories</a></li>
+<li class="last"><a href="/frontpage?qt-frontpage_tab=3#qt-frontpage_tab" id="quicktabs-tab-frontpage_tab-3" class="active">Images</a></li>
+</ul></div><div id="quicktabs-container-frontpage_tab" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-frontpage_tab-0" class="quicktabs-tabpage "><div class="view view-highlight view-id-highlight view-display-id-block view-dom-id-440cd8b756233138a4588ffc1d29e381">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/highlights/Oceans_Melting_Greenland_Dataset_Release"><img src="https://podaac.jpl.nasa.gov/sites/default/files/highlight/OMG_L2_AXCTD_2.jpg" width="994" height="574" alt="Oceans Melting Greenland (OMG)" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/highlights/Oceans_Melting_Greenland_Dataset_Release">Oceans Melting Greenland (OMG) Airborne eXpendable...</a></span>  </div>  
+  <div class="views-field views-field-field-item-date">        <div class="field-content"><span class="date-display-single">September 5, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Oceans Melting Greenland (OMG) is a NASA Earth Venture Suborbital (EVS-2) mission that aims to improve estimates of sea level rise by...</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/highlights/RSS_SMAP_SSS_V4.0_Datasets_Release"><img src="https://podaac.jpl.nasa.gov/sites/default/files/highlight/SMAP_SSS.JPG" width="1498" height="470" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/highlights/RSS_SMAP_SSS_V4.0_Datasets_Release">Remote Sensing Systems (RSS) SMAP Sea Surface Sali...</a></span>  </div>  
+  <div class="views-field views-field-field-item-date">        <div class="field-content"><span class="date-display-single">August 29, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">The new RSS SMAP Version 4.0 data spans the full mission, from 2 April 2015 to the present.</span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/highlights">
+    More Dataset Highlights »  </a>
+</div>
+  
+  
+  
+</div></div><div  id="quicktabs-tabpage-frontpage_tab-1" class="quicktabs-tabpage quicktabs-hide"><div class="view view-animations view-id-animations view-display-id-block view-dom-id-628bdfb6d8422de4880ef6e15f03feb0">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-youtube">        <div class="field-content"><a href="/animations/Sea_Surface_Salinity_from_SMAP_RSS_V4_Data_Animation"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/youtube/X1AaXXsz8Os.png?itok=dJQWuv41" alt="Embedded thumbnail for Sea Surface Salinity from SMAP RSS V4 (2015-2019)" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/animations/Sea_Surface_Salinity_from_SMAP_RSS_V4_Data_Animation">Sea Surface Salinity from SMAP RSS V4 (2015-2019)</a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">August 29, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Animation of sea surface salinity from 27 March 2015 to 13 August 2019 based on the 8-day running mean version 4.0 Level 3 NASA Soil...</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-youtube">        <div class="field-content"><a href="/animations/Ocean_Surface_Heat_Flux_from_CYGNSS_Data_Animation"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/youtube/_xV-TubBfj8.png?itok=Ps2sWK_S" alt="Embedded thumbnail for Ocean Surface Heat Flux from CYGNSS (2017-2019)" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/animations/Ocean_Surface_Heat_Flux_from_CYGNSS_Data_Animation">Ocean Surface Heat Flux from CYGNSS (2017-2019)</a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">August 26, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Animation of the ocean surface heat flux over the period 18 March 2017 to 30 June 2019 from the Version 1.0 CYGNSS Level 2 Ocean...</span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/AnimationsImages/Animations">
+    More Animations »  </a>
+</div>
+  
+  
+  
+</div></div><div  id="quicktabs-tabpage-frontpage_tab-2" class="quicktabs-tabpage quicktabs-hide"><div class="view view-ocean-stories view-id-ocean_stories view-display-id-block view-dom-id-520cee02ff071288f212f0b1b98047c3">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/OceanEvents/2019_06_12_Ocean_Response_to_2018_Atlantic_Hurricane_Season"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/ocean-story/images/smap2.JPG?itok=-7wHlRYw" width="220" height="118" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/OceanEvents/2019_06_12_Ocean_Response_to_2018_Atlantic_Hurricane_Season">Ocean Response to 2018 Atlantic Hurricane Season</a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">June 12, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">The 2018 Atlantic hurricane season featured 15 named storms. The season officially began on 25 May 2018 with the formation of Tropical...</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/OceanEvents/2019_04_11_Ocean_impacts_of_Cyclone_Idai"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/ocean-story/images/Cyclone_Ida_1.png?itok=adQUPM9A" width="220" height="146" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/OceanEvents/2019_04_11_Ocean_impacts_of_Cyclone_Idai">Ocean impacts of Cyclone Idai</a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">April 11, 2019</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Cyclone Idai was a major tropical storm that made landfall in Africa, an unusual case, that had unfortunate consequences in Mozambique...</span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/OceanEvents">
+    More Ocean Stories »  </a>
+</div>
+  
+  
+  
+</div></div><div  id="quicktabs-tabpage-frontpage_tab-3" class="quicktabs-tabpage quicktabs-hide"><div class="view view-images view-id-images view-display-id-block view-dom-id-dd359f137e7d1c889ed9caaac63b7ce1">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/AnimationsImages/Images/CYGNSS"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/image/images/cygnss_v2.1_level3_wind_speed_15sep2018_bluemarble.jpg?itok=e2BG4yjc" width="220" height="110" alt="CYGNSS" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/AnimationsImages/Images/CYGNSS">CYGNSS Version 2.1 Science Data Record Released</a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">September 21, 2018</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">CYGNSS wind speed on 15 September 2018, generated by the Level 3 Version 2.1 dataset on a MODIS Bluemarble background. The wind speed...</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/AnimationsImages/Images/Florence_cold_wake"><img src="https://podaac.jpl.nasa.gov/sites/default/files/styles/medium/public/image/images/Screen%20Shot%202018-09-13%20at%202.33.32%20PM.png?itok=g8M7p7Jj" width="220" height="127" alt="Florence cold wake " /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/AnimationsImages/Images/Florence_cold_wake">Florence cold wake </a></span>  </div>  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">September 13, 2018</span></div>  </div>  
+  <div class="views-field views-field-body">        <span class="field-content">Cold wake associated with Florence prior to U.S. landfall</span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/AnimationsImages/Images">
+    More Images »  </a>
+</div>
+  
+  
+  
+</div></div></div></div>  </div>
+
+</div><!-- /.block -->
+<div id="block-podaac-helper-podaac-image-day" class="block block-podaac-helper even">
+
+  <div class="block-content">
+              <h2 class="block-title">Image of the Day</h2>
+          
+    <div id="podaac-image-day-image">
+  <a href="https://podaac.jpl.nasa.gov/sites/default/files/SSHA_10day.png" title="SSHA 10 Days" target="_blank">
+    <img src="https://podaac.jpl.nasa.gov/sites/default/files/SSHA_crop_10day.png" alt="SSHA 10 Days"/>
+  </a>
+</div>
+
+<div id="podaac-image-day-text">
+  <a href="http://sealevel.jpl.nasa.gov/science/datasources/ssha/archive/" target="_blank">
+    Sea Surface Height Anomaly: SARAL, Jason-2 and Jason-3 Measurements from 18-Sep-2019 to 28-Sep-2019  </a>
+</div>
+  </div>
+
+</div><!-- /.block -->
+<div id="block-views-soto2dimages-block" class="block block-views last odd">
+
+  <div class="block-content">
+              <h2 class="block-title">State Of the Ocean (SOTO)</h2>
+          
+    <div class="view view-soto2dimages view-id-soto2dimages view-display-id-block view-dom-id-e16417f558535caf54f2f9964c7997b4">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><a href="/node/732"><img src="https://podaac.jpl.nasa.gov/sites/default/files/Soto2d.png" width="471" height="258" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/node/732">A suite of tools presented through an interactive, web-based visualization front end.</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+</div><!-- /.block -->
+  </div><!-- region__footer -->
+  
+    </div><!-- /#main -->
+  
+  </div><!-- /#main-container -->
+
+</div><!-- /#page -->
+
+  <footer id="bottom" class="region region-bottom">
+    <div id="block-menu-block-2" class="block block-menu-block first odd" role="navigation">
+
+  <div class="block-content">
+              
+    <div class="menu-block-wrapper menu-block-2 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-3805"><a href="/rss.xml" title="">RSS Feed</a></li>
+<li class="leaf menu-mlid-1996"><a href="http://www.jpl.nasa.gov/copyrights.cfm" title="">Privacy</a></li>
+<li class="leaf menu-mlid-1997"><a href="/CitingPODAAC" title="">Data Citation</a></li>
+<li class="leaf menu-mlid-1998"><a href="/Glossary" title="">Glossary</a></li>
+<li class="leaf menu-mlid-1999"><a href="/AboutPodaac" title="">About PO.DAAC</a></li>
+<li class="last leaf menu-mlid-2000"><a href="mailto:podaac@podaac.jpl.nasa.gov" title="">Contact</a></li>
+</ul></div>
+  </div>
+
+</div><!-- /.block -->
+<div id="block-simplenews-5" class="block block-simplenews even">
+
+  <div class="block-content">
+              <h2 class="block-title">PO.DAAC Mailing List</h2>
+          
+    <a name="subscription"></a> 
+<span class="subscription-close"></span>
+  
+
+  <p>Upon successful submission, you will receive a confirmation e-mail in your inbox.</p>
+
+  <form class="simplenews-subscribe" action="/" method="post" id="simplenews-block-form-5" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-mail" name="mail" value="" size="20" maxlength="128" class="form-text required" />
+</div>
+<div class="captcha"><input type="hidden" name="captcha_sid" value="504433544" />
+<input type="hidden" name="captcha_token" value="72dd6d6ea57ed03f840fe4317e9890a1" />
+<img src="/image_captcha?sid=504433544&amp;ts=1569651265" width="180" height="60" alt="Image CAPTCHA" title="Image CAPTCHA" /><div class="form-item form-type-textfield form-item-captcha-response">
+  <label for="edit-captcha-response">What code is in the image? <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-captcha-response" name="captcha_response" value="" size="15" maxlength="128" class="form-text required" />
+<div class="description">Enter the characters shown in the image.</div>
+</div>
+</div><input type="submit" id="edit-submit--2" name="op" value="Subscribe" class="form-submit" /><input type="hidden" name="form_build_id" value="form-Wpv3XYbvhyVtGE3W_SPXA0kz6Aw9PUtuVdt4_U1hSFg" />
+<input type="hidden" name="form_id" value="simplenews_block_form_5" />
+</div></form>  </div>
+
+</div><!-- /.block -->
+<div id="block-block-17" class="block block-block last odd">
+
+  <div class="block-content">
+              
+    <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+.core-trust-seal {
+position:absolute; 
+left:45%;
+}
+@media (max-width: 950px) {
+.core-trust-seal {
+margin-top:25px;
+}
+}
+@media (max-width:700px) {
+.core-trust-seal {
+    float: right;
+    left: auto;
+    top: auto;
+    margin-top: 0;
+    position:relative;
+}
+}
+
+/*--><!]]>*/
+</style><div class="core-trust-seal"><a href="https://www.coretrustseal.org/" style="text-decoration: none;" target="_blank"><img alt="" height="50" src="https://brac-dev.jpl.nasa.gov/podaac-dev/sites/default/files/PODAAC-CoreTrustSeal.jpg" width="50" /></a></div>
+  </div>
+
+</div><!-- /.block -->
+  	<div id="subscription-link-container">
+  		Get PO.DAAC Updates by Email <a id="subscription-link" href="#">Subscribe &raquo;</a>
+  	</div>
+		<div id="podaac-jpl-clearance">
+			<span class="podaac-jpl-clearance-label">Clearance Number:</span> CL05-0770
+		</div>
+  </footer><!-- region__bottom -->
+	<script src="https://podaac.jpl.nasa.gov/sites/all/modules/contrib/flexslider/assets/js/flexslider.load.js?pyj1ia"></script>
+	
+	<!-- Add Tophat -->
+	<script src="https://cdn.earthdata.nasa.gov/tophat2/tophat2.js" 
+        id="earthdata-tophat-script" 
+        data-show-fbm="false" 
+        data-show-status="false"
+        data-current-daac="PO.DAAC"></script>
+	<!-- Add Tophat -->
+
+	<!-- NetTracker Page Tag -->
+	<!-- Copyright 2004 Sane Solutions, LLC.	All rights reserved. -->
+		<script src="/sites/all/themes/podaac/net_tracker_files/ntpagetag.js" type="text/javascript"></script>
+	<noscript>
+		<img src="http://ws1.ems.eosdis.nasa.gov/images/ntpagetag.gif?js=0" class="element-invisible" />
+	</noscript>
+
+	<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0013/2090.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+</body>
+</html>

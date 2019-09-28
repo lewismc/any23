@@ -30,6 +30,9 @@
 
   <name>Apache Any23 :: Plugins :: Rya Connector</name>
   <description>Any23 plugin connector to stream data into Apache Rya - http://rya.apache.org/</description>
+  <properties>
+    <rya.version>4.0.0-incubating</rya.version>
+  </properties>
 
   <dependencies>
     <!-- RDF4J -->
@@ -50,7 +53,7 @@
     <dependency>
         <groupId>org.apache.rya</groupId>
         <artifactId>rya.sail</artifactId>
-        <version>4.0.0-incubating</version>
+        <version>${rya.version}</version>
     </dependency>
 
     <!-- BEGIN: Test Dependencies -->
@@ -63,6 +66,18 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.rya</groupId>
+      <artifactId>rya.indexing</artifactId>
+      <version>${rya.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.rya</groupId>
+      <artifactId>rya.test.accumulo</artifactId>
+      <version>${rya.version}</version>
+      <scope>compile</scope>
     </dependency>
     <!-- END: Test Dependencies -->
 
